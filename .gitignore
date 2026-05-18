@@ -9,4 +9,5 @@ apps/api/generated
 apps/web/dist
 apps/api/prisma/dev.db
 npm-debug.log*
-
+deploy/instances/*.env
+!deploy/instances/.gitkeep

@@ -2,7 +2,7 @@
 
 基于 `Email Identity Graph Platform V1 Spec Cn.pdf` 落地的前后端分离 MVP，目标是把主邮箱、辅助邮箱、注册号码、辅助号码、平台标签之间的关系统一管理、快速检索并图谱化展示。
 
-当前技术栈：
+技术栈：
 
 - 前端：Vue 3 + TypeScript + Vite + Pinia + Naive UI + ECharts
 - 后端：NestJS + Prisma + PostgreSQL + JWT + Swagger
@@ -13,24 +13,27 @@
 - 邮箱注册
 - 邮箱 + 密码登录
 - 邮箱验证码登录
-- 忘记密码 / 修改密码
+- 忘记密码
+- 验证码修改密码
 - 主邮箱管理
 - 统一实体目录
-- 平台标签管理
-- 关系图谱全屏页
 - 全局搜索
-- Dashboard 统计总览
-- Docker / Nginx / PostgreSQL 部署配置
+- 全屏关系图谱
+- Docker / VPS 多实例脚本化部署
 
 ## 项目结构
 
 ```text
 .
 ├── apps/
-│   ├── api/   # NestJS + Prisma backend
-│   └── web/   # Vue 3 frontend
-├── docker-compose.yml
-├── .env.example
+│   ├── api/                     # NestJS + Prisma backend
+│   └── web/                     # Vue 3 frontend
+├── deploy/
+│   ├── docker-compose.vps.yml   # VPS 多实例 compose 模板
+│   ├── instance.env.example     # 实例 env 模板
+│   ├── instances/               # 每个实例自己的 env 文件
+│   └── manage-vps.sh            # VPS 交互式管理脚本
+├── docker-compose.yml           # 本地/简单单实例 compose
 └── README.md
 ```
 
@@ -57,11 +60,6 @@ RESEND_FROM_EMAIL=EIGP <onboarding@resend.dev>
 MAIL_DEBUG=true
 VERIFICATION_CODE_EXPIRES_MINUTES=10
 ```
-
-说明：
-
-- `APP_ENCRYPTION_KEY` 用于加密存储主邮箱密码。
-- 当 `RESEND_API_KEY` 为空且 `MAIL_DEBUG=true` 时，验证码会以 `debugCode` 形式返回，方便本地联调。
 
 ### 3. 安装依赖
 
@@ -95,64 +93,109 @@ npm run dev
 - 后端 API：`http://localhost:3000/api`
 - Swagger：`http://localhost:3000/docs`
 
-## Docker / VPS 部署
+## VPS 部署
 
-### 1. 新建根目录 `.env`
+## 推荐方式
 
-基于 [/.env.example](/F:/我的项目/EIGP-item/.env.example:1) 新建项目根目录 `.env`：
-
-```env
-JWT_SECRET=replace-with-a-long-random-secret
-APP_ENCRYPTION_KEY=replace-with-a-second-long-random-secret
-DATABASE_URL=postgresql://postgres:postgres@postgres:5432/eigp?schema=public
-FRONTEND_URL=https://your-domain.com
-RESEND_API_KEY=
-RESEND_FROM_EMAIL=EIGP <onboarding@resend.dev>
-MAIL_DEBUG=false
-VERIFICATION_CODE_EXPIRES_MINUTES=10
-```
-
-### 2. 启动或更新容器
+推荐直接使用交互式脚本：
 
 ```bash
-docker compose up -d --build
+cd /path/to/EIGP-item
+chmod +x deploy/manage-vps.sh
+./deploy/manage-vps.sh
 ```
 
-默认行为：
+脚本能力：
 
-- `web` 容器暴露 `80`
-- `api` 容器暴露 `3000`
-- `postgres` 容器暴露 `5432`
-- `web` 内置 Nginx，会把 `/api/*` 反代到 `api:3000`
+- 列出所有已配置实例，并标记 `running / stopped / configured`
+- 新建实例
+- 修改实例配置并重建
+- 使用当前配置重建/重启
+- `git pull` 后重建容器
+- 停止实例
+- 删除实例容器但保留数据库
+- 删除实例容器和数据库卷
 
-### 3. 数据库持久化说明
+## 新建实例时会询问的配置
 
-这个项目的 PostgreSQL 使用的是命名卷 `eigp-postgres-data`，所以：
+脚本会交互式询问这些项目：
 
-- 你执行 `docker compose up -d --build` 更新容器时，数据库会保留
-- 你执行 `docker compose down` 停掉容器时，数据库也会保留
-- 后续再次 `docker compose up -d`，仍会继续使用原来的数据库数据
+- 实例名称
+- 域名或公网 IP
+- 协议 `http / https`
+- VPS 对外访问端口
+- PostgreSQL 数据库名
+- PostgreSQL 用户名
+- PostgreSQL 密码
+- `JWT_SECRET`
+- `APP_ENCRYPTION_KEY`
+- `RESEND_API_KEY`（选填）
+- `RESEND_FROM_EMAIL`
+- `MAIL_DEBUG`
+- 验证码有效期
+
+脚本会自动提醒：
+
+- 强烈建议为 `JWT_SECRET`、`APP_ENCRYPTION_KEY`、`POSTGRES_PASSWORD` 使用强随机值
+- 每次拉取最新代码后，需要执行“更新实例”来同步容器
+- API 容器启动时会自动执行 `prisma migrate deploy`
+
+## 多实例部署原理
+
+脚本使用的是 [deploy/docker-compose.vps.yml](/F:/我的项目/EIGP-item/deploy/docker-compose.vps.yml:1)。
+
+每个实例会有自己独立的：
+
+- Compose project name
+- 容器组
+- PostgreSQL volume
+- 环境变量文件
+
+实例配置会写到：
+
+```text
+deploy/instances/<instance-name>.env
+```
+
+## 数据库持久化说明
+
+数据库卷不会因为容器停止、删除、重建而消失。
+
+也就是说：
+
+- `docker compose up -d --build` 更新代码时，数据库会保留
+- `docker compose down` 删除容器时，数据库也会保留
+- 再次启动实例时，会继续使用原来的数据库数据
 
 只有以下情况数据库才会真正删除：
 
 - 手动执行 `docker compose down -v`
-- 手动删除卷：`docker volume rm eigp-postgres-data`
+- 或者手动删除卷
+- 或者在脚本里明确选择“删除实例容器和数据库卷”
 
-换句话说，除非你主动删卷，否则数据库会一直存在。
+换句话说，除非你主动删除数据库卷，否则数据库会一直存在。
 
-### 4. 域名访问方式
+## 域名访问
 
-如果你是直接把容器宿主机暴露到公网：
+脚本会根据你输入的：
+
+- 域名
+- 协议
+- 对外端口
+
+自动生成 `FRONTEND_URL`。
+
+如果你直接把容器端口暴露到公网：
 
 - 域名 A 记录指向 VPS IP
-- 访问域名时直接命中宿主机 `80` 端口
-- Web 容器内的 Nginx 会负责静态前端和 `/api` 反代
+- 浏览器访问 `域名[:端口]`
+- `web` 容器内的 Nginx 负责前端静态资源、`/api` 和 `/docs`
 
 如果你要上 HTTPS，建议：
 
-- 宿主机外层再放一层 Nginx / Caddy / Traefik
-- 证书终止放在最外层
-- 反向代理到 `web` 容器对应的 `80` 端口
+- 在宿主机最外层再放 Nginx / Caddy / Traefik
+- 证书终止放最外层
+- 再反代到脚本生成的 Web 访问端口
 
 ## 主要接口
 
@@ -163,6 +206,7 @@ docker compose up -d --build
 - `POST /api/auth/login/code`
 - `POST /api/auth/password/send-code`
 - `POST /api/auth/password/reset`
+- `POST /api/auth/password/change/send-code`
 - `POST /api/auth/password/change`
 - `GET /api/auth/profile`
 - `GET /api/dashboard/overview`
@@ -192,6 +236,6 @@ docker compose up -d --build
 
 ## 说明
 
-- 规格里推荐了 Next.js / React Flow；这次实现为了最大化复用 `DVTP-item` 并保证本地可继续快速开发，采用了 Vue + Nest 的同构工程方式。
-- 关系图谱页目前使用轻量 SVG 方案，并已支持悬停高亮、节点详情和全屏查看。
+- 规格里推荐了 Next.js / React Flow；这次实现为了最大化复用现有工程并保持交付速度，采用了 Vue + Nest 的同构工程方式。
+- 图谱页使用轻量 SVG 方案，已支持悬停高亮、节点详情和全屏查看。
 - 当前重点是 V1 核心链路，后续还可以继续补：Excel 导入导出、批量编辑、多用户协作、审计日志、自动化检测等。
