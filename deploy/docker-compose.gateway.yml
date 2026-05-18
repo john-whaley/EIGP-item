@@ -4,8 +4,8 @@ services:
     container_name: eigp-gateway
     restart: unless-stopped
     ports:
-      - "80:80"
-      - "443:443"
+      - "5649:80"
+      - "9823:443"
     volumes:
       - ./gateway/Caddyfile:/etc/caddy/Caddyfile:ro
       - caddy_data:/data

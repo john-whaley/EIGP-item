@@ -9,6 +9,8 @@ GATEWAY_COMPOSE_FILE="${SCRIPT_DIR}/docker-compose.gateway.yml"
 GATEWAY_DIR="${SCRIPT_DIR}/gateway"
 GATEWAY_CADDYFILE="${GATEWAY_DIR}/Caddyfile"
 PUBLIC_NETWORK_NAME="eigp-public"
+HTTP_PROXY_PORT="5649"
+HTTPS_PROXY_PORT="9823"
 
 mkdir -p "${INSTANCES_DIR}" "${GATEWAY_DIR}"
 touch "${INSTANCES_DIR}/.gitkeep" "${GATEWAY_DIR}/.gitkeep"
@@ -136,9 +138,9 @@ build_frontend_url() {
   local enable_https="$2"
 
   if [[ "${enable_https}" == "true" ]]; then
-    printf 'https://%s' "${domain}"
+    printf 'https://%s:%s' "${domain}" "${HTTPS_PROXY_PORT}"
   else
-    printf 'http://%s' "${domain}"
+    printf 'http://%s:%s' "${domain}" "${HTTP_PROXY_PORT}"
   fi
 }
 
@@ -288,10 +290,11 @@ Compose 项目名：${STACK_NAME}
 
 访问前必须确认：
 1. 域名 A 记录已经手动指向 VPS 公网 IP。
-2. VPS 的 80/443 端口已经放行。
+2. VPS 的 ${HTTP_PROXY_PORT}/${HTTPS_PROXY_PORT} 端口已经放行。
 3. 如果启用 HTTPS，域名必须先解析到当前服务器，Caddy 才能自动签发证书。
-4. 数据库不会因为容器停止、重建、docker compose down 而丢失。
-5. 只有手动 down -v 或删除 volume 才会真的删库。
+4. 如果 VPS 的 80/443 已被别的服务占用，自动 HTTPS 证书通常签不下来；这时优先访问 http://域名:${HTTP_PROXY_PORT}。
+5. 数据库不会因为容器停止、重建、docker compose down 而丢失。
+6. 只有手动 down -v 或删除 volume 才会真的删库。
 EOF
 
   chmod +x \
@@ -387,8 +390,9 @@ MAIL_DEBUG：${MAIL_DEBUG}
 部署提醒：
 - 脚本会自动创建实例 .env、实例辅助脚本和 Caddy 域名网关配置。
 - 你必须手动把域名 A 记录指向 VPS 公网 IP。
-- 你必须放行 VPS 的 80/443 端口。
-- 只要域名解析和 80/443 正常，使用域名即可直接访问前端。
+- 你必须放行 VPS 的 ${HTTP_PROXY_PORT}/${HTTPS_PROXY_PORT} 端口。
+- 只要域名解析和 ${HTTP_PROXY_PORT}/${HTTPS_PROXY_PORT} 正常，使用域名加端口即可直接访问前端。
+- 如果 80/443 已被别的服务占用，Caddy 的自动 HTTPS 证书大概率无法签发；这时优先使用 http://域名:${HTTP_PROXY_PORT}，或让上游代理处理 HTTPS。
 - 数据库不会随着容器停止、重建、docker compose down 而消失。
 EOF
 }
