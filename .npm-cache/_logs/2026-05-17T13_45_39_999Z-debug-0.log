@@ -1,0 +1,1173 @@
+0 verbose cli D:\nodejs\node.exe D:\nodejs\node_modules\npm\bin\npm-cli.js
+1 info using npm@10.8.2
+2 info using node@v18.20.5
+3 silly config load:file:D:\nvm\v18.20.5\node_modules\npm\npmrc
+4 silly config load:file:F:\我的项目\EIGP-item\.npmrc
+5 silly config load:file:C:\Users\HP\.npmrc
+6 silly config load:file:D:\nodejs\etc\npmrc
+7 verbose title npm install
+8 verbose argv "install"
+9 verbose logfile logs-max:10 dir:F:\我的项目\EIGP-item\.npm-cache\_logs\2026-05-17T13_45_39_999Z-
+10 verbose logfile F:\我的项目\EIGP-item\.npm-cache\_logs\2026-05-17T13_45_39_999Z-debug-0.log
+11 silly packumentCache heap:4345298944 maxSize:1086324736 maxEntrySize:543162368
+12 silly logfile done cleaning log files
+13 silly idealTree buildDeps
+14 silly placeDep ROOT @eigp/api@0.1.0 OK for: email-identity-graph-platform@0.1.0 want: file:F:\我的项目\EIGP-item\apps\api
+15 silly reify mark retired [ 'F:\\我的项目\\EIGP-item\\node_modules\\fsevents' ]
+16 silly reify mark retired [ 'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\aix-ppc64' ]
+17 silly reify mark retired [ 'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\android-arm' ]
+18 silly reify mark retired [ 'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\android-arm64' ]
+19 silly reify mark retired [ 'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\android-x64' ]
+20 silly reify mark retired [ 'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\darwin-arm64' ]
+21 silly reify mark retired [ 'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\darwin-x64' ]
+22 silly reify mark retired [ 'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\freebsd-arm64' ]
+23 silly reify mark retired [ 'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\freebsd-x64' ]
+24 silly reify mark retired [ 'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\linux-arm' ]
+25 silly reify mark retired [ 'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\linux-arm64' ]
+26 silly reify mark retired [ 'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\linux-ia32' ]
+27 silly reify mark retired [ 'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\linux-loong64' ]
+28 silly reify mark retired [ 'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\linux-mips64el' ]
+29 silly reify mark retired [ 'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\linux-ppc64' ]
+30 silly reify mark retired [ 'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\linux-riscv64' ]
+31 silly reify mark retired [ 'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\linux-s390x' ]
+32 silly reify mark retired [ 'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\linux-x64' ]
+33 silly reify mark retired [ 'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\netbsd-arm64' ]
+34 silly reify mark retired [ 'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\netbsd-x64' ]
+35 silly reify mark retired [ 'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\openbsd-arm64' ]
+36 silly reify mark retired [ 'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\openbsd-x64' ]
+37 silly reify mark retired [ 'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\openharmony-arm64' ]
+38 silly reify mark retired [ 'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\sunos-x64' ]
+39 silly reify mark retired [ 'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\win32-arm64' ]
+40 silly reify mark retired [ 'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\win32-ia32' ]
+41 silly reify mark retired [
+41 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\@rollup\\rollup-android-arm-eabi'
+41 silly reify ]
+42 silly reify mark retired [ 'F:\\我的项目\\EIGP-item\\node_modules\\@rollup\\rollup-android-arm64' ]
+43 silly reify mark retired [ 'F:\\我的项目\\EIGP-item\\node_modules\\@rollup\\rollup-darwin-arm64' ]
+44 silly reify mark retired [ 'F:\\我的项目\\EIGP-item\\node_modules\\@rollup\\rollup-darwin-x64' ]
+45 silly reify mark retired [ 'F:\\我的项目\\EIGP-item\\node_modules\\@rollup\\rollup-freebsd-arm64' ]
+46 silly reify mark retired [ 'F:\\我的项目\\EIGP-item\\node_modules\\@rollup\\rollup-freebsd-x64' ]
+47 silly reify mark retired [
+47 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\@rollup\\rollup-linux-arm-gnueabihf'
+47 silly reify ]
+48 silly reify mark retired [
+48 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\@rollup\\rollup-linux-arm-musleabihf'
+48 silly reify ]
+49 silly reify mark retired [
+49 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\@rollup\\rollup-linux-arm64-gnu'
+49 silly reify ]
+50 silly reify mark retired [
+50 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\@rollup\\rollup-linux-arm64-musl'
+50 silly reify ]
+51 silly reify mark retired [
+51 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\@rollup\\rollup-linux-loong64-gnu'
+51 silly reify ]
+52 silly reify mark retired [
+52 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\@rollup\\rollup-linux-loong64-musl'
+52 silly reify ]
+53 silly reify mark retired [
+53 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\@rollup\\rollup-linux-ppc64-gnu'
+53 silly reify ]
+54 silly reify mark retired [
+54 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\@rollup\\rollup-linux-ppc64-musl'
+54 silly reify ]
+55 silly reify mark retired [
+55 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\@rollup\\rollup-linux-riscv64-gnu'
+55 silly reify ]
+56 silly reify mark retired [
+56 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\@rollup\\rollup-linux-riscv64-musl'
+56 silly reify ]
+57 silly reify mark retired [
+57 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\@rollup\\rollup-linux-s390x-gnu'
+57 silly reify ]
+58 silly reify mark retired [ 'F:\\我的项目\\EIGP-item\\node_modules\\@rollup\\rollup-linux-x64-gnu' ]
+59 silly reify mark retired [ 'F:\\我的项目\\EIGP-item\\node_modules\\@rollup\\rollup-linux-x64-musl' ]
+60 silly reify mark retired [
+60 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\@rollup\\rollup-openharmony-arm64'
+60 silly reify ]
+61 silly reify mark retired [ 'F:\\我的项目\\EIGP-item\\node_modules\\@rollup\\rollup-openbsd-x64' ]
+62 silly reify mark retired [
+62 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\@rollup\\rollup-win32-arm64-msvc'
+62 silly reify ]
+63 silly reify mark retired [
+63 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\@rollup\\rollup-win32-ia32-msvc'
+63 silly reify ]
+64 silly reify mark retired [
+64 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\vite\\node_modules\\@esbuild\\aix-ppc64'
+64 silly reify ]
+65 silly reify mark retired [
+65 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\vite\\node_modules\\@esbuild\\android-arm'
+65 silly reify ]
+66 silly reify mark retired [
+66 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\vite\\node_modules\\@esbuild\\android-x64'
+66 silly reify ]
+67 silly reify mark retired [
+67 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\vite\\node_modules\\@esbuild\\android-arm64'
+67 silly reify ]
+68 silly reify mark retired [
+68 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\vite\\node_modules\\@esbuild\\darwin-arm64'
+68 silly reify ]
+69 silly reify mark retired [
+69 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\vite\\node_modules\\@esbuild\\darwin-x64'
+69 silly reify ]
+70 silly reify mark retired [
+70 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\vite\\node_modules\\@esbuild\\freebsd-arm64'
+70 silly reify ]
+71 silly reify mark retired [
+71 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\vite\\node_modules\\@esbuild\\freebsd-x64'
+71 silly reify ]
+72 silly reify mark retired [
+72 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\vite\\node_modules\\@esbuild\\linux-arm'
+72 silly reify ]
+73 silly reify mark retired [
+73 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\vite\\node_modules\\@esbuild\\linux-arm64'
+73 silly reify ]
+74 silly reify mark retired [
+74 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\vite\\node_modules\\@esbuild\\linux-ia32'
+74 silly reify ]
+75 silly reify mark retired [
+75 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\vite\\node_modules\\@esbuild\\linux-loong64'
+75 silly reify ]
+76 silly reify mark retired [
+76 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\vite\\node_modules\\@esbuild\\linux-mips64el'
+76 silly reify ]
+77 silly reify mark retired [
+77 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\vite\\node_modules\\@esbuild\\linux-ppc64'
+77 silly reify ]
+78 silly reify mark retired [
+78 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\vite\\node_modules\\@esbuild\\linux-x64'
+78 silly reify ]
+79 silly reify mark retired [
+79 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\vite\\node_modules\\@esbuild\\linux-s390x'
+79 silly reify ]
+80 silly reify mark retired [
+80 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\vite\\node_modules\\@esbuild\\linux-riscv64'
+80 silly reify ]
+81 silly reify mark retired [
+81 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\vite\\node_modules\\@esbuild\\netbsd-x64'
+81 silly reify ]
+82 silly reify mark retired [
+82 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\vite\\node_modules\\@esbuild\\openbsd-x64'
+82 silly reify ]
+83 silly reify mark retired [
+83 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\vite\\node_modules\\@esbuild\\sunos-x64'
+83 silly reify ]
+84 silly reify mark retired [
+84 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\vite\\node_modules\\@esbuild\\win32-arm64'
+84 silly reify ]
+85 silly reify mark retired [
+85 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\vite\\node_modules\\@esbuild\\win32-ia32'
+85 silly reify ]
+86 silly reify moves {
+86 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\fsevents': 'F:\\我的项目\\EIGP-item\\node_modules\\.fsevents-i7xH1a8A',
+86 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\aix-ppc64': 'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\.aix-ppc64-taybZqrv',
+86 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\android-arm': 'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\.android-arm-nXJtMLf0',
+86 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\android-arm64': 'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\.android-arm64-Rh7YTutf',
+86 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\android-x64': 'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\.android-x64-480XQ7aJ',
+86 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\darwin-arm64': 'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\.darwin-arm64-ArxzngJN',
+86 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\darwin-x64': 'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\.darwin-x64-d3xONa90',
+86 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\freebsd-arm64': 'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\.freebsd-arm64-5Kir3JzW',
+86 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\freebsd-x64': 'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\.freebsd-x64-9RzyJgSh',
+86 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\linux-arm': 'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\.linux-arm-gN718jXh',
+86 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\linux-arm64': 'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\.linux-arm64-4QfN10Fh',
+86 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\linux-ia32': 'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\.linux-ia32-harkfAH4',
+86 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\linux-loong64': 'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\.linux-loong64-vgo26hkr',
+86 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\linux-mips64el': 'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\.linux-mips64el-PPKuBkhr',
+86 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\linux-ppc64': 'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\.linux-ppc64-qsROgUQF',
+86 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\linux-riscv64': 'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\.linux-riscv64-99SPpFPz',
+86 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\linux-s390x': 'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\.linux-s390x-0T73J8hf',
+86 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\linux-x64': 'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\.linux-x64-NJ54eDKY',
+86 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\netbsd-arm64': 'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\.netbsd-arm64-4BE6BR1d',
+86 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\netbsd-x64': 'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\.netbsd-x64-b1T4379R',
+86 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\openbsd-arm64': 'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\.openbsd-arm64-fcQjWGEG',
+86 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\openbsd-x64': 'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\.openbsd-x64-bgmYeP6p',
+86 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\openharmony-arm64': 'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\.openharmony-arm64-GAspfvy2',
+86 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\sunos-x64': 'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\.sunos-x64-WhMuzzuZ',
+86 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\win32-arm64': 'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\.win32-arm64-3Po8A91B',
+86 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\win32-ia32': 'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\.win32-ia32-TMgksGj5',
+86 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\@rollup\\rollup-android-arm-eabi': 'F:\\我的项目\\EIGP-item\\node_modules\\@rollup\\.rollup-android-arm-eabi-P9vhDZuI',
+86 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\@rollup\\rollup-android-arm64': 'F:\\我的项目\\EIGP-item\\node_modules\\@rollup\\.rollup-android-arm64-nDrUNuTw',
+86 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\@rollup\\rollup-darwin-arm64': 'F:\\我的项目\\EIGP-item\\node_modules\\@rollup\\.rollup-darwin-arm64-DjYduoNF',
+86 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\@rollup\\rollup-darwin-x64': 'F:\\我的项目\\EIGP-item\\node_modules\\@rollup\\.rollup-darwin-x64-lcmImLsA',
+86 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\@rollup\\rollup-freebsd-arm64': 'F:\\我的项目\\EIGP-item\\node_modules\\@rollup\\.rollup-freebsd-arm64-VcRuV1Vi',
+86 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\@rollup\\rollup-freebsd-x64': 'F:\\我的项目\\EIGP-item\\node_modules\\@rollup\\.rollup-freebsd-x64-nXlineFH',
+86 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\@rollup\\rollup-linux-arm-gnueabihf': 'F:\\我的项目\\EIGP-item\\node_modules\\@rollup\\.rollup-linux-arm-gnueabihf-LAn4NX35',
+86 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\@rollup\\rollup-linux-arm-musleabihf': 'F:\\我的项目\\EIGP-item\\node_modules\\@rollup\\.rollup-linux-arm-musleabihf-HG9lEiew',
+86 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\@rollup\\rollup-linux-arm64-gnu': 'F:\\我的项目\\EIGP-item\\node_modules\\@rollup\\.rollup-linux-arm64-gnu-q0VgwMdO',
+86 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\@rollup\\rollup-linux-arm64-musl': 'F:\\我的项目\\EIGP-item\\node_modules\\@rollup\\.rollup-linux-arm64-musl-yj2ahR4p',
+86 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\@rollup\\rollup-linux-loong64-gnu': 'F:\\我的项目\\EIGP-item\\node_modules\\@rollup\\.rollup-linux-loong64-gnu-Dn2BFaV1',
+86 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\@rollup\\rollup-linux-loong64-musl': 'F:\\我的项目\\EIGP-item\\node_modules\\@rollup\\.rollup-linux-loong64-musl-m9m4WL5h',
+86 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\@rollup\\rollup-linux-ppc64-gnu': 'F:\\我的项目\\EIGP-item\\node_modules\\@rollup\\.rollup-linux-ppc64-gnu-OTw0Rwxu',
+86 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\@rollup\\rollup-linux-ppc64-musl': 'F:\\我的项目\\EIGP-item\\node_modules\\@rollup\\.rollup-linux-ppc64-musl-7pw6KkrF',
+86 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\@rollup\\rollup-linux-riscv64-gnu': 'F:\\我的项目\\EIGP-item\\node_modules\\@rollup\\.rollup-linux-riscv64-gnu-94oxoQg5',
+86 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\@rollup\\rollup-linux-riscv64-musl': 'F:\\我的项目\\EIGP-item\\node_modules\\@rollup\\.rollup-linux-riscv64-musl-HXauz6g7',
+86 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\@rollup\\rollup-linux-s390x-gnu': 'F:\\我的项目\\EIGP-item\\node_modules\\@rollup\\.rollup-linux-s390x-gnu-8Unj95xR',
+86 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\@rollup\\rollup-linux-x64-gnu': 'F:\\我的项目\\EIGP-item\\node_modules\\@rollup\\.rollup-linux-x64-gnu-m7xJyqOS',
+86 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\@rollup\\rollup-linux-x64-musl': 'F:\\我的项目\\EIGP-item\\node_modules\\@rollup\\.rollup-linux-x64-musl-NG2mFDG7',
+86 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\@rollup\\rollup-openharmony-arm64': 'F:\\我的项目\\EIGP-item\\node_modules\\@rollup\\.rollup-openharmony-arm64-W1B419J1',
+86 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\@rollup\\rollup-openbsd-x64': 'F:\\我的项目\\EIGP-item\\node_modules\\@rollup\\.rollup-openbsd-x64-3rLqQS3a',
+86 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\@rollup\\rollup-win32-arm64-msvc': 'F:\\我的项目\\EIGP-item\\node_modules\\@rollup\\.rollup-win32-arm64-msvc-rgyMpWFA',
+86 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\@rollup\\rollup-win32-ia32-msvc': 'F:\\我的项目\\EIGP-item\\node_modules\\@rollup\\.rollup-win32-ia32-msvc-LejSnugy',
+86 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\vite\\node_modules\\@esbuild\\aix-ppc64': 'F:\\我的项目\\EIGP-item\\node_modules\\vite\\node_modules\\@esbuild\\.aix-ppc64-ZS3182Ow',
+86 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\vite\\node_modules\\@esbuild\\android-arm': 'F:\\我的项目\\EIGP-item\\node_modules\\vite\\node_modules\\@esbuild\\.android-arm-XnPv2SEn',
+86 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\vite\\node_modules\\@esbuild\\android-x64': 'F:\\我的项目\\EIGP-item\\node_modules\\vite\\node_modules\\@esbuild\\.android-x64-mdKuaRD9',
+86 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\vite\\node_modules\\@esbuild\\android-arm64': 'F:\\我的项目\\EIGP-item\\node_modules\\vite\\node_modules\\@esbuild\\.android-arm64-cWs2K8HV',
+86 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\vite\\node_modules\\@esbuild\\darwin-arm64': 'F:\\我的项目\\EIGP-item\\node_modules\\vite\\node_modules\\@esbuild\\.darwin-arm64-FHUieL5k',
+86 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\vite\\node_modules\\@esbuild\\darwin-x64': 'F:\\我的项目\\EIGP-item\\node_modules\\vite\\node_modules\\@esbuild\\.darwin-x64-y40GKtek',
+86 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\vite\\node_modules\\@esbuild\\freebsd-arm64': 'F:\\我的项目\\EIGP-item\\node_modules\\vite\\node_modules\\@esbuild\\.freebsd-arm64-qZWKSnKm',
+86 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\vite\\node_modules\\@esbuild\\freebsd-x64': 'F:\\我的项目\\EIGP-item\\node_modules\\vite\\node_modules\\@esbuild\\.freebsd-x64-uO7qIIYB',
+86 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\vite\\node_modules\\@esbuild\\linux-arm': 'F:\\我的项目\\EIGP-item\\node_modules\\vite\\node_modules\\@esbuild\\.linux-arm-pFmf9O3l',
+86 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\vite\\node_modules\\@esbuild\\linux-arm64': 'F:\\我的项目\\EIGP-item\\node_modules\\vite\\node_modules\\@esbuild\\.linux-arm64-sYXw7wdt',
+86 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\vite\\node_modules\\@esbuild\\linux-ia32': 'F:\\我的项目\\EIGP-item\\node_modules\\vite\\node_modules\\@esbuild\\.linux-ia32-xX4UEH7t',
+86 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\vite\\node_modules\\@esbuild\\linux-loong64': 'F:\\我的项目\\EIGP-item\\node_modules\\vite\\node_modules\\@esbuild\\.linux-loong64-lQ4i0yYd',
+86 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\vite\\node_modules\\@esbuild\\linux-mips64el': 'F:\\我的项目\\EIGP-item\\node_modules\\vite\\node_modules\\@esbuild\\.linux-mips64el-gtnyHvEq',
+86 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\vite\\node_modules\\@esbuild\\linux-ppc64': 'F:\\我的项目\\EIGP-item\\node_modules\\vite\\node_modules\\@esbuild\\.linux-ppc64-elnPJsgA',
+86 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\vite\\node_modules\\@esbuild\\linux-x64': 'F:\\我的项目\\EIGP-item\\node_modules\\vite\\node_modules\\@esbuild\\.linux-x64-n11EsK3M',
+86 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\vite\\node_modules\\@esbuild\\linux-s390x': 'F:\\我的项目\\EIGP-item\\node_modules\\vite\\node_modules\\@esbuild\\.linux-s390x-oip73hXE',
+86 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\vite\\node_modules\\@esbuild\\linux-riscv64': 'F:\\我的项目\\EIGP-item\\node_modules\\vite\\node_modules\\@esbuild\\.linux-riscv64-bOmmhkzR',
+86 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\vite\\node_modules\\@esbuild\\netbsd-x64': 'F:\\我的项目\\EIGP-item\\node_modules\\vite\\node_modules\\@esbuild\\.netbsd-x64-Xm4l8DzU',
+86 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\vite\\node_modules\\@esbuild\\openbsd-x64': 'F:\\我的项目\\EIGP-item\\node_modules\\vite\\node_modules\\@esbuild\\.openbsd-x64-5tfnwqxb',
+86 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\vite\\node_modules\\@esbuild\\sunos-x64': 'F:\\我的项目\\EIGP-item\\node_modules\\vite\\node_modules\\@esbuild\\.sunos-x64-tjiVrLnD',
+86 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\vite\\node_modules\\@esbuild\\win32-arm64': 'F:\\我的项目\\EIGP-item\\node_modules\\vite\\node_modules\\@esbuild\\.win32-arm64-zXdaVMJA',
+86 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\vite\\node_modules\\@esbuild\\win32-ia32': 'F:\\我的项目\\EIGP-item\\node_modules\\vite\\node_modules\\@esbuild\\.win32-ia32-x3xTrlkQ'
+86 silly reify }
+87 silly audit bulk request {
+87 silly audit   '@dvtp/api': [ '0.1.0' ],
+87 silly audit   resend: [ '4.8.0', '6.4.2' ],
+87 silly audit   '@dvtp/web': [ '0.1.0' ],
+87 silly audit   '@babel/helper-string-parser': [ '7.27.1' ],
+87 silly audit   '@babel/helper-validator-identifier': [ '7.28.5' ],
+87 silly audit   '@babel/parser': [ '7.29.3' ],
+87 silly audit   '@babel/types': [ '7.29.0' ],
+87 silly audit   '@borewit/text-codec': [ '0.2.2' ],
+87 silly audit   '@css-render/plugin-bem': [ '0.15.14' ],
+87 silly audit   '@css-render/vue3-ssr': [ '0.15.14' ],
+87 silly audit   '@emotion/hash': [ '0.8.0' ],
+87 silly audit   '@esbuild/aix-ppc64': [ '0.28.0', '0.21.5' ],
+87 silly audit   '@esbuild/android-arm': [ '0.28.0', '0.21.5' ],
+87 silly audit   '@esbuild/android-arm64': [ '0.28.0', '0.21.5' ],
+87 silly audit   '@esbuild/android-x64': [ '0.28.0', '0.21.5' ],
+87 silly audit   '@esbuild/darwin-arm64': [ '0.28.0', '0.21.5' ],
+87 silly audit   '@esbuild/darwin-x64': [ '0.28.0', '0.21.5' ],
+87 silly audit   '@esbuild/freebsd-arm64': [ '0.28.0', '0.21.5' ],
+87 silly audit   '@esbuild/freebsd-x64': [ '0.28.0', '0.21.5' ],
+87 silly audit   '@esbuild/linux-arm': [ '0.28.0', '0.21.5' ],
+87 silly audit   '@esbuild/linux-arm64': [ '0.28.0', '0.21.5' ],
+87 silly audit   '@esbuild/linux-ia32': [ '0.28.0', '0.21.5' ],
+87 silly audit   '@esbuild/linux-loong64': [ '0.28.0', '0.21.5' ],
+87 silly audit   '@esbuild/linux-mips64el': [ '0.28.0', '0.21.5' ],
+87 silly audit   '@esbuild/linux-ppc64': [ '0.28.0', '0.21.5' ],
+87 silly audit   '@esbuild/linux-riscv64': [ '0.28.0', '0.21.5' ],
+87 silly audit   '@esbuild/linux-s390x': [ '0.28.0', '0.21.5' ],
+87 silly audit   '@esbuild/linux-x64': [ '0.28.0', '0.21.5' ],
+87 silly audit   '@esbuild/netbsd-arm64': [ '0.28.0' ],
+87 silly audit   '@esbuild/netbsd-x64': [ '0.28.0', '0.21.5' ],
+87 silly audit   '@esbuild/openbsd-arm64': [ '0.28.0' ],
+87 silly audit   '@esbuild/openbsd-x64': [ '0.28.0', '0.21.5' ],
+87 silly audit   '@esbuild/openharmony-arm64': [ '0.28.0' ],
+87 silly audit   '@esbuild/sunos-x64': [ '0.28.0', '0.21.5' ],
+87 silly audit   '@esbuild/win32-arm64': [ '0.28.0', '0.21.5' ],
+87 silly audit   '@esbuild/win32-ia32': [ '0.28.0', '0.21.5' ],
+87 silly audit   '@esbuild/win32-x64': [ '0.28.0', '0.21.5' ],
+87 silly audit   '@jridgewell/sourcemap-codec': [ '1.5.5' ],
+87 silly audit   '@juggle/resize-observer': [ '3.4.0' ],
+87 silly audit   '@lukeed/csprng': [ '1.1.0' ],
+87 silly audit   '@mapbox/node-pre-gyp': [ '1.0.11' ],
+87 silly audit   '@microsoft/tsdoc': [ '0.15.1' ],
+87 silly audit   '@nestjs/common': [ '10.4.22' ],
+87 silly audit   '@nestjs/config': [ '3.3.0' ],
+87 silly audit   '@nestjs/core': [ '10.4.22' ],
+87 silly audit   '@nestjs/jwt': [ '10.2.0' ],
+87 silly audit   '@nestjs/mapped-types': [ '2.0.5' ],
+87 silly audit   '@nestjs/passport': [ '10.0.3' ],
+87 silly audit   '@nestjs/platform-express': [ '10.4.22' ],
+87 silly audit   accepts: [ '1.3.8', '2.0.0' ],
+87 silly audit   'content-disposition': [ '0.5.4', '1.1.0' ],
+87 silly audit   'cookie-signature': [ '1.0.7', '1.2.2' ],
+87 silly audit   express: [ '4.22.1', '5.2.1' ],
+87 silly audit   finalhandler: [ '1.3.2', '2.1.1' ],
+87 silly audit   fresh: [ '0.5.2', '2.0.0' ],
+87 silly audit   'merge-descriptors': [ '1.0.3', '2.0.0' ],
+87 silly audit   'mime-db': [ '1.52.0', '1.54.0' ],
+87 silly audit   'mime-types': [ '2.1.35', '3.0.2' ],
+87 silly audit   ms: [ '2.1.3', '2.0.0' ],
+87 silly audit   negotiator: [ '0.6.3', '1.0.0' ],
+87 silly audit   'path-to-regexp': [ '0.1.13', '3.3.0', '8.4.2' ],
+87 silly audit   send: [ '0.19.2', '1.2.1' ],
+87 silly audit   'serve-static': [ '1.16.3', '2.2.1' ],
+87 silly audit   '@nestjs/swagger': [ '7.4.2' ],
+87 silly audit   '@nuxtjs/opencollective': [ '0.3.2' ],
+87 silly audit   '@prisma/client': [ '5.22.0' ],
+87 silly audit   '@prisma/debug': [ '5.22.0' ],
+87 silly audit   '@prisma/engines': [ '5.22.0' ],
+87 silly audit   '@prisma/engines-version': [ '5.22.0-44.605197351a3c8bdd595af2d2a9bc3025bca48ea2' ],
+87 silly audit   '@prisma/fetch-engine': [ '5.22.0' ],
+87 silly audit   '@prisma/get-platform': [ '5.22.0' ],
+87 silly audit   '@react-email/render': [ '1.1.2' ],
+87 silly audit   '@rollup/rollup-android-arm-eabi': [ '4.60.4' ],
+87 silly audit   '@rollup/rollup-android-arm64': [ '4.60.4' ],
+87 silly audit   '@rollup/rollup-darwin-arm64': [ '4.60.4' ],
+87 silly audit   '@rollup/rollup-darwin-x64': [ '4.60.4' ],
+87 silly audit   '@rollup/rollup-freebsd-arm64': [ '4.60.4' ],
+87 silly audit   '@rollup/rollup-freebsd-x64': [ '4.60.4' ],
+87 silly audit   '@rollup/rollup-linux-arm-gnueabihf': [ '4.60.4' ],
+87 silly audit   '@rollup/rollup-linux-arm-musleabihf': [ '4.60.4' ],
+87 silly audit   '@rollup/rollup-linux-arm64-gnu': [ '4.60.4' ],
+87 silly audit   '@rollup/rollup-linux-arm64-musl': [ '4.60.4' ],
+87 silly audit   '@rollup/rollup-linux-loong64-gnu': [ '4.60.4' ],
+87 silly audit   '@rollup/rollup-linux-loong64-musl': [ '4.60.4' ],
+87 silly audit   '@rollup/rollup-linux-ppc64-gnu': [ '4.60.4' ],
+87 silly audit   '@rollup/rollup-linux-ppc64-musl': [ '4.60.4' ],
+87 silly audit   '@rollup/rollup-linux-riscv64-gnu': [ '4.60.4' ],
+87 silly audit   '@rollup/rollup-linux-riscv64-musl': [ '4.60.4' ],
+87 silly audit   '@rollup/rollup-linux-s390x-gnu': [ '4.60.4' ],
+87 silly audit   '@rollup/rollup-linux-x64-gnu': [ '4.60.4' ],
+87 silly audit   '@rollup/rollup-linux-x64-musl': [ '4.60.4' ],
+87 silly audit   '@rollup/rollup-openbsd-x64': [ '4.60.4' ],
+87 silly audit   '@rollup/rollup-openharmony-arm64': [ '4.60.4' ],
+87 silly audit   '@rollup/rollup-win32-arm64-msvc': [ '4.60.4' ],
+87 silly audit   '@rollup/rollup-win32-ia32-msvc': [ '4.60.4' ],
+87 silly audit   '@rollup/rollup-win32-x64-gnu': [ '4.60.4' ],
+87 silly audit   '@rollup/rollup-win32-x64-msvc': [ '4.60.4' ],
+87 silly audit   '@selderee/plugin-htmlparser2': [ '0.11.0' ],
+87 silly audit   '@stablelib/base64': [ '1.0.1' ],
+87 silly audit   '@tokenizer/inflate': [ '0.2.7' ],
+87 silly audit   debug: [ '4.4.3', '2.6.9' ],
+87 silly audit   '@tokenizer/token': [ '0.3.0' ],
+87 silly audit   '@types/bcrypt': [ '5.0.2' ],
+87 silly audit   '@types/body-parser': [ '1.19.6' ],
+87 silly audit   '@types/connect': [ '3.4.38' ],
+87 silly audit   '@types/estree': [ '1.0.8' ],
+87 silly audit   '@types/express': [ '4.17.25' ],
+87 silly audit   '@types/express-serve-static-core': [ '4.19.8' ],
+87 silly audit   '@types/http-errors': [ '2.0.5' ],
+87 silly audit   '@types/jsonwebtoken': [ '9.0.5' ],
+87 silly audit   '@types/katex': [ '0.16.8' ],
+87 silly audit   '@types/lodash': [ '4.17.24' ],
+87 silly audit   '@types/lodash-es': [ '4.17.12' ],
+87 silly audit   '@types/mime': [ '1.3.5' ],
+87 silly audit   '@types/node': [ '22.19.19' ],
+87 silly audit   '@types/passport': [ '1.0.17' ],
+87 silly audit   '@types/passport-jwt': [ '4.0.1' ],
+87 silly audit   '@types/passport-strategy': [ '0.2.38' ],
+87 silly audit   '@types/qs': [ '6.15.1' ],
+87 silly audit   '@types/range-parser': [ '1.2.7' ],
+87 silly audit   '@types/send': [ '1.2.1', '0.17.6' ],
+87 silly audit   '@types/serve-static': [ '1.15.10' ],
+87 silly audit   '@types/validator': [ '13.15.10' ],
+87 silly audit   '@vitejs/plugin-vue': [ '5.2.4' ],
+87 silly audit   '@volar/language-core': [ '2.4.15' ],
+87 silly audit   '@volar/source-map': [ '2.4.15' ],
+87 silly audit   '@volar/typescript': [ '2.4.15' ],
+87 silly audit   '@vue/compiler-core': [ '3.5.34' ],
+87 silly audit   '@vue/compiler-dom': [ '3.5.34' ],
+87 silly audit   '@vue/compiler-sfc': [ '3.5.34' ],
+87 silly audit   '@vue/compiler-ssr': [ '3.5.34' ],
+87 silly audit   '@vue/compiler-vue2': [ '2.7.16' ],
+87 silly audit   '@vue/devtools-api': [ '6.6.4' ],
+87 silly audit   '@vue/language-core': [ '2.2.12' ],
+87 silly audit   'brace-expansion': [ '2.1.0', '1.1.14' ],
+87 silly audit   minimatch: [ '9.0.9', '3.1.5' ],
+87 silly audit   '@vue/reactivity': [ '3.5.34' ],
+87 silly audit   '@vue/runtime-core': [ '3.5.34' ],
+87 silly audit   '@vue/runtime-dom': [ '3.5.34' ],
+87 silly audit   '@vue/server-renderer': [ '3.5.34' ],
+87 silly audit   '@vue/shared': [ '3.5.34' ],
+87 silly audit   abbrev: [ '1.1.1' ],
+87 silly audit   'agent-base': [ '6.0.2' ],
+87 silly audit   'alien-signals': [ '1.0.13' ],
+87 silly audit   'ansi-regex': [ '5.0.1' ],
+87 silly audit   'ansi-styles': [ '4.3.0' ],
+87 silly audit   'append-field': [ '1.0.0' ],
+87 silly audit   aproba: [ '2.1.0' ],
+87 silly audit   'are-we-there-yet': [ '2.0.0' ],
+87 silly audit   argparse: [ '2.0.1' ],
+87 silly audit   'array-flatten': [ '1.1.1' ],
+87 silly audit   'async-validator': [ '4.2.5' ],
+87 silly audit   asynckit: [ '0.4.0' ],
+87 silly audit   axios: [ '1.16.1' ],
+87 silly audit   'balanced-match': [ '1.0.2' ],
+87 silly audit   bcrypt: [ '5.1.1' ],
+87 silly audit   'body-parser': [ '1.20.4', '2.2.2' ],
+87 silly audit   'buffer-equal-constant-time': [ '1.0.1' ],
+87 silly audit   'buffer-from': [ '1.1.2' ],
+87 silly audit   busboy: [ '1.6.0' ],
+87 silly audit   bytes: [ '3.1.2' ],
+87 silly audit   'call-bind-apply-helpers': [ '1.0.2' ],
+87 silly audit   'call-bound': [ '1.0.4' ],
+87 silly audit   chalk: [ '4.1.2' ],
+87 silly audit   'supports-color': [ '7.2.0', '8.1.1' ],
+87 silly audit   chownr: [ '2.0.0' ],
+87 silly audit   'class-transformer': [ '0.5.1' ],
+87 silly audit   'class-validator': [ '0.14.4' ],
+87 silly audit   cliui: [ '8.0.1' ],
+87 silly audit   'color-convert': [ '2.0.1' ],
+87 silly audit   'color-name': [ '1.1.4' ],
+87 silly audit   'color-support': [ '1.1.3' ],
+87 silly audit   'combined-stream': [ '1.0.8' ],
+87 silly audit   'concat-map': [ '0.0.1' ],
+87 silly audit   'concat-stream': [ '2.0.0' ],
+87 silly audit   concurrently: [ '9.2.1' ],
+87 silly audit   consola: [ '2.15.3' ],
+87 silly audit   'console-control-strings': [ '1.1.0' ],
+87 silly audit   'content-type': [ '1.0.5', '2.0.0' ],
+87 silly audit   cookie: [ '0.7.2' ],
+87 silly audit   cors: [ '2.8.5' ],
+87 silly audit   'cross-spawn': [ '7.0.6' ],
+87 silly audit   'css-render': [ '0.15.14' ],
+87 silly audit   csstype: [ '3.0.11', '3.2.3' ],
+87 silly audit   'date-fns': [ '4.1.0' ],
+87 silly audit   'date-fns-tz': [ '3.2.0' ],
+87 silly audit   dayjs: [ '1.11.20' ],
+87 silly audit   'de-indent': [ '1.0.2' ],
+87 silly audit   deepmerge: [ '4.3.1' ],
+87 silly audit   'delayed-stream': [ '1.0.0' ],
+87 silly audit   delegates: [ '1.0.0' ],
+87 silly audit   depd: [ '2.0.0' ],
+87 silly audit   destroy: [ '1.2.0' ],
+87 silly audit   'detect-libc': [ '2.1.2' ],
+87 silly audit   'dom-serializer': [ '2.0.0' ],
+87 silly audit   entities: [ '4.5.0', '7.0.1' ],
+87 silly audit   domelementtype: [ '2.3.0' ],
+87 silly audit   domhandler: [ '5.0.3' ],
+87 silly audit   domutils: [ '3.2.2' ],
+87 silly audit   dotenv: [ '16.4.5' ],
+87 silly audit   'dotenv-expand': [ '10.0.0' ],
+87 silly audit   'dunder-proto': [ '1.0.1' ],
+87 silly audit   duplexer: [ '0.1.2' ],
+87 silly audit   'ecdsa-sig-formatter': [ '1.0.11' ],
+87 silly audit   echarts: [ '5.6.0' ],
+87 silly audit   tslib: [ '2.3.0', '2.8.1' ],
+87 silly audit   'ee-first': [ '1.1.1' ],
+87 silly audit   'emoji-regex': [ '8.0.0' ],
+87 silly audit   encodeurl: [ '2.0.0' ],
+87 silly audit   'es-define-property': [ '1.0.1' ],
+87 silly audit   'es-errors': [ '1.3.0' ],
+87 silly audit   'es-object-atoms': [ '1.1.1' ],
+87 silly audit   'es-set-tostringtag': [ '2.1.0' ],
+87 silly audit   'es6-promise': [ '4.2.8' ],
+87 silly audit   esbuild: [ '0.28.0', '0.21.5' ],
+87 silly audit   escalade: [ '3.2.0' ],
+87 silly audit   'escape-html': [ '1.0.3' ],
+87 silly audit   'estree-walker': [ '2.0.2' ],
+87 silly audit   etag: [ '1.8.1' ],
+87 silly audit   'event-stream': [ '3.3.4' ],
+87 silly audit   evtd: [ '0.2.4' ],
+87 silly audit   'iconv-lite': [ '0.7.2', '0.4.24' ],
+87 silly audit   'media-typer': [ '1.1.0', '0.3.0' ],
+87 silly audit   'raw-body': [ '3.0.2', '2.5.3' ],
+87 silly audit   'type-is': [ '2.1.0', '1.6.18' ],
+87 silly audit   'fast-deep-equal': [ '2.0.1' ],
+87 silly audit   'fast-safe-stringify': [ '2.1.1' ],
+87 silly audit   'fast-sha256': [ '1.3.0' ],
+87 silly audit   fflate: [ '0.8.3' ],
+87 silly audit   'file-type': [ '20.4.1' ],
+87 silly audit   'follow-redirects': [ '1.16.0' ],
+87 silly audit   'form-data': [ '4.0.5' ],
+87 silly audit   forwarded: [ '0.2.0' ],
+87 silly audit   from: [ '0.1.7' ],
+87 silly audit   'fs-minipass': [ '2.1.0' ],
+87 silly audit   minipass: [ '3.3.6', '5.0.0' ],
+87 silly audit   'fs.realpath': [ '1.0.0' ],
+87 silly audit   fsevents: [ '2.3.3' ],
+87 silly audit   'function-bind': [ '1.1.2' ],
+87 silly audit   gauge: [ '3.0.2' ],
+87 silly audit   'get-caller-file': [ '2.0.5' ],
+87 silly audit   'get-intrinsic': [ '1.3.0' ],
+87 silly audit   'get-proto': [ '1.0.1' ],
+87 silly audit   glob: [ '7.2.3' ],
+87 silly audit   gopd: [ '1.2.0' ],
+87 silly audit   'has-flag': [ '4.0.0' ],
+87 silly audit   'has-symbols': [ '1.1.0' ],
+87 silly audit   'has-tostringtag': [ '1.0.2' ],
+87 silly audit   'has-unicode': [ '2.0.1' ],
+87 silly audit   hasown: [ '2.0.3' ],
+87 silly audit   he: [ '1.2.0' ],
+87 silly audit   helmet: [ '8.1.0' ],
+87 silly audit   'highlight.js': [ '11.11.1' ],
+87 silly audit   'html-to-text': [ '9.0.5' ],
+87 silly audit   htmlparser2: [ '8.0.2' ],
+87 silly audit   'http-errors': [ '2.0.1' ],
+87 silly audit   'https-proxy-agent': [ '5.0.1' ],
+87 silly audit   ieee754: [ '1.2.1' ],
+87 silly audit   inflight: [ '1.0.6' ],
+87 silly audit   inherits: [ '2.0.4' ],
+87 silly audit   'ipaddr.js': [ '1.9.1' ],
+87 silly audit   'is-fullwidth-code-point': [ '3.0.0' ],
+87 silly audit   'is-promise': [ '4.0.0' ],
+87 silly audit   isexe: [ '2.0.0' ],
+87 silly audit   iterare: [ '1.2.1' ],
+87 silly audit   'js-yaml': [ '4.1.0' ],
+87 silly audit   jsonwebtoken: [ '9.0.2' ],
+87 silly audit   jwa: [ '1.4.2' ],
+87 silly audit   jws: [ '3.2.3' ],
+87 silly audit   leac: [ '0.6.0' ],
+87 silly audit   'libphonenumber-js': [ '1.13.2' ],
+87 silly audit   lodash: [ '4.17.21' ],
+87 silly audit   'lodash-es': [ '4.18.1' ],
+87 silly audit   'lodash.includes': [ '4.3.0' ],
+87 silly audit   'lodash.isboolean': [ '3.0.3' ],
+87 silly audit   'lodash.isinteger': [ '4.0.4' ],
+87 silly audit   'lodash.isnumber': [ '3.0.3' ],
+87 silly audit   'lodash.isplainobject': [ '4.0.6' ],
+87 silly audit   'lodash.isstring': [ '4.0.1' ],
+87 silly audit   'lodash.once': [ '4.1.1' ],
+87 silly audit   'magic-string': [ '0.30.21' ],
+87 silly audit   'make-dir': [ '3.1.0' ],
+87 silly audit   semver: [ '6.3.1', '7.8.0' ],
+87 silly audit   'map-stream': [ '0.1.0' ],
+87 silly audit   'math-intrinsics': [ '1.1.0' ],
+87 silly audit   methods: [ '1.1.2' ],
+87 silly audit   mime: [ '1.6.0' ],
+87 silly audit   minimist: [ '1.2.8' ],
+87 silly audit   minizlib: [ '2.1.2' ],
+87 silly audit   mkdirp: [ '0.5.6', '1.0.4' ],
+87 silly audit   'muggle-string': [ '0.4.1' ],
+87 silly audit   multer: [ '2.0.2' ],
+87 silly audit   'naive-ui': [ '2.43.2' ],
+87 silly audit   nanoid: [ '3.3.12' ],
+87 silly audit   'node-addon-api': [ '5.1.0' ],
+87 silly audit   'node-cleanup': [ '2.1.2' ],
+87 silly audit   'node-fetch': [ '2.7.0' ],
+87 silly audit   nopt: [ '5.0.0' ],
+87 silly audit   npmlog: [ '5.0.1' ],
+87 silly audit   'object-assign': [ '4.1.1' ],
+87 silly audit   'object-inspect': [ '1.13.4' ],
+87 silly audit   'on-finished': [ '2.4.1' ],
+87 silly audit   once: [ '1.4.0' ],
+87 silly audit   parseley: [ '0.12.1' ],
+87 silly audit   parseurl: [ '1.3.3' ],
+87 silly audit   passport: [ '0.7.0' ],
+87 silly audit   'passport-jwt': [ '4.0.1' ],
+87 silly audit   'passport-strategy': [ '1.0.0' ],
+87 silly audit   'path-browserify': [ '1.0.1' ],
+87 silly audit   'path-is-absolute': [ '1.0.1' ],
+87 silly audit   'path-key': [ '3.1.1' ],
+87 silly audit   pause: [ '0.0.1' ],
+87 silly audit   'pause-stream': [ '0.0.11' ],
+87 silly audit   peberminta: [ '0.9.0' ],
+87 silly audit   picocolors: [ '1.1.1' ],
+87 silly audit   pinia: [ '2.3.1' ],
+87 silly audit   postcss: [ '8.5.14' ],
+87 silly audit   prettier: [ '3.8.3' ],
+87 silly audit   prisma: [ '5.22.0' ],
+87 silly audit   'proxy-addr': [ '2.0.7' ],
+87 silly audit   'proxy-from-env': [ '2.1.0' ],
+87 silly audit   'ps-tree': [ '1.2.0' ],
+87 silly audit   qs: [ '6.14.2' ],
+87 silly audit   querystringify: [ '2.2.0' ],
+87 silly audit   'range-parser': [ '1.2.1' ],
+87 silly audit   react: [ '19.2.6' ],
+87 silly audit   'react-dom': [ '19.2.6' ],
+87 silly audit   'react-promise-suspense': [ '0.3.4' ],
+87 silly audit   'readable-stream': [ '3.6.2' ],
+87 silly audit   'reflect-metadata': [ '0.2.2' ],
+87 silly audit   'require-directory': [ '2.1.1' ],
+87 silly audit   'requires-port': [ '1.0.0' ],
+87 silly audit   rimraf: [ '3.0.2' ],
+87 silly audit   rollup: [ '4.60.4' ],
+87 silly audit   router: [ '2.2.0' ],
+87 silly audit   rxjs: [ '7.8.2' ],
+87 silly audit   'safe-buffer': [ '5.2.1' ],
+87 silly audit   'safer-buffer': [ '2.1.2' ],
+87 silly audit   scheduler: [ '0.27.0' ],
+87 silly audit   seemly: [ '0.3.10' ],
+87 silly audit   selderee: [ '0.11.0' ],
+87 silly audit   'set-blocking': [ '2.0.0' ],
+87 silly audit   setprototypeof: [ '1.2.0' ],
+87 silly audit   'shebang-command': [ '2.0.0' ],
+87 silly audit   'shebang-regex': [ '3.0.0' ],
+87 silly audit   'shell-quote': [ '1.8.3' ],
+87 silly audit   'side-channel': [ '1.1.0' ],
+87 silly audit   'side-channel-list': [ '1.0.1' ],
+87 silly audit   'side-channel-map': [ '1.0.1' ],
+87 silly audit   'side-channel-weakmap': [ '1.0.2' ],
+87 silly audit   'signal-exit': [ '3.0.7' ],
+87 silly audit   'source-map-js': [ '1.2.1' ],
+87 silly audit   split: [ '0.3.3' ],
+87 silly audit   statuses: [ '2.0.2' ],
+87 silly audit   'stream-combiner': [ '0.0.4' ],
+87 silly audit   streamsearch: [ '1.1.0' ],
+87 silly audit   string_decoder: [ '1.3.0' ],
+87 silly audit   'string-argv': [ '0.3.2' ],
+87 silly audit   'string-width': [ '4.2.3' ],
+87 silly audit   'strip-ansi': [ '6.0.1' ],
+87 silly audit   strtok3: [ '10.3.5' ],
+87 silly audit   svix: [ '1.76.1' ],
+87 silly audit   'swagger-ui-dist': [ '5.17.14' ],
+87 silly audit   'swagger-ui-express': [ '5.0.1' ],
+87 silly audit   tar: [ '6.2.1' ],
+87 silly audit   through: [ '2.3.8' ],
+87 silly audit   toidentifier: [ '1.0.1' ],
+87 silly audit   'token-types': [ '6.1.2' ],
+87 silly audit   tr46: [ '0.0.3' ],
+87 silly audit   'tree-kill': [ '1.2.2' ],
+87 silly audit   treemate: [ '0.3.11' ],
+87 silly audit   'tsc-watch': [ '7.2.0' ],
+87 silly audit   tsx: [ '4.22.1' ],
+87 silly audit   typedarray: [ '0.0.6' ],
+87 silly audit   typescript: [ '5.9.3' ],
+87 silly audit   uid: [ '2.0.2' ],
+87 silly audit   'uint8array-extras': [ '1.5.0' ],
+87 silly audit   'undici-types': [ '6.21.0' ],
+87 silly audit   unpipe: [ '1.0.0' ],
+87 silly audit   'url-parse': [ '1.5.10' ],
+87 silly audit   'util-deprecate': [ '1.0.2' ],
+87 silly audit   'utils-merge': [ '1.0.1' ],
+87 silly audit   uuid: [ '10.0.0' ],
+87 silly audit   validator: [ '13.15.35' ],
+87 silly audit   vary: [ '1.1.2' ],
+87 silly audit   vdirs: [ '0.1.8' ],
+87 silly audit   vite: [ '5.4.21' ],
+87 silly audit   vooks: [ '0.2.12' ],
+87 silly audit   'vscode-uri': [ '3.1.0' ],
+87 silly audit   vue: [ '3.5.34' ],
+87 silly audit   'vue-demi': [ '0.14.10' ],
+87 silly audit   'vue-router': [ '4.6.4' ],
+87 silly audit   'vue-tsc': [ '2.2.12' ],
+87 silly audit   vueuc: [ '0.4.65' ],
+87 silly audit   'webidl-conversions': [ '3.0.1' ],
+87 silly audit   'whatwg-url': [ '5.0.0' ],
+87 silly audit   which: [ '2.0.2' ],
+87 silly audit   'wide-align': [ '1.1.5' ],
+87 silly audit   'wrap-ansi': [ '7.0.0' ],
+87 silly audit   wrappy: [ '1.0.2' ],
+87 silly audit   xtend: [ '4.0.2' ],
+87 silly audit   y18n: [ '5.0.8' ],
+87 silly audit   yallist: [ '4.0.0' ],
+87 silly audit   yargs: [ '17.7.2' ],
+87 silly audit   'yargs-parser': [ '21.1.1' ],
+87 silly audit   zrender: [ '5.6.1' ],
+87 silly audit   '@eigp/api': [ '0.1.0' ]
+87 silly audit }
+88 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\vite\node_modules\@esbuild\win32-ia32
+89 silly reify mark deleted [
+89 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\vite\\node_modules\\@esbuild\\win32-ia32'
+89 silly reify ]
+90 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\vite\node_modules\@esbuild\win32-arm64
+91 silly reify mark deleted [
+91 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\vite\\node_modules\\@esbuild\\win32-arm64'
+91 silly reify ]
+92 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\vite\node_modules\@esbuild\sunos-x64
+93 silly reify mark deleted [
+93 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\vite\\node_modules\\@esbuild\\sunos-x64'
+93 silly reify ]
+94 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\vite\node_modules\@esbuild\openbsd-x64
+95 silly reify mark deleted [
+95 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\vite\\node_modules\\@esbuild\\openbsd-x64'
+95 silly reify ]
+96 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\vite\node_modules\@esbuild\netbsd-x64
+97 silly reify mark deleted [
+97 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\vite\\node_modules\\@esbuild\\netbsd-x64'
+97 silly reify ]
+98 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\vite\node_modules\@esbuild\linux-riscv64
+99 silly reify mark deleted [
+99 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\vite\\node_modules\\@esbuild\\linux-riscv64'
+99 silly reify ]
+100 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\vite\node_modules\@esbuild\linux-s390x
+101 silly reify mark deleted [
+101 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\vite\\node_modules\\@esbuild\\linux-s390x'
+101 silly reify ]
+102 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\vite\node_modules\@esbuild\linux-x64
+103 silly reify mark deleted [
+103 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\vite\\node_modules\\@esbuild\\linux-x64'
+103 silly reify ]
+104 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\vite\node_modules\@esbuild\linux-ppc64
+105 silly reify mark deleted [
+105 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\vite\\node_modules\\@esbuild\\linux-ppc64'
+105 silly reify ]
+106 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\vite\node_modules\@esbuild\linux-mips64el
+107 silly reify mark deleted [
+107 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\vite\\node_modules\\@esbuild\\linux-mips64el'
+107 silly reify ]
+108 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\vite\node_modules\@esbuild\linux-loong64
+109 silly reify mark deleted [
+109 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\vite\\node_modules\\@esbuild\\linux-loong64'
+109 silly reify ]
+110 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\vite\node_modules\@esbuild\linux-ia32
+111 silly reify mark deleted [
+111 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\vite\\node_modules\\@esbuild\\linux-ia32'
+111 silly reify ]
+112 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\vite\node_modules\@esbuild\linux-arm64
+113 silly reify mark deleted [
+113 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\vite\\node_modules\\@esbuild\\linux-arm64'
+113 silly reify ]
+114 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\vite\node_modules\@esbuild\linux-arm
+115 silly reify mark deleted [
+115 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\vite\\node_modules\\@esbuild\\linux-arm'
+115 silly reify ]
+116 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\vite\node_modules\@esbuild\freebsd-x64
+117 silly reify mark deleted [
+117 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\vite\\node_modules\\@esbuild\\freebsd-x64'
+117 silly reify ]
+118 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\vite\node_modules\@esbuild\freebsd-arm64
+119 silly reify mark deleted [
+119 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\vite\\node_modules\\@esbuild\\freebsd-arm64'
+119 silly reify ]
+120 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\vite\node_modules\@esbuild\darwin-x64
+121 silly reify mark deleted [
+121 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\vite\\node_modules\\@esbuild\\darwin-x64'
+121 silly reify ]
+122 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\vite\node_modules\@esbuild\darwin-arm64
+123 silly reify mark deleted [
+123 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\vite\\node_modules\\@esbuild\\darwin-arm64'
+123 silly reify ]
+124 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\vite\node_modules\@esbuild\android-arm64
+125 silly reify mark deleted [
+125 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\vite\\node_modules\\@esbuild\\android-arm64'
+125 silly reify ]
+126 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\vite\node_modules\@esbuild\android-x64
+127 silly reify mark deleted [
+127 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\vite\\node_modules\\@esbuild\\android-x64'
+127 silly reify ]
+128 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\vite\node_modules\@esbuild\android-arm
+129 silly reify mark deleted [
+129 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\vite\\node_modules\\@esbuild\\android-arm'
+129 silly reify ]
+130 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\vite\node_modules\@esbuild\aix-ppc64
+131 silly reify mark deleted [
+131 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\vite\\node_modules\\@esbuild\\aix-ppc64'
+131 silly reify ]
+132 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\@rollup\rollup-win32-ia32-msvc
+133 silly reify mark deleted [
+133 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\@rollup\\rollup-win32-ia32-msvc'
+133 silly reify ]
+134 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\@rollup\rollup-win32-arm64-msvc
+135 silly reify mark deleted [
+135 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\@rollup\\rollup-win32-arm64-msvc'
+135 silly reify ]
+136 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\@rollup\rollup-openbsd-x64
+137 silly reify mark deleted [ 'F:\\我的项目\\EIGP-item\\node_modules\\@rollup\\rollup-openbsd-x64' ]
+138 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\@rollup\rollup-openharmony-arm64
+139 silly reify mark deleted [
+139 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\@rollup\\rollup-openharmony-arm64'
+139 silly reify ]
+140 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\@rollup\rollup-linux-x64-musl
+141 silly reify mark deleted [ 'F:\\我的项目\\EIGP-item\\node_modules\\@rollup\\rollup-linux-x64-musl' ]
+142 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\@rollup\rollup-linux-x64-gnu
+143 silly reify mark deleted [ 'F:\\我的项目\\EIGP-item\\node_modules\\@rollup\\rollup-linux-x64-gnu' ]
+144 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\@rollup\rollup-linux-s390x-gnu
+145 silly reify mark deleted [
+145 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\@rollup\\rollup-linux-s390x-gnu'
+145 silly reify ]
+146 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\@rollup\rollup-linux-riscv64-musl
+147 silly reify mark deleted [
+147 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\@rollup\\rollup-linux-riscv64-musl'
+147 silly reify ]
+148 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\@rollup\rollup-linux-riscv64-gnu
+149 silly reify mark deleted [
+149 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\@rollup\\rollup-linux-riscv64-gnu'
+149 silly reify ]
+150 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\@rollup\rollup-linux-ppc64-musl
+151 silly reify mark deleted [
+151 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\@rollup\\rollup-linux-ppc64-musl'
+151 silly reify ]
+152 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\@rollup\rollup-linux-ppc64-gnu
+153 silly reify mark deleted [
+153 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\@rollup\\rollup-linux-ppc64-gnu'
+153 silly reify ]
+154 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\@rollup\rollup-linux-loong64-musl
+155 silly reify mark deleted [
+155 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\@rollup\\rollup-linux-loong64-musl'
+155 silly reify ]
+156 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\@rollup\rollup-linux-loong64-gnu
+157 silly reify mark deleted [
+157 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\@rollup\\rollup-linux-loong64-gnu'
+157 silly reify ]
+158 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\@rollup\rollup-linux-arm64-musl
+159 silly reify mark deleted [
+159 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\@rollup\\rollup-linux-arm64-musl'
+159 silly reify ]
+160 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\@rollup\rollup-linux-arm64-gnu
+161 silly reify mark deleted [
+161 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\@rollup\\rollup-linux-arm64-gnu'
+161 silly reify ]
+162 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\@rollup\rollup-linux-arm-musleabihf
+163 silly reify mark deleted [
+163 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\@rollup\\rollup-linux-arm-musleabihf'
+163 silly reify ]
+164 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\@rollup\rollup-linux-arm-gnueabihf
+165 silly reify mark deleted [
+165 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\@rollup\\rollup-linux-arm-gnueabihf'
+165 silly reify ]
+166 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\@rollup\rollup-freebsd-x64
+167 silly reify mark deleted [ 'F:\\我的项目\\EIGP-item\\node_modules\\@rollup\\rollup-freebsd-x64' ]
+168 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\@rollup\rollup-freebsd-arm64
+169 silly reify mark deleted [ 'F:\\我的项目\\EIGP-item\\node_modules\\@rollup\\rollup-freebsd-arm64' ]
+170 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\@rollup\rollup-darwin-x64
+171 silly reify mark deleted [ 'F:\\我的项目\\EIGP-item\\node_modules\\@rollup\\rollup-darwin-x64' ]
+172 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\@rollup\rollup-darwin-arm64
+173 silly reify mark deleted [ 'F:\\我的项目\\EIGP-item\\node_modules\\@rollup\\rollup-darwin-arm64' ]
+174 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\@rollup\rollup-android-arm64
+175 silly reify mark deleted [ 'F:\\我的项目\\EIGP-item\\node_modules\\@rollup\\rollup-android-arm64' ]
+176 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\@rollup\rollup-android-arm-eabi
+177 silly reify mark deleted [
+177 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\@rollup\\rollup-android-arm-eabi'
+177 silly reify ]
+178 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\@esbuild\win32-ia32
+179 silly reify mark deleted [ 'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\win32-ia32' ]
+180 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\@esbuild\win32-arm64
+181 silly reify mark deleted [ 'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\win32-arm64' ]
+182 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\@esbuild\sunos-x64
+183 silly reify mark deleted [ 'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\sunos-x64' ]
+184 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\@esbuild\openharmony-arm64
+185 silly reify mark deleted [ 'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\openharmony-arm64' ]
+186 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\@esbuild\openbsd-x64
+187 silly reify mark deleted [ 'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\openbsd-x64' ]
+188 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\@esbuild\openbsd-arm64
+189 silly reify mark deleted [ 'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\openbsd-arm64' ]
+190 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\@esbuild\netbsd-x64
+191 silly reify mark deleted [ 'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\netbsd-x64' ]
+192 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\@esbuild\netbsd-arm64
+193 silly reify mark deleted [ 'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\netbsd-arm64' ]
+194 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\@esbuild\linux-x64
+195 silly reify mark deleted [ 'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\linux-x64' ]
+196 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\@esbuild\linux-s390x
+197 silly reify mark deleted [ 'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\linux-s390x' ]
+198 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\@esbuild\linux-riscv64
+199 silly reify mark deleted [ 'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\linux-riscv64' ]
+200 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\@esbuild\linux-ppc64
+201 silly reify mark deleted [ 'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\linux-ppc64' ]
+202 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\@esbuild\linux-mips64el
+203 silly reify mark deleted [ 'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\linux-mips64el' ]
+204 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\@esbuild\linux-loong64
+205 silly reify mark deleted [ 'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\linux-loong64' ]
+206 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\@esbuild\linux-ia32
+207 silly reify mark deleted [ 'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\linux-ia32' ]
+208 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\@esbuild\linux-arm64
+209 silly reify mark deleted [ 'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\linux-arm64' ]
+210 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\@esbuild\linux-arm
+211 silly reify mark deleted [ 'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\linux-arm' ]
+212 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\@esbuild\freebsd-x64
+213 silly reify mark deleted [ 'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\freebsd-x64' ]
+214 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\@esbuild\freebsd-arm64
+215 silly reify mark deleted [ 'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\freebsd-arm64' ]
+216 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\@esbuild\darwin-x64
+217 silly reify mark deleted [ 'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\darwin-x64' ]
+218 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\@esbuild\darwin-arm64
+219 silly reify mark deleted [ 'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\darwin-arm64' ]
+220 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\@esbuild\android-x64
+221 silly reify mark deleted [ 'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\android-x64' ]
+222 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\@esbuild\android-arm64
+223 silly reify mark deleted [ 'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\android-arm64' ]
+224 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\@esbuild\android-arm
+225 silly reify mark deleted [ 'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\android-arm' ]
+226 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\@esbuild\aix-ppc64
+227 silly reify mark deleted [ 'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\aix-ppc64' ]
+228 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\fsevents
+229 silly reify mark deleted [ 'F:\\我的项目\\EIGP-item\\node_modules\\fsevents' ]
+230 http fetch POST 200 https://registry.npmjs.org/-/npm/v1/security/advisories/bulk 7165ms
+231 silly audit report {
+231 silly audit report   '@nestjs/core': [
+231 silly audit report     {
+231 silly audit report       id: 1117063,
+231 silly audit report       url: 'https://github.com/advisories/GHSA-36xv-jgw5-4q75',
+231 silly audit report       title: "@nestjs/core Improperly Neutralizes Special Elements in Output Used by a Downstream Component ('Injection')",
+231 silly audit report       severity: 'moderate',
+231 silly audit report       vulnerable_versions: '<=11.1.17',
+231 silly audit report       cwe: [Array],
+231 silly audit report       cvss: [Object]
+231 silly audit report     }
+231 silly audit report   ],
+231 silly audit report   esbuild: [
+231 silly audit report     {
+231 silly audit report       id: 1102341,
+231 silly audit report       url: 'https://github.com/advisories/GHSA-67mh-4wv8-2f99',
+231 silly audit report       title: 'esbuild enables any website to send any requests to the development server and read the response',
+231 silly audit report       severity: 'moderate',
+231 silly audit report       vulnerable_versions: '<=0.24.2',
+231 silly audit report       cwe: [Array],
+231 silly audit report       cvss: [Object]
+231 silly audit report     }
+231 silly audit report   ],
+231 silly audit report   'file-type': [
+231 silly audit report     {
+231 silly audit report       id: 1114301,
+231 silly audit report       url: 'https://github.com/advisories/GHSA-5v7r-6r5c-r473',
+231 silly audit report       title: 'file-type affected by infinite loop in ASF parser on malformed input with zero-size sub-header',
+231 silly audit report       severity: 'moderate',
+231 silly audit report       vulnerable_versions: '>=13.0.0 <21.3.1',
+231 silly audit report       cwe: [Array],
+231 silly audit report       cvss: [Object]
+231 silly audit report     },
+231 silly audit report     {
+231 silly audit report       id: 1114726,
+231 silly audit report       url: 'https://github.com/advisories/GHSA-j47w-4g3g-c36v',
+231 silly audit report       title: 'file-type: ZIP Decompression Bomb DoS via [Content_Types].xml entry',
+231 silly audit report       severity: 'moderate',
+231 silly audit report       vulnerable_versions: '>=20.0.0 <=21.3.1',
+231 silly audit report       cwe: [Array],
+231 silly audit report       cvss: [Object]
+231 silly audit report     }
+231 silly audit report   ],
+231 silly audit report   'js-yaml': [
+231 silly audit report     {
+231 silly audit report       id: 1112715,
+231 silly audit report       url: 'https://github.com/advisories/GHSA-mh29-5h37-fv8m',
+231 silly audit report       title: 'js-yaml has prototype pollution in merge (<<)',
+231 silly audit report       severity: 'moderate',
+231 silly audit report       vulnerable_versions: '>=4.0.0 <4.1.1',
+231 silly audit report       cwe: [Array],
+231 silly audit report       cvss: [Object]
+231 silly audit report     }
+231 silly audit report   ],
+231 silly audit report   lodash: [
+231 silly audit report     {
+231 silly audit report       id: 1112455,
+231 silly audit report       url: 'https://github.com/advisories/GHSA-xxjr-mmjv-4gpg',
+231 silly audit report       title: 'Lodash has Prototype Pollution Vulnerability in `_.unset` and `_.omit` functions',
+231 silly audit report       severity: 'moderate',
+231 silly audit report       vulnerable_versions: '>=4.0.0 <=4.17.22',
+231 silly audit report       cwe: [Array],
+231 silly audit report       cvss: [Object]
+231 silly audit report     },
+231 silly audit report     {
+231 silly audit report       id: 1115806,
+231 silly audit report       url: 'https://github.com/advisories/GHSA-r5fr-rjxr-66jc',
+231 silly audit report       title: 'lodash vulnerable to Code Injection via `_.template` imports key names',
+231 silly audit report       severity: 'high',
+231 silly audit report       vulnerable_versions: '>=4.0.0 <=4.17.23',
+231 silly audit report       cwe: [Array],
+231 silly audit report       cvss: [Object]
+231 silly audit report     },
+231 silly audit report     {
+231 silly audit report       id: 1115810,
+231 silly audit report       url: 'https://github.com/advisories/GHSA-f23m-r3pf-42rh',
+231 silly audit report       title: 'lodash vulnerable to Prototype Pollution via array path bypass in `_.unset` and `_.omit`',
+231 silly audit report       severity: 'moderate',
+231 silly audit report       vulnerable_versions: '<=4.17.23',
+231 silly audit report       cwe: [Array],
+231 silly audit report       cvss: [Object]
+231 silly audit report     }
+231 silly audit report   ],
+231 silly audit report   multer: [
+231 silly audit report     {
+231 silly audit report       id: 1113635,
+231 silly audit report       url: 'https://github.com/advisories/GHSA-xf7r-hgr6-v32p',
+231 silly audit report       title: 'Multer vulnerable to Denial of Service via incomplete cleanup',
+231 silly audit report       severity: 'high',
+231 silly audit report       vulnerable_versions: '<2.1.0',
+231 silly audit report       cwe: [Array],
+231 silly audit report       cvss: [Object]
+231 silly audit report     },
+231 silly audit report     {
+231 silly audit report       id: 1113636,
+231 silly audit report       url: 'https://github.com/advisories/GHSA-v52c-386h-88mc',
+231 silly audit report       title: 'Multer vulnerable to Denial of Service via resource exhaustion',
+231 silly audit report       severity: 'high',
+231 silly audit report       vulnerable_versions: '<2.1.0',
+231 silly audit report       cwe: [Array],
+231 silly audit report       cvss: [Object]
+231 silly audit report     },
+231 silly audit report     {
+231 silly audit report       id: 1113996,
+231 silly audit report       url: 'https://github.com/advisories/GHSA-5528-5vmv-3xc2',
+231 silly audit report       title: 'Multer Vulnerable to Denial of Service via Uncontrolled Recursion',
+231 silly audit report       severity: 'high',
+231 silly audit report       vulnerable_versions: '<2.1.1',
+231 silly audit report       cwe: [Array],
+231 silly audit report       cvss: [Object]
+231 silly audit report     }
+231 silly audit report   ],
+231 silly audit report   tar: [
+231 silly audit report     {
+231 silly audit report       id: 1112659,
+231 silly audit report       url: 'https://github.com/advisories/GHSA-34x7-hfp2-rc4v',
+231 silly audit report       title: 'node-tar Vulnerable to Arbitrary File Creation/Overwrite via Hardlink Path Traversal',
+231 silly audit report       severity: 'high',
+231 silly audit report       vulnerable_versions: '<7.5.7',
+231 silly audit report       cwe: [Array],
+231 silly audit report       cvss: [Object]
+231 silly audit report     },
+231 silly audit report     {
+231 silly audit report       id: 1113300,
+231 silly audit report       url: 'https://github.com/advisories/GHSA-8qq5-rm4j-mr97',
+231 silly audit report       title: 'node-tar is Vulnerable to Arbitrary File Overwrite and Symlink Poisoning via Insufficient Path Sanitization',
+231 silly audit report       severity: 'high',
+231 silly audit report       vulnerable_versions: '<=7.5.2',
+231 silly audit report       cwe: [Array],
+231 silly audit report       cvss: [Object]
+231 silly audit report     },
+231 silly audit report     {
+231 silly audit report       id: 1113375,
+231 silly audit report       url: 'https://github.com/advisories/GHSA-83g3-92jg-28cx',
+231 silly audit report       title: 'Arbitrary File Read/Write via Hardlink Target Escape Through Symlink Chain in node-tar Extraction',
+231 silly audit report       severity: 'high',
+231 silly audit report       vulnerable_versions: '<7.5.8',
+231 silly audit report       cwe: [Array],
+231 silly audit report       cvss: [Object]
+231 silly audit report     },
+231 silly audit report     {
+231 silly audit report       id: 1114200,
+231 silly audit report       url: 'https://github.com/advisories/GHSA-qffp-2rhf-9h96',
+231 silly audit report       title: 'tar has Hardlink Path Traversal via Drive-Relative Linkpath',
+231 silly audit report       severity: 'high',
+231 silly audit report       vulnerable_versions: '<=7.5.9',
+231 silly audit report       cwe: [Array],
+231 silly audit report       cvss: [Object]
+231 silly audit report     },
+231 silly audit report     {
+231 silly audit report       id: 1114302,
+231 silly audit report       url: 'https://github.com/advisories/GHSA-9ppj-qmqm-q256',
+231 silly audit report       title: 'node-tar Symlink Path Traversal via Drive-Relative Linkpath',
+231 silly audit report       severity: 'high',
+231 silly audit report       vulnerable_versions: '<=7.5.10',
+231 silly audit report       cwe: [Array],
+231 silly audit report       cvss: [Object]
+231 silly audit report     },
+231 silly audit report     {
+231 silly audit report       id: 1114680,
+231 silly audit report       url: 'https://github.com/advisories/GHSA-r6q2-hw4h-h46w',
+231 silly audit report       title: 'Race Condition in node-tar Path Reservations via Unicode Ligature Collisions on macOS APFS',
+231 silly audit report       severity: 'high',
+231 silly audit report       vulnerable_versions: '<=7.5.3',
+231 silly audit report       cwe: [Array],
+231 silly audit report       cvss: [Object]
+231 silly audit report     }
+231 silly audit report   ],
+231 silly audit report   vite: [
+231 silly audit report     {
+231 silly audit report       id: 1116229,
+231 silly audit report       url: 'https://github.com/advisories/GHSA-4w7w-66w2-5vf9',
+231 silly audit report       title: 'Vite Vulnerable to Path Traversal in Optimized Deps `.map` Handling',
+231 silly audit report       severity: 'moderate',
+231 silly audit report       vulnerable_versions: '<=6.4.1',
+231 silly audit report       cwe: [Array],
+231 silly audit report       cvss: [Object]
+231 silly audit report     }
+231 silly audit report   ]
+231 silly audit report }
+232 silly packumentCache corgi:https://registry.npmjs.org/@nestjs%2fcore cache-miss
+233 silly packumentCache corgi:https://registry.npmjs.org/esbuild cache-miss
+234 silly packumentCache corgi:https://registry.npmjs.org/file-type cache-miss
+235 silly packumentCache corgi:https://registry.npmjs.org/js-yaml cache-miss
+236 silly packumentCache corgi:https://registry.npmjs.org/lodash cache-miss
+237 silly packumentCache corgi:https://registry.npmjs.org/multer cache-miss
+238 silly packumentCache corgi:https://registry.npmjs.org/tar cache-miss
+239 silly packumentCache corgi:https://registry.npmjs.org/vite cache-miss
+240 http fetch GET 200 https://registry.npmjs.org/file-type 26ms (cache hit)
+241 silly packumentCache corgi:https://registry.npmjs.org/file-type set size:198411 disposed:false
+242 http fetch GET 200 https://registry.npmjs.org/lodash 28ms (cache hit)
+243 silly packumentCache corgi:https://registry.npmjs.org/lodash set size:69555 disposed:false
+244 http fetch GET 200 https://registry.npmjs.org/esbuild 33ms (cache hit)
+245 silly packumentCache corgi:https://registry.npmjs.org/esbuild set size:885757 disposed:false
+246 http fetch GET 200 https://registry.npmjs.org/js-yaml 38ms (cache hit)
+247 silly packumentCache corgi:https://registry.npmjs.org/js-yaml set size:58533 disposed:false
+248 http fetch GET 200 https://registry.npmjs.org/tar 38ms (cache hit)
+249 silly packumentCache corgi:https://registry.npmjs.org/tar set size:201168 disposed:false
+250 http fetch GET 200 https://registry.npmjs.org/@nestjs%2fcore 47ms (cache hit)
+251 silly packumentCache corgi:https://registry.npmjs.org/@nestjs%2fcore set size:660815 disposed:false
+252 http fetch GET 200 https://registry.npmjs.org/multer 50ms (cache hit)
+253 silly packumentCache corgi:https://registry.npmjs.org/multer set size:70518 disposed:false
+254 http fetch GET 200 https://registry.npmjs.org/vite 54ms (cache hit)
+255 silly packumentCache corgi:https://registry.npmjs.org/vite set size:2246766 disposed:false
+256 silly packumentCache corgi:https://registry.npmjs.org/@nestjs%2fplatform-express cache-miss
+257 silly packumentCache corgi:https://registry.npmjs.org/@nestjs%2fswagger cache-miss
+258 http fetch GET 200 https://registry.npmjs.org/@nestjs%2fswagger 33ms (cache hit)
+259 silly packumentCache corgi:https://registry.npmjs.org/@nestjs%2fswagger set size:497914 disposed:false
+260 http fetch GET 200 https://registry.npmjs.org/@nestjs%2fplatform-express 39ms (cache hit)
+261 silly packumentCache corgi:https://registry.npmjs.org/@nestjs%2fplatform-express set size:447437 disposed:false
+262 silly packumentCache corgi:https://registry.npmjs.org/@nestjs%2fcommon cache-miss
+263 http fetch GET 200 https://registry.npmjs.org/@nestjs%2fcommon 5ms (cache hit)
+264 silly packumentCache corgi:https://registry.npmjs.org/@nestjs%2fcommon set size:574452 disposed:false
+265 silly packumentCache corgi:https://registry.npmjs.org/@nestjs%2fconfig cache-miss
+266 silly packumentCache corgi:https://registry.npmjs.org/naive-ui cache-miss
+267 http fetch GET 200 https://registry.npmjs.org/naive-ui 5ms (cache hit)
+268 silly packumentCache corgi:https://registry.npmjs.org/naive-ui set size:484047 disposed:false
+269 http fetch GET 200 https://registry.npmjs.org/@nestjs%2fconfig 11ms (cache hit)
+270 silly packumentCache corgi:https://registry.npmjs.org/@nestjs%2fconfig set size:121861 disposed:false
+271 silly packumentCache corgi:https://registry.npmjs.org/@mapbox%2fnode-pre-gyp cache-miss
+272 http fetch GET 200 https://registry.npmjs.org/@mapbox%2fnode-pre-gyp 7ms (cache hit)
+273 silly packumentCache corgi:https://registry.npmjs.org/@mapbox%2fnode-pre-gyp set size:47144 disposed:false
+274 silly packumentCache corgi:https://registry.npmjs.org/@vitejs%2fplugin-vue cache-miss
+275 http fetch GET 200 https://registry.npmjs.org/@vitejs%2fplugin-vue 71ms (cache hit)
+276 silly packumentCache corgi:https://registry.npmjs.org/@vitejs%2fplugin-vue set size:173841 disposed:false
+277 silly packumentCache corgi:https://registry.npmjs.org/@nestjs%2fjwt cache-miss
+278 silly packumentCache corgi:https://registry.npmjs.org/@nestjs%2fmapped-types cache-miss
+279 silly packumentCache corgi:https://registry.npmjs.org/@nestjs%2fpassport cache-miss
+280 http fetch GET 200 https://registry.npmjs.org/@nestjs%2fpassport 14ms (cache hit)
+281 silly packumentCache corgi:https://registry.npmjs.org/@nestjs%2fpassport set size:91584 disposed:false
+282 http fetch GET 200 https://registry.npmjs.org/@nestjs%2fjwt 16ms (cache hit)
+283 silly packumentCache corgi:https://registry.npmjs.org/@nestjs%2fjwt set size:49448 disposed:false
+284 http fetch GET 200 https://registry.npmjs.org/@nestjs%2fmapped-types 16ms (cache hit)
+285 silly packumentCache corgi:https://registry.npmjs.org/@nestjs%2fmapped-types set size:50012 disposed:false
+286 silly packumentCache corgi:https://registry.npmjs.org/bcrypt cache-miss
+287 http fetch GET 200 https://registry.npmjs.org/bcrypt 3ms (cache hit)
+288 silly packumentCache corgi:https://registry.npmjs.org/bcrypt set size:52606 disposed:false
+289 silly CHANGE node_modules/vite/node_modules/@esbuild/win32-ia32
+290 silly CHANGE node_modules/vite/node_modules/@esbuild/win32-arm64
+291 silly CHANGE node_modules/vite/node_modules/@esbuild/sunos-x64
+292 silly CHANGE node_modules/vite/node_modules/@esbuild/openbsd-x64
+293 silly CHANGE node_modules/vite/node_modules/@esbuild/netbsd-x64
+294 silly CHANGE node_modules/vite/node_modules/@esbuild/linux-riscv64
+295 silly CHANGE node_modules/vite/node_modules/@esbuild/linux-s390x
+296 silly CHANGE node_modules/vite/node_modules/@esbuild/linux-x64
+297 silly CHANGE node_modules/vite/node_modules/@esbuild/linux-ppc64
+298 silly CHANGE node_modules/vite/node_modules/@esbuild/linux-mips64el
+299 silly CHANGE node_modules/vite/node_modules/@esbuild/linux-loong64
+300 silly CHANGE node_modules/vite/node_modules/@esbuild/linux-ia32
+301 silly CHANGE node_modules/vite/node_modules/@esbuild/linux-arm64
+302 silly CHANGE node_modules/vite/node_modules/@esbuild/linux-arm
+303 silly CHANGE node_modules/vite/node_modules/@esbuild/freebsd-x64
+304 silly CHANGE node_modules/vite/node_modules/@esbuild/freebsd-arm64
+305 silly CHANGE node_modules/vite/node_modules/@esbuild/darwin-x64
+306 silly CHANGE node_modules/vite/node_modules/@esbuild/darwin-arm64
+307 silly CHANGE node_modules/vite/node_modules/@esbuild/android-arm64
+308 silly CHANGE node_modules/vite/node_modules/@esbuild/android-x64
+309 silly CHANGE node_modules/vite/node_modules/@esbuild/android-arm
+310 silly CHANGE node_modules/vite/node_modules/@esbuild/aix-ppc64
+311 silly CHANGE node_modules/@rollup/rollup-win32-ia32-msvc
+312 silly CHANGE node_modules/@rollup/rollup-win32-arm64-msvc
+313 silly CHANGE node_modules/@rollup/rollup-openbsd-x64
+314 silly CHANGE node_modules/@rollup/rollup-openharmony-arm64
+315 silly CHANGE node_modules/@rollup/rollup-linux-x64-musl
+316 silly CHANGE node_modules/@rollup/rollup-linux-x64-gnu
+317 silly CHANGE node_modules/@rollup/rollup-linux-s390x-gnu
+318 silly CHANGE node_modules/@rollup/rollup-linux-riscv64-musl
+319 silly CHANGE node_modules/@rollup/rollup-linux-riscv64-gnu
+320 silly CHANGE node_modules/@rollup/rollup-linux-ppc64-musl
+321 silly CHANGE node_modules/@rollup/rollup-linux-ppc64-gnu
+322 silly CHANGE node_modules/@rollup/rollup-linux-loong64-musl
+323 silly CHANGE node_modules/@rollup/rollup-linux-loong64-gnu
+324 silly CHANGE node_modules/@rollup/rollup-linux-arm64-musl
+325 silly CHANGE node_modules/@rollup/rollup-linux-arm64-gnu
+326 silly CHANGE node_modules/@rollup/rollup-linux-arm-musleabihf
+327 silly CHANGE node_modules/@rollup/rollup-linux-arm-gnueabihf
+328 silly CHANGE node_modules/@rollup/rollup-freebsd-x64
+329 silly CHANGE node_modules/@rollup/rollup-freebsd-arm64
+330 silly CHANGE node_modules/@rollup/rollup-darwin-x64
+331 silly CHANGE node_modules/@rollup/rollup-darwin-arm64
+332 silly CHANGE node_modules/@rollup/rollup-android-arm64
+333 silly CHANGE node_modules/@rollup/rollup-android-arm-eabi
+334 silly CHANGE node_modules/@esbuild/win32-ia32
+335 silly CHANGE node_modules/@esbuild/win32-arm64
+336 silly CHANGE node_modules/@esbuild/sunos-x64
+337 silly CHANGE node_modules/@esbuild/openharmony-arm64
+338 silly CHANGE node_modules/@esbuild/openbsd-x64
+339 silly CHANGE node_modules/@esbuild/openbsd-arm64
+340 silly CHANGE node_modules/@esbuild/netbsd-x64
+341 silly CHANGE node_modules/@esbuild/netbsd-arm64
+342 silly CHANGE node_modules/@esbuild/linux-x64
+343 silly CHANGE node_modules/@esbuild/linux-s390x
+344 silly CHANGE node_modules/@esbuild/linux-riscv64
+345 silly CHANGE node_modules/@esbuild/linux-ppc64
+346 silly CHANGE node_modules/@esbuild/linux-mips64el
+347 silly CHANGE node_modules/@esbuild/linux-loong64
+348 silly CHANGE node_modules/@esbuild/linux-ia32
+349 silly CHANGE node_modules/@esbuild/linux-arm64
+350 silly CHANGE node_modules/@esbuild/linux-arm
+351 silly CHANGE node_modules/@esbuild/freebsd-x64
+352 silly CHANGE node_modules/@esbuild/freebsd-arm64
+353 silly CHANGE node_modules/@esbuild/darwin-x64
+354 silly CHANGE node_modules/@esbuild/darwin-arm64
+355 silly CHANGE node_modules/@esbuild/android-x64
+356 silly CHANGE node_modules/@esbuild/android-arm64
+357 silly CHANGE node_modules/@esbuild/android-arm
+358 silly CHANGE node_modules/@esbuild/aix-ppc64
+359 silly CHANGE node_modules/fsevents
+360 verbose cwd F:\我的项目\EIGP-item
+361 verbose os Windows_NT 10.0.19045
+362 verbose node v18.20.5
+363 verbose npm  v10.8.2
+364 verbose exit 0
+365 info ok

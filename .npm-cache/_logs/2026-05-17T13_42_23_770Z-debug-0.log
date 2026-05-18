@@ -1,0 +1,2222 @@
+0 verbose cli D:\nodejs\node.exe D:\nodejs\node_modules\npm\bin\npm-cli.js
+1 info using npm@10.8.2
+2 info using node@v18.20.5
+3 silly config load:file:D:\nvm\v18.20.5\node_modules\npm\npmrc
+4 silly config load:file:F:\我的项目\EIGP-item\.npmrc
+5 silly config load:file:C:\Users\HP\.npmrc
+6 silly config load:file:D:\nodejs\etc\npmrc
+7 verbose title npm install
+8 verbose argv "install"
+9 verbose logfile logs-max:10 dir:F:\我的项目\EIGP-item\.npm-cache\_logs\2026-05-17T13_42_23_770Z-
+10 verbose logfile F:\我的项目\EIGP-item\.npm-cache\_logs\2026-05-17T13_42_23_770Z-debug-0.log
+11 silly packumentCache heap:4345298944 maxSize:1086324736 maxEntrySize:543162368
+12 silly logfile done cleaning log files
+13 silly idealTree buildDeps
+14 silly placeDep ROOT @eigp/api@0.1.0 OK for: email-identity-graph-platform@0.1.0 want: file:F:\我的项目\EIGP-item\apps\api
+15 silly reify mark retired [ 'F:\\我的项目\\EIGP-item\\node_modules\\rxjs' ]
+16 silly reify moves {
+16 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\rxjs': 'F:\\我的项目\\EIGP-item\\node_modules\\.rxjs-GtNVakvC'
+16 silly reify }
+17 silly audit bulk request {
+17 silly audit   '@dvtp/api': [ '0.1.0' ],
+17 silly audit   resend: [ '4.8.0', '6.4.2' ],
+17 silly audit   '@dvtp/web': [ '0.1.0' ],
+17 silly audit   '@babel/helper-string-parser': [ '7.27.1' ],
+17 silly audit   '@babel/helper-validator-identifier': [ '7.28.5' ],
+17 silly audit   '@babel/parser': [ '7.29.3' ],
+17 silly audit   '@babel/types': [ '7.29.0' ],
+17 silly audit   '@borewit/text-codec': [ '0.2.2' ],
+17 silly audit   '@css-render/plugin-bem': [ '0.15.14' ],
+17 silly audit   '@css-render/vue3-ssr': [ '0.15.14' ],
+17 silly audit   '@emotion/hash': [ '0.8.0' ],
+17 silly audit   '@esbuild/aix-ppc64': [ '0.28.0', '0.21.5' ],
+17 silly audit   '@esbuild/android-arm': [ '0.28.0', '0.21.5' ],
+17 silly audit   '@esbuild/android-arm64': [ '0.28.0', '0.21.5' ],
+17 silly audit   '@esbuild/android-x64': [ '0.28.0', '0.21.5' ],
+17 silly audit   '@esbuild/darwin-arm64': [ '0.28.0', '0.21.5' ],
+17 silly audit   '@esbuild/darwin-x64': [ '0.28.0', '0.21.5' ],
+17 silly audit   '@esbuild/freebsd-arm64': [ '0.28.0', '0.21.5' ],
+17 silly audit   '@esbuild/freebsd-x64': [ '0.28.0', '0.21.5' ],
+17 silly audit   '@esbuild/linux-arm': [ '0.28.0', '0.21.5' ],
+17 silly audit   '@esbuild/linux-arm64': [ '0.28.0', '0.21.5' ],
+17 silly audit   '@esbuild/linux-ia32': [ '0.28.0', '0.21.5' ],
+17 silly audit   '@esbuild/linux-loong64': [ '0.28.0', '0.21.5' ],
+17 silly audit   '@esbuild/linux-mips64el': [ '0.28.0', '0.21.5' ],
+17 silly audit   '@esbuild/linux-ppc64': [ '0.28.0', '0.21.5' ],
+17 silly audit   '@esbuild/linux-riscv64': [ '0.28.0', '0.21.5' ],
+17 silly audit   '@esbuild/linux-s390x': [ '0.28.0', '0.21.5' ],
+17 silly audit   '@esbuild/linux-x64': [ '0.28.0', '0.21.5' ],
+17 silly audit   '@esbuild/netbsd-arm64': [ '0.28.0' ],
+17 silly audit   '@esbuild/netbsd-x64': [ '0.28.0', '0.21.5' ],
+17 silly audit   '@esbuild/openbsd-arm64': [ '0.28.0' ],
+17 silly audit   '@esbuild/openbsd-x64': [ '0.28.0', '0.21.5' ],
+17 silly audit   '@esbuild/openharmony-arm64': [ '0.28.0' ],
+17 silly audit   '@esbuild/sunos-x64': [ '0.28.0', '0.21.5' ],
+17 silly audit   '@esbuild/win32-arm64': [ '0.28.0', '0.21.5' ],
+17 silly audit   '@esbuild/win32-ia32': [ '0.28.0', '0.21.5' ],
+17 silly audit   '@esbuild/win32-x64': [ '0.28.0', '0.21.5' ],
+17 silly audit   '@jridgewell/sourcemap-codec': [ '1.5.5' ],
+17 silly audit   '@juggle/resize-observer': [ '3.4.0' ],
+17 silly audit   '@lukeed/csprng': [ '1.1.0' ],
+17 silly audit   '@mapbox/node-pre-gyp': [ '1.0.11' ],
+17 silly audit   '@microsoft/tsdoc': [ '0.15.1' ],
+17 silly audit   '@nestjs/common': [ '10.4.22' ],
+17 silly audit   '@nestjs/config': [ '3.3.0' ],
+17 silly audit   '@nestjs/core': [ '10.4.22' ],
+17 silly audit   '@nestjs/jwt': [ '10.2.0' ],
+17 silly audit   '@nestjs/mapped-types': [ '2.0.5' ],
+17 silly audit   '@nestjs/passport': [ '10.0.3' ],
+17 silly audit   '@nestjs/platform-express': [ '10.4.22' ],
+17 silly audit   accepts: [ '1.3.8', '2.0.0' ],
+17 silly audit   'content-disposition': [ '0.5.4', '1.1.0' ],
+17 silly audit   'cookie-signature': [ '1.0.7', '1.2.2' ],
+17 silly audit   express: [ '4.22.1', '5.2.1' ],
+17 silly audit   finalhandler: [ '1.3.2', '2.1.1' ],
+17 silly audit   fresh: [ '0.5.2', '2.0.0' ],
+17 silly audit   'merge-descriptors': [ '1.0.3', '2.0.0' ],
+17 silly audit   'mime-db': [ '1.52.0', '1.54.0' ],
+17 silly audit   'mime-types': [ '2.1.35', '3.0.2' ],
+17 silly audit   ms: [ '2.1.3', '2.0.0' ],
+17 silly audit   negotiator: [ '0.6.3', '1.0.0' ],
+17 silly audit   'path-to-regexp': [ '0.1.13', '3.3.0', '8.4.2' ],
+17 silly audit   send: [ '0.19.2', '1.2.1' ],
+17 silly audit   'serve-static': [ '1.16.3', '2.2.1' ],
+17 silly audit   '@nestjs/swagger': [ '7.4.2' ],
+17 silly audit   '@nuxtjs/opencollective': [ '0.3.2' ],
+17 silly audit   '@prisma/client': [ '5.22.0' ],
+17 silly audit   '@prisma/debug': [ '5.22.0' ],
+17 silly audit   '@prisma/engines': [ '5.22.0' ],
+17 silly audit   '@prisma/engines-version': [ '5.22.0-44.605197351a3c8bdd595af2d2a9bc3025bca48ea2' ],
+17 silly audit   '@prisma/fetch-engine': [ '5.22.0' ],
+17 silly audit   '@prisma/get-platform': [ '5.22.0' ],
+17 silly audit   '@react-email/render': [ '1.1.2' ],
+17 silly audit   '@rollup/rollup-android-arm-eabi': [ '4.60.4' ],
+17 silly audit   '@rollup/rollup-android-arm64': [ '4.60.4' ],
+17 silly audit   '@rollup/rollup-darwin-arm64': [ '4.60.4' ],
+17 silly audit   '@rollup/rollup-darwin-x64': [ '4.60.4' ],
+17 silly audit   '@rollup/rollup-freebsd-arm64': [ '4.60.4' ],
+17 silly audit   '@rollup/rollup-freebsd-x64': [ '4.60.4' ],
+17 silly audit   '@rollup/rollup-linux-arm-gnueabihf': [ '4.60.4' ],
+17 silly audit   '@rollup/rollup-linux-arm-musleabihf': [ '4.60.4' ],
+17 silly audit   '@rollup/rollup-linux-arm64-gnu': [ '4.60.4' ],
+17 silly audit   '@rollup/rollup-linux-arm64-musl': [ '4.60.4' ],
+17 silly audit   '@rollup/rollup-linux-loong64-gnu': [ '4.60.4' ],
+17 silly audit   '@rollup/rollup-linux-loong64-musl': [ '4.60.4' ],
+17 silly audit   '@rollup/rollup-linux-ppc64-gnu': [ '4.60.4' ],
+17 silly audit   '@rollup/rollup-linux-ppc64-musl': [ '4.60.4' ],
+17 silly audit   '@rollup/rollup-linux-riscv64-gnu': [ '4.60.4' ],
+17 silly audit   '@rollup/rollup-linux-riscv64-musl': [ '4.60.4' ],
+17 silly audit   '@rollup/rollup-linux-s390x-gnu': [ '4.60.4' ],
+17 silly audit   '@rollup/rollup-linux-x64-gnu': [ '4.60.4' ],
+17 silly audit   '@rollup/rollup-linux-x64-musl': [ '4.60.4' ],
+17 silly audit   '@rollup/rollup-openbsd-x64': [ '4.60.4' ],
+17 silly audit   '@rollup/rollup-openharmony-arm64': [ '4.60.4' ],
+17 silly audit   '@rollup/rollup-win32-arm64-msvc': [ '4.60.4' ],
+17 silly audit   '@rollup/rollup-win32-ia32-msvc': [ '4.60.4' ],
+17 silly audit   '@rollup/rollup-win32-x64-gnu': [ '4.60.4' ],
+17 silly audit   '@rollup/rollup-win32-x64-msvc': [ '4.60.4' ],
+17 silly audit   '@selderee/plugin-htmlparser2': [ '0.11.0' ],
+17 silly audit   '@stablelib/base64': [ '1.0.1' ],
+17 silly audit   '@tokenizer/inflate': [ '0.2.7' ],
+17 silly audit   debug: [ '4.4.3', '2.6.9' ],
+17 silly audit   '@tokenizer/token': [ '0.3.0' ],
+17 silly audit   '@types/bcrypt': [ '5.0.2' ],
+17 silly audit   '@types/body-parser': [ '1.19.6' ],
+17 silly audit   '@types/connect': [ '3.4.38' ],
+17 silly audit   '@types/estree': [ '1.0.8' ],
+17 silly audit   '@types/express': [ '4.17.25' ],
+17 silly audit   '@types/express-serve-static-core': [ '4.19.8' ],
+17 silly audit   '@types/http-errors': [ '2.0.5' ],
+17 silly audit   '@types/jsonwebtoken': [ '9.0.5' ],
+17 silly audit   '@types/katex': [ '0.16.8' ],
+17 silly audit   '@types/lodash': [ '4.17.24' ],
+17 silly audit   '@types/lodash-es': [ '4.17.12' ],
+17 silly audit   '@types/mime': [ '1.3.5' ],
+17 silly audit   '@types/node': [ '22.19.19' ],
+17 silly audit   '@types/passport': [ '1.0.17' ],
+17 silly audit   '@types/passport-jwt': [ '4.0.1' ],
+17 silly audit   '@types/passport-strategy': [ '0.2.38' ],
+17 silly audit   '@types/qs': [ '6.15.1' ],
+17 silly audit   '@types/range-parser': [ '1.2.7' ],
+17 silly audit   '@types/send': [ '1.2.1', '0.17.6' ],
+17 silly audit   '@types/serve-static': [ '1.15.10' ],
+17 silly audit   '@types/validator': [ '13.15.10' ],
+17 silly audit   '@vitejs/plugin-vue': [ '5.2.4' ],
+17 silly audit   '@volar/language-core': [ '2.4.15' ],
+17 silly audit   '@volar/source-map': [ '2.4.15' ],
+17 silly audit   '@volar/typescript': [ '2.4.15' ],
+17 silly audit   '@vue/compiler-core': [ '3.5.34' ],
+17 silly audit   '@vue/compiler-dom': [ '3.5.34' ],
+17 silly audit   '@vue/compiler-sfc': [ '3.5.34' ],
+17 silly audit   '@vue/compiler-ssr': [ '3.5.34' ],
+17 silly audit   '@vue/compiler-vue2': [ '2.7.16' ],
+17 silly audit   '@vue/devtools-api': [ '6.6.4' ],
+17 silly audit   '@vue/language-core': [ '2.2.12' ],
+17 silly audit   'brace-expansion': [ '2.1.0', '1.1.14' ],
+17 silly audit   minimatch: [ '9.0.9', '3.1.5' ],
+17 silly audit   '@vue/reactivity': [ '3.5.34' ],
+17 silly audit   '@vue/runtime-core': [ '3.5.34' ],
+17 silly audit   '@vue/runtime-dom': [ '3.5.34' ],
+17 silly audit   '@vue/server-renderer': [ '3.5.34' ],
+17 silly audit   '@vue/shared': [ '3.5.34' ],
+17 silly audit   abbrev: [ '1.1.1' ],
+17 silly audit   'agent-base': [ '6.0.2' ],
+17 silly audit   'alien-signals': [ '1.0.13' ],
+17 silly audit   'ansi-regex': [ '5.0.1' ],
+17 silly audit   'ansi-styles': [ '4.3.0' ],
+17 silly audit   'append-field': [ '1.0.0' ],
+17 silly audit   aproba: [ '2.1.0' ],
+17 silly audit   'are-we-there-yet': [ '2.0.0' ],
+17 silly audit   argparse: [ '2.0.1' ],
+17 silly audit   'array-flatten': [ '1.1.1' ],
+17 silly audit   'async-validator': [ '4.2.5' ],
+17 silly audit   asynckit: [ '0.4.0' ],
+17 silly audit   axios: [ '1.16.1' ],
+17 silly audit   'balanced-match': [ '1.0.2' ],
+17 silly audit   bcrypt: [ '5.1.1' ],
+17 silly audit   'body-parser': [ '1.20.4', '2.2.2' ],
+17 silly audit   'buffer-equal-constant-time': [ '1.0.1' ],
+17 silly audit   'buffer-from': [ '1.1.2' ],
+17 silly audit   busboy: [ '1.6.0' ],
+17 silly audit   bytes: [ '3.1.2' ],
+17 silly audit   'call-bind-apply-helpers': [ '1.0.2' ],
+17 silly audit   'call-bound': [ '1.0.4' ],
+17 silly audit   chalk: [ '4.1.2' ],
+17 silly audit   'supports-color': [ '7.2.0', '8.1.1' ],
+17 silly audit   chownr: [ '2.0.0' ],
+17 silly audit   'class-transformer': [ '0.5.1' ],
+17 silly audit   'class-validator': [ '0.14.4' ],
+17 silly audit   cliui: [ '8.0.1' ],
+17 silly audit   'color-convert': [ '2.0.1' ],
+17 silly audit   'color-name': [ '1.1.4' ],
+17 silly audit   'color-support': [ '1.1.3' ],
+17 silly audit   'combined-stream': [ '1.0.8' ],
+17 silly audit   'concat-map': [ '0.0.1' ],
+17 silly audit   'concat-stream': [ '2.0.0' ],
+17 silly audit   concurrently: [ '9.2.1' ],
+17 silly audit   consola: [ '2.15.3' ],
+17 silly audit   'console-control-strings': [ '1.1.0' ],
+17 silly audit   'content-type': [ '1.0.5', '2.0.0' ],
+17 silly audit   cookie: [ '0.7.2' ],
+17 silly audit   cors: [ '2.8.5' ],
+17 silly audit   'cross-spawn': [ '7.0.6' ],
+17 silly audit   'css-render': [ '0.15.14' ],
+17 silly audit   csstype: [ '3.0.11', '3.2.3' ],
+17 silly audit   'date-fns': [ '4.1.0' ],
+17 silly audit   'date-fns-tz': [ '3.2.0' ],
+17 silly audit   dayjs: [ '1.11.20' ],
+17 silly audit   'de-indent': [ '1.0.2' ],
+17 silly audit   deepmerge: [ '4.3.1' ],
+17 silly audit   'delayed-stream': [ '1.0.0' ],
+17 silly audit   delegates: [ '1.0.0' ],
+17 silly audit   depd: [ '2.0.0' ],
+17 silly audit   destroy: [ '1.2.0' ],
+17 silly audit   'detect-libc': [ '2.1.2' ],
+17 silly audit   'dom-serializer': [ '2.0.0' ],
+17 silly audit   entities: [ '4.5.0', '7.0.1' ],
+17 silly audit   domelementtype: [ '2.3.0' ],
+17 silly audit   domhandler: [ '5.0.3' ],
+17 silly audit   domutils: [ '3.2.2' ],
+17 silly audit   dotenv: [ '16.4.5' ],
+17 silly audit   'dotenv-expand': [ '10.0.0' ],
+17 silly audit   'dunder-proto': [ '1.0.1' ],
+17 silly audit   duplexer: [ '0.1.2' ],
+17 silly audit   'ecdsa-sig-formatter': [ '1.0.11' ],
+17 silly audit   echarts: [ '5.6.0' ],
+17 silly audit   tslib: [ '2.3.0', '2.8.1' ],
+17 silly audit   'ee-first': [ '1.1.1' ],
+17 silly audit   'emoji-regex': [ '8.0.0' ],
+17 silly audit   encodeurl: [ '2.0.0' ],
+17 silly audit   'es-define-property': [ '1.0.1' ],
+17 silly audit   'es-errors': [ '1.3.0' ],
+17 silly audit   'es-object-atoms': [ '1.1.1' ],
+17 silly audit   'es-set-tostringtag': [ '2.1.0' ],
+17 silly audit   'es6-promise': [ '4.2.8' ],
+17 silly audit   esbuild: [ '0.28.0', '0.21.5' ],
+17 silly audit   escalade: [ '3.2.0' ],
+17 silly audit   'escape-html': [ '1.0.3' ],
+17 silly audit   'estree-walker': [ '2.0.2' ],
+17 silly audit   etag: [ '1.8.1' ],
+17 silly audit   'event-stream': [ '3.3.4' ],
+17 silly audit   evtd: [ '0.2.4' ],
+17 silly audit   'iconv-lite': [ '0.7.2', '0.4.24' ],
+17 silly audit   'media-typer': [ '1.1.0', '0.3.0' ],
+17 silly audit   'raw-body': [ '3.0.2', '2.5.3' ],
+17 silly audit   'type-is': [ '2.1.0', '1.6.18' ],
+17 silly audit   'fast-deep-equal': [ '2.0.1' ],
+17 silly audit   'fast-safe-stringify': [ '2.1.1' ],
+17 silly audit   'fast-sha256': [ '1.3.0' ],
+17 silly audit   fflate: [ '0.8.3' ],
+17 silly audit   'file-type': [ '20.4.1' ],
+17 silly audit   'follow-redirects': [ '1.16.0' ],
+17 silly audit   'form-data': [ '4.0.5' ],
+17 silly audit   forwarded: [ '0.2.0' ],
+17 silly audit   from: [ '0.1.7' ],
+17 silly audit   'fs-minipass': [ '2.1.0' ],
+17 silly audit   minipass: [ '3.3.6', '5.0.0' ],
+17 silly audit   'fs.realpath': [ '1.0.0' ],
+17 silly audit   fsevents: [ '2.3.3' ],
+17 silly audit   'function-bind': [ '1.1.2' ],
+17 silly audit   gauge: [ '3.0.2' ],
+17 silly audit   'get-caller-file': [ '2.0.5' ],
+17 silly audit   'get-intrinsic': [ '1.3.0' ],
+17 silly audit   'get-proto': [ '1.0.1' ],
+17 silly audit   glob: [ '7.2.3' ],
+17 silly audit   gopd: [ '1.2.0' ],
+17 silly audit   'has-flag': [ '4.0.0' ],
+17 silly audit   'has-symbols': [ '1.1.0' ],
+17 silly audit   'has-tostringtag': [ '1.0.2' ],
+17 silly audit   'has-unicode': [ '2.0.1' ],
+17 silly audit   hasown: [ '2.0.3' ],
+17 silly audit   he: [ '1.2.0' ],
+17 silly audit   helmet: [ '8.1.0' ],
+17 silly audit   'highlight.js': [ '11.11.1' ],
+17 silly audit   'html-to-text': [ '9.0.5' ],
+17 silly audit   htmlparser2: [ '8.0.2' ],
+17 silly audit   'http-errors': [ '2.0.1' ],
+17 silly audit   'https-proxy-agent': [ '5.0.1' ],
+17 silly audit   ieee754: [ '1.2.1' ],
+17 silly audit   inflight: [ '1.0.6' ],
+17 silly audit   inherits: [ '2.0.4' ],
+17 silly audit   'ipaddr.js': [ '1.9.1' ],
+17 silly audit   'is-fullwidth-code-point': [ '3.0.0' ],
+17 silly audit   'is-promise': [ '4.0.0' ],
+17 silly audit   isexe: [ '2.0.0' ],
+17 silly audit   iterare: [ '1.2.1' ],
+17 silly audit   'js-yaml': [ '4.1.0' ],
+17 silly audit   jsonwebtoken: [ '9.0.2' ],
+17 silly audit   jwa: [ '1.4.2' ],
+17 silly audit   jws: [ '3.2.3' ],
+17 silly audit   leac: [ '0.6.0' ],
+17 silly audit   'libphonenumber-js': [ '1.13.2' ],
+17 silly audit   lodash: [ '4.17.21' ],
+17 silly audit   'lodash-es': [ '4.18.1' ],
+17 silly audit   'lodash.includes': [ '4.3.0' ],
+17 silly audit   'lodash.isboolean': [ '3.0.3' ],
+17 silly audit   'lodash.isinteger': [ '4.0.4' ],
+17 silly audit   'lodash.isnumber': [ '3.0.3' ],
+17 silly audit   'lodash.isplainobject': [ '4.0.6' ],
+17 silly audit   'lodash.isstring': [ '4.0.1' ],
+17 silly audit   'lodash.once': [ '4.1.1' ],
+17 silly audit   'magic-string': [ '0.30.21' ],
+17 silly audit   'make-dir': [ '3.1.0' ],
+17 silly audit   semver: [ '6.3.1', '7.8.0' ],
+17 silly audit   'map-stream': [ '0.1.0' ],
+17 silly audit   'math-intrinsics': [ '1.1.0' ],
+17 silly audit   methods: [ '1.1.2' ],
+17 silly audit   mime: [ '1.6.0' ],
+17 silly audit   minimist: [ '1.2.8' ],
+17 silly audit   minizlib: [ '2.1.2' ],
+17 silly audit   mkdirp: [ '0.5.6', '1.0.4' ],
+17 silly audit   'muggle-string': [ '0.4.1' ],
+17 silly audit   multer: [ '2.0.2' ],
+17 silly audit   'naive-ui': [ '2.43.2' ],
+17 silly audit   nanoid: [ '3.3.12' ],
+17 silly audit   'node-addon-api': [ '5.1.0' ],
+17 silly audit   'node-cleanup': [ '2.1.2' ],
+17 silly audit   'node-fetch': [ '2.7.0' ],
+17 silly audit   nopt: [ '5.0.0' ],
+17 silly audit   npmlog: [ '5.0.1' ],
+17 silly audit   'object-assign': [ '4.1.1' ],
+17 silly audit   'object-inspect': [ '1.13.4' ],
+17 silly audit   'on-finished': [ '2.4.1' ],
+17 silly audit   once: [ '1.4.0' ],
+17 silly audit   parseley: [ '0.12.1' ],
+17 silly audit   parseurl: [ '1.3.3' ],
+17 silly audit   passport: [ '0.7.0' ],
+17 silly audit   'passport-jwt': [ '4.0.1' ],
+17 silly audit   'passport-strategy': [ '1.0.0' ],
+17 silly audit   'path-browserify': [ '1.0.1' ],
+17 silly audit   'path-is-absolute': [ '1.0.1' ],
+17 silly audit   'path-key': [ '3.1.1' ],
+17 silly audit   pause: [ '0.0.1' ],
+17 silly audit   'pause-stream': [ '0.0.11' ],
+17 silly audit   peberminta: [ '0.9.0' ],
+17 silly audit   picocolors: [ '1.1.1' ],
+17 silly audit   pinia: [ '2.3.1' ],
+17 silly audit   postcss: [ '8.5.14' ],
+17 silly audit   prettier: [ '3.8.3' ],
+17 silly audit   prisma: [ '5.22.0' ],
+17 silly audit   'proxy-addr': [ '2.0.7' ],
+17 silly audit   'proxy-from-env': [ '2.1.0' ],
+17 silly audit   'ps-tree': [ '1.2.0' ],
+17 silly audit   qs: [ '6.14.2' ],
+17 silly audit   querystringify: [ '2.2.0' ],
+17 silly audit   'range-parser': [ '1.2.1' ],
+17 silly audit   react: [ '19.2.6' ],
+17 silly audit   'react-dom': [ '19.2.6' ],
+17 silly audit   'react-promise-suspense': [ '0.3.4' ],
+17 silly audit   'readable-stream': [ '3.6.2' ],
+17 silly audit   'reflect-metadata': [ '0.2.2' ],
+17 silly audit   'require-directory': [ '2.1.1' ],
+17 silly audit   'requires-port': [ '1.0.0' ],
+17 silly audit   rimraf: [ '3.0.2' ],
+17 silly audit   rollup: [ '4.60.4' ],
+17 silly audit   router: [ '2.2.0' ],
+17 silly audit   rxjs: [ '7.8.2' ],
+17 silly audit   'safe-buffer': [ '5.2.1' ],
+17 silly audit   'safer-buffer': [ '2.1.2' ],
+17 silly audit   scheduler: [ '0.27.0' ],
+17 silly audit   seemly: [ '0.3.10' ],
+17 silly audit   selderee: [ '0.11.0' ],
+17 silly audit   'set-blocking': [ '2.0.0' ],
+17 silly audit   setprototypeof: [ '1.2.0' ],
+17 silly audit   'shebang-command': [ '2.0.0' ],
+17 silly audit   'shebang-regex': [ '3.0.0' ],
+17 silly audit   'shell-quote': [ '1.8.3' ],
+17 silly audit   'side-channel': [ '1.1.0' ],
+17 silly audit   'side-channel-list': [ '1.0.1' ],
+17 silly audit   'side-channel-map': [ '1.0.1' ],
+17 silly audit   'side-channel-weakmap': [ '1.0.2' ],
+17 silly audit   'signal-exit': [ '3.0.7' ],
+17 silly audit   'source-map-js': [ '1.2.1' ],
+17 silly audit   split: [ '0.3.3' ],
+17 silly audit   statuses: [ '2.0.2' ],
+17 silly audit   'stream-combiner': [ '0.0.4' ],
+17 silly audit   streamsearch: [ '1.1.0' ],
+17 silly audit   string_decoder: [ '1.3.0' ],
+17 silly audit   'string-argv': [ '0.3.2' ],
+17 silly audit   'string-width': [ '4.2.3' ],
+17 silly audit   'strip-ansi': [ '6.0.1' ],
+17 silly audit   strtok3: [ '10.3.5' ],
+17 silly audit   svix: [ '1.76.1' ],
+17 silly audit   'swagger-ui-dist': [ '5.17.14' ],
+17 silly audit   'swagger-ui-express': [ '5.0.1' ],
+17 silly audit   tar: [ '6.2.1' ],
+17 silly audit   through: [ '2.3.8' ],
+17 silly audit   toidentifier: [ '1.0.1' ],
+17 silly audit   'token-types': [ '6.1.2' ],
+17 silly audit   tr46: [ '0.0.3' ],
+17 silly audit   'tree-kill': [ '1.2.2' ],
+17 silly audit   treemate: [ '0.3.11' ],
+17 silly audit   'tsc-watch': [ '7.2.0' ],
+17 silly audit   tsx: [ '4.22.1' ],
+17 silly audit   typedarray: [ '0.0.6' ],
+17 silly audit   typescript: [ '5.9.3' ],
+17 silly audit   uid: [ '2.0.2' ],
+17 silly audit   'uint8array-extras': [ '1.5.0' ],
+17 silly audit   'undici-types': [ '6.21.0' ],
+17 silly audit   unpipe: [ '1.0.0' ],
+17 silly audit   'url-parse': [ '1.5.10' ],
+17 silly audit   'util-deprecate': [ '1.0.2' ],
+17 silly audit   'utils-merge': [ '1.0.1' ],
+17 silly audit   uuid: [ '10.0.0' ],
+17 silly audit   validator: [ '13.15.35' ],
+17 silly audit   vary: [ '1.1.2' ],
+17 silly audit   vdirs: [ '0.1.8' ],
+17 silly audit   vite: [ '5.4.21' ],
+17 silly audit   vooks: [ '0.2.12' ],
+17 silly audit   'vscode-uri': [ '3.1.0' ],
+17 silly audit   vue: [ '3.5.34' ],
+17 silly audit   'vue-demi': [ '0.14.10' ],
+17 silly audit   'vue-router': [ '4.6.4' ],
+17 silly audit   'vue-tsc': [ '2.2.12' ],
+17 silly audit   vueuc: [ '0.4.65' ],
+17 silly audit   'webidl-conversions': [ '3.0.1' ],
+17 silly audit   'whatwg-url': [ '5.0.0' ],
+17 silly audit   which: [ '2.0.2' ],
+17 silly audit   'wide-align': [ '1.1.5' ],
+17 silly audit   'wrap-ansi': [ '7.0.0' ],
+17 silly audit   wrappy: [ '1.0.2' ],
+17 silly audit   xtend: [ '4.0.2' ],
+17 silly audit   y18n: [ '5.0.8' ],
+17 silly audit   yallist: [ '4.0.0' ],
+17 silly audit   yargs: [ '17.7.2' ],
+17 silly audit   'yargs-parser': [ '21.1.1' ],
+17 silly audit   zrender: [ '5.6.1' ],
+17 silly audit   '@eigp/api': [ '0.1.0' ]
+17 silly audit }
+18 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\vite\node_modules\@esbuild\win32-ia32
+19 silly reify mark deleted [
+19 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\vite\\node_modules\\@esbuild\\win32-ia32'
+19 silly reify ]
+20 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\vite\node_modules\@esbuild\win32-arm64
+21 silly reify mark deleted [
+21 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\vite\\node_modules\\@esbuild\\win32-arm64'
+21 silly reify ]
+22 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\vite\node_modules\@esbuild\sunos-x64
+23 silly reify mark deleted [
+23 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\vite\\node_modules\\@esbuild\\sunos-x64'
+23 silly reify ]
+24 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\vite\node_modules\@esbuild\openbsd-x64
+25 silly reify mark deleted [
+25 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\vite\\node_modules\\@esbuild\\openbsd-x64'
+25 silly reify ]
+26 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\vite\node_modules\@esbuild\netbsd-x64
+27 silly reify mark deleted [
+27 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\vite\\node_modules\\@esbuild\\netbsd-x64'
+27 silly reify ]
+28 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\vite\node_modules\@esbuild\linux-x64
+29 silly reify mark deleted [
+29 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\vite\\node_modules\\@esbuild\\linux-x64'
+29 silly reify ]
+30 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\vite\node_modules\@esbuild\linux-s390x
+31 silly reify mark deleted [
+31 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\vite\\node_modules\\@esbuild\\linux-s390x'
+31 silly reify ]
+32 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\vite\node_modules\@esbuild\linux-riscv64
+33 silly reify mark deleted [
+33 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\vite\\node_modules\\@esbuild\\linux-riscv64'
+33 silly reify ]
+34 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\vite\node_modules\@esbuild\linux-ppc64
+35 silly reify mark deleted [
+35 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\vite\\node_modules\\@esbuild\\linux-ppc64'
+35 silly reify ]
+36 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\vite\node_modules\@esbuild\linux-mips64el
+37 silly reify mark deleted [
+37 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\vite\\node_modules\\@esbuild\\linux-mips64el'
+37 silly reify ]
+38 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\vite\node_modules\@esbuild\linux-loong64
+39 silly reify mark deleted [
+39 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\vite\\node_modules\\@esbuild\\linux-loong64'
+39 silly reify ]
+40 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\vite\node_modules\@esbuild\linux-ia32
+41 silly reify mark deleted [
+41 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\vite\\node_modules\\@esbuild\\linux-ia32'
+41 silly reify ]
+42 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\vite\node_modules\@esbuild\linux-arm64
+43 silly reify mark deleted [
+43 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\vite\\node_modules\\@esbuild\\linux-arm64'
+43 silly reify ]
+44 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\vite\node_modules\@esbuild\linux-arm
+45 silly reify mark deleted [
+45 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\vite\\node_modules\\@esbuild\\linux-arm'
+45 silly reify ]
+46 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\vite\node_modules\@esbuild\freebsd-x64
+47 silly reify mark deleted [
+47 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\vite\\node_modules\\@esbuild\\freebsd-x64'
+47 silly reify ]
+48 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\vite\node_modules\@esbuild\freebsd-arm64
+49 silly reify mark deleted [
+49 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\vite\\node_modules\\@esbuild\\freebsd-arm64'
+49 silly reify ]
+50 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\vite\node_modules\@esbuild\darwin-x64
+51 silly reify mark deleted [
+51 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\vite\\node_modules\\@esbuild\\darwin-x64'
+51 silly reify ]
+52 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\vite\node_modules\@esbuild\darwin-arm64
+53 silly reify mark deleted [
+53 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\vite\\node_modules\\@esbuild\\darwin-arm64'
+53 silly reify ]
+54 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\vite\node_modules\@esbuild\android-x64
+55 silly reify mark deleted [
+55 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\vite\\node_modules\\@esbuild\\android-x64'
+55 silly reify ]
+56 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\vite\node_modules\@esbuild\android-arm64
+57 silly reify mark deleted [
+57 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\vite\\node_modules\\@esbuild\\android-arm64'
+57 silly reify ]
+58 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\vite\node_modules\@esbuild\android-arm
+59 silly reify mark deleted [
+59 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\vite\\node_modules\\@esbuild\\android-arm'
+59 silly reify ]
+60 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\vite\node_modules\@esbuild\aix-ppc64
+61 silly reify mark deleted [
+61 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\vite\\node_modules\\@esbuild\\aix-ppc64'
+61 silly reify ]
+62 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\fsevents
+63 silly reify mark deleted [ 'F:\\我的项目\\EIGP-item\\node_modules\\fsevents' ]
+64 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\@rollup\rollup-win32-ia32-msvc
+65 silly reify mark deleted [
+65 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\@rollup\\rollup-win32-ia32-msvc'
+65 silly reify ]
+66 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\@rollup\rollup-win32-arm64-msvc
+67 silly reify mark deleted [
+67 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\@rollup\\rollup-win32-arm64-msvc'
+67 silly reify ]
+68 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\@rollup\rollup-openharmony-arm64
+69 silly reify mark deleted [
+69 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\@rollup\\rollup-openharmony-arm64'
+69 silly reify ]
+70 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\@rollup\rollup-openbsd-x64
+71 silly reify mark deleted [ 'F:\\我的项目\\EIGP-item\\node_modules\\@rollup\\rollup-openbsd-x64' ]
+72 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\@rollup\rollup-linux-x64-musl
+73 silly reify mark deleted [ 'F:\\我的项目\\EIGP-item\\node_modules\\@rollup\\rollup-linux-x64-musl' ]
+74 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\@rollup\rollup-linux-x64-gnu
+75 silly reify mark deleted [ 'F:\\我的项目\\EIGP-item\\node_modules\\@rollup\\rollup-linux-x64-gnu' ]
+76 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\@rollup\rollup-linux-s390x-gnu
+77 silly reify mark deleted [
+77 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\@rollup\\rollup-linux-s390x-gnu'
+77 silly reify ]
+78 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\@rollup\rollup-linux-riscv64-musl
+79 silly reify mark deleted [
+79 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\@rollup\\rollup-linux-riscv64-musl'
+79 silly reify ]
+80 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\@rollup\rollup-linux-riscv64-gnu
+81 silly reify mark deleted [
+81 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\@rollup\\rollup-linux-riscv64-gnu'
+81 silly reify ]
+82 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\@rollup\rollup-linux-ppc64-musl
+83 silly reify mark deleted [
+83 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\@rollup\\rollup-linux-ppc64-musl'
+83 silly reify ]
+84 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\@rollup\rollup-linux-ppc64-gnu
+85 silly reify mark deleted [
+85 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\@rollup\\rollup-linux-ppc64-gnu'
+85 silly reify ]
+86 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\@rollup\rollup-linux-loong64-musl
+87 silly reify mark deleted [
+87 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\@rollup\\rollup-linux-loong64-musl'
+87 silly reify ]
+88 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\@rollup\rollup-linux-loong64-gnu
+89 silly reify mark deleted [
+89 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\@rollup\\rollup-linux-loong64-gnu'
+89 silly reify ]
+90 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\@rollup\rollup-linux-arm64-musl
+91 silly reify mark deleted [
+91 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\@rollup\\rollup-linux-arm64-musl'
+91 silly reify ]
+92 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\@rollup\rollup-linux-arm64-gnu
+93 silly reify mark deleted [
+93 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\@rollup\\rollup-linux-arm64-gnu'
+93 silly reify ]
+94 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\@rollup\rollup-linux-arm-musleabihf
+95 silly reify mark deleted [
+95 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\@rollup\\rollup-linux-arm-musleabihf'
+95 silly reify ]
+96 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\@rollup\rollup-linux-arm-gnueabihf
+97 silly reify mark deleted [
+97 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\@rollup\\rollup-linux-arm-gnueabihf'
+97 silly reify ]
+98 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\@rollup\rollup-freebsd-x64
+99 silly reify mark deleted [ 'F:\\我的项目\\EIGP-item\\node_modules\\@rollup\\rollup-freebsd-x64' ]
+100 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\@rollup\rollup-freebsd-arm64
+101 silly reify mark deleted [ 'F:\\我的项目\\EIGP-item\\node_modules\\@rollup\\rollup-freebsd-arm64' ]
+102 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\@rollup\rollup-darwin-x64
+103 silly reify mark deleted [ 'F:\\我的项目\\EIGP-item\\node_modules\\@rollup\\rollup-darwin-x64' ]
+104 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\@rollup\rollup-darwin-arm64
+105 silly reify mark deleted [ 'F:\\我的项目\\EIGP-item\\node_modules\\@rollup\\rollup-darwin-arm64' ]
+106 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\@rollup\rollup-android-arm64
+107 silly reify mark deleted [ 'F:\\我的项目\\EIGP-item\\node_modules\\@rollup\\rollup-android-arm64' ]
+108 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\@rollup\rollup-android-arm-eabi
+109 silly reify mark deleted [
+109 silly reify   'F:\\我的项目\\EIGP-item\\node_modules\\@rollup\\rollup-android-arm-eabi'
+109 silly reify ]
+110 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\@esbuild\win32-ia32
+111 silly reify mark deleted [ 'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\win32-ia32' ]
+112 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\@esbuild\win32-arm64
+113 silly reify mark deleted [ 'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\win32-arm64' ]
+114 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\@esbuild\sunos-x64
+115 silly reify mark deleted [ 'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\sunos-x64' ]
+116 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\@esbuild\openharmony-arm64
+117 silly reify mark deleted [ 'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\openharmony-arm64' ]
+118 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\@esbuild\openbsd-x64
+119 silly reify mark deleted [ 'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\openbsd-x64' ]
+120 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\@esbuild\openbsd-arm64
+121 silly reify mark deleted [ 'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\openbsd-arm64' ]
+122 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\@esbuild\netbsd-x64
+123 silly reify mark deleted [ 'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\netbsd-x64' ]
+124 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\@esbuild\netbsd-arm64
+125 silly reify mark deleted [ 'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\netbsd-arm64' ]
+126 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\@esbuild\linux-x64
+127 silly reify mark deleted [ 'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\linux-x64' ]
+128 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\@esbuild\linux-s390x
+129 silly reify mark deleted [ 'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\linux-s390x' ]
+130 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\@esbuild\linux-riscv64
+131 silly reify mark deleted [ 'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\linux-riscv64' ]
+132 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\@esbuild\linux-ppc64
+133 silly reify mark deleted [ 'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\linux-ppc64' ]
+134 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\@esbuild\linux-mips64el
+135 silly reify mark deleted [ 'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\linux-mips64el' ]
+136 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\@esbuild\linux-loong64
+137 silly reify mark deleted [ 'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\linux-loong64' ]
+138 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\@esbuild\linux-ia32
+139 silly reify mark deleted [ 'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\linux-ia32' ]
+140 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\@esbuild\linux-arm64
+141 silly reify mark deleted [ 'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\linux-arm64' ]
+142 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\@esbuild\linux-arm
+143 silly reify mark deleted [ 'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\linux-arm' ]
+144 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\@esbuild\freebsd-x64
+145 silly reify mark deleted [ 'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\freebsd-x64' ]
+146 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\@esbuild\freebsd-arm64
+147 silly reify mark deleted [ 'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\freebsd-arm64' ]
+148 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\@esbuild\darwin-x64
+149 silly reify mark deleted [ 'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\darwin-x64' ]
+150 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\@esbuild\darwin-arm64
+151 silly reify mark deleted [ 'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\darwin-arm64' ]
+152 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\@esbuild\android-x64
+153 silly reify mark deleted [ 'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\android-x64' ]
+154 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\@esbuild\android-arm64
+155 silly reify mark deleted [ 'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\android-arm64' ]
+156 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\@esbuild\android-arm
+157 silly reify mark deleted [ 'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\android-arm' ]
+158 verbose reify failed optional dependency F:\我的项目\EIGP-item\node_modules\@esbuild\aix-ppc64
+159 silly reify mark deleted [ 'F:\\我的项目\\EIGP-item\\node_modules\\@esbuild\\aix-ppc64' ]
+160 silly tarball no local data for zrender@https://registry.npmjs.org/zrender/-/zrender-5.6.1.tgz. Extracting by manifest.
+161 silly tarball no local data for yargs-parser@https://registry.npmjs.org/yargs-parser/-/yargs-parser-21.1.1.tgz. Extracting by manifest.
+162 silly tarball no local data for yargs@https://registry.npmjs.org/yargs/-/yargs-17.7.2.tgz. Extracting by manifest.
+163 silly tarball no local data for yallist@https://registry.npmjs.org/yallist/-/yallist-4.0.0.tgz. Extracting by manifest.
+164 silly tarball no local data for y18n@https://registry.npmjs.org/y18n/-/y18n-5.0.8.tgz. Extracting by manifest.
+165 silly tarball no local data for xtend@https://registry.npmjs.org/xtend/-/xtend-4.0.2.tgz. Extracting by manifest.
+166 silly tarball no local data for wrappy@https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz. Extracting by manifest.
+167 silly tarball no local data for wrap-ansi@https://registry.npmjs.org/wrap-ansi/-/wrap-ansi-7.0.0.tgz. Extracting by manifest.
+168 silly tarball no local data for wide-align@https://registry.npmjs.org/wide-align/-/wide-align-1.1.5.tgz. Extracting by manifest.
+169 silly tarball no local data for which@https://registry.npmjs.org/which/-/which-2.0.2.tgz. Extracting by manifest.
+170 silly tarball no local data for whatwg-url@https://registry.npmjs.org/whatwg-url/-/whatwg-url-5.0.0.tgz. Extracting by manifest.
+171 silly tarball no local data for webidl-conversions@https://registry.npmjs.org/webidl-conversions/-/webidl-conversions-3.0.1.tgz. Extracting by manifest.
+172 silly tarball no local data for vueuc@https://registry.npmjs.org/vueuc/-/vueuc-0.4.65.tgz. Extracting by manifest.
+173 silly tarball no local data for vue-tsc@https://registry.npmjs.org/vue-tsc/-/vue-tsc-2.2.12.tgz. Extracting by manifest.
+174 silly tarball no local data for vue@https://registry.npmjs.org/vue/-/vue-3.5.34.tgz. Extracting by manifest.
+175 silly tarball no local data for vue-demi@https://registry.npmjs.org/vue-demi/-/vue-demi-0.14.10.tgz. Extracting by manifest.
+176 silly tarball no local data for vscode-uri@https://registry.npmjs.org/vscode-uri/-/vscode-uri-3.1.0.tgz. Extracting by manifest.
+177 silly tarball no local data for vooks@https://registry.npmjs.org/vooks/-/vooks-0.2.12.tgz. Extracting by manifest.
+178 silly tarball no local data for vue-router@https://registry.npmjs.org/vue-router/-/vue-router-4.6.4.tgz. Extracting by manifest.
+179 silly tarball no local data for vite@https://registry.npmjs.org/vite/-/vite-5.4.21.tgz. Extracting by manifest.
+180 silly tarball no local data for vdirs@https://registry.npmjs.org/vdirs/-/vdirs-0.1.8.tgz. Extracting by manifest.
+181 silly tarball no local data for vary@https://registry.npmjs.org/vary/-/vary-1.1.2.tgz. Extracting by manifest.
+182 silly tarball no local data for validator@https://registry.npmjs.org/validator/-/validator-13.15.35.tgz. Extracting by manifest.
+183 silly tarball no local data for uuid@https://registry.npmjs.org/uuid/-/uuid-10.0.0.tgz. Extracting by manifest.
+184 silly tarball no local data for utils-merge@https://registry.npmjs.org/utils-merge/-/utils-merge-1.0.1.tgz. Extracting by manifest.
+185 silly tarball no local data for url-parse@https://registry.npmjs.org/url-parse/-/url-parse-1.5.10.tgz. Extracting by manifest.
+186 silly tarball no local data for util-deprecate@https://registry.npmjs.org/util-deprecate/-/util-deprecate-1.0.2.tgz. Extracting by manifest.
+187 silly tarball no local data for unpipe@https://registry.npmjs.org/unpipe/-/unpipe-1.0.0.tgz. Extracting by manifest.
+188 silly tarball no local data for undici-types@https://registry.npmjs.org/undici-types/-/undici-types-6.21.0.tgz. Extracting by manifest.
+189 silly tarball no local data for uint8array-extras@https://registry.npmjs.org/uint8array-extras/-/uint8array-extras-1.5.0.tgz. Extracting by manifest.
+190 silly tarball no local data for uid@https://registry.npmjs.org/uid/-/uid-2.0.2.tgz. Extracting by manifest.
+191 silly tarball no local data for typescript@https://registry.npmjs.org/typescript/-/typescript-5.9.3.tgz. Extracting by manifest.
+192 silly tarball no local data for type-is@https://registry.npmjs.org/type-is/-/type-is-1.6.18.tgz. Extracting by manifest.
+193 silly tarball no local data for typedarray@https://registry.npmjs.org/typedarray/-/typedarray-0.0.6.tgz. Extracting by manifest.
+194 silly tarball no local data for tsx@https://registry.npmjs.org/tsx/-/tsx-4.22.1.tgz. Extracting by manifest.
+195 silly tarball no local data for tslib@https://registry.npmjs.org/tslib/-/tslib-2.8.1.tgz. Extracting by manifest.
+196 silly tarball no local data for tsc-watch@https://registry.npmjs.org/tsc-watch/-/tsc-watch-7.2.0.tgz. Extracting by manifest.
+197 silly tarball no local data for treemate@https://registry.npmjs.org/treemate/-/treemate-0.3.11.tgz. Extracting by manifest.
+198 silly tarball no local data for tree-kill@https://registry.npmjs.org/tree-kill/-/tree-kill-1.2.2.tgz. Extracting by manifest.
+199 silly tarball no local data for tr46@https://registry.npmjs.org/tr46/-/tr46-0.0.3.tgz. Extracting by manifest.
+200 silly tarball no local data for token-types@https://registry.npmjs.org/token-types/-/token-types-6.1.2.tgz. Extracting by manifest.
+201 silly tarball no local data for toidentifier@https://registry.npmjs.org/toidentifier/-/toidentifier-1.0.1.tgz. Extracting by manifest.
+202 silly tarball no local data for through@https://registry.npmjs.org/through/-/through-2.3.8.tgz. Extracting by manifest.
+203 silly tarball no local data for tar@https://registry.npmjs.org/tar/-/tar-6.2.1.tgz. Extracting by manifest.
+204 silly tarball no local data for swagger-ui-express@https://registry.npmjs.org/swagger-ui-express/-/swagger-ui-express-5.0.1.tgz. Extracting by manifest.
+205 silly tarball no local data for swagger-ui-dist@https://registry.npmjs.org/swagger-ui-dist/-/swagger-ui-dist-5.17.14.tgz. Extracting by manifest.
+206 silly tarball no local data for svix@https://registry.npmjs.org/svix/-/svix-1.76.1.tgz. Extracting by manifest.
+207 silly tarball no local data for supports-color@https://registry.npmjs.org/supports-color/-/supports-color-8.1.1.tgz. Extracting by manifest.
+208 silly tarball no local data for strtok3@https://registry.npmjs.org/strtok3/-/strtok3-10.3.5.tgz. Extracting by manifest.
+209 silly tarball no local data for strip-ansi@https://registry.npmjs.org/strip-ansi/-/strip-ansi-6.0.1.tgz. Extracting by manifest.
+210 silly tarball no local data for string-argv@https://registry.npmjs.org/string-argv/-/string-argv-0.3.2.tgz. Extracting by manifest.
+211 silly tarball no local data for string-width@https://registry.npmjs.org/string-width/-/string-width-4.2.3.tgz. Extracting by manifest.
+212 silly tarball no local data for string_decoder@https://registry.npmjs.org/string_decoder/-/string_decoder-1.3.0.tgz. Extracting by manifest.
+213 silly tarball no local data for stream-combiner@https://registry.npmjs.org/stream-combiner/-/stream-combiner-0.0.4.tgz. Extracting by manifest.
+214 silly tarball no local data for streamsearch@https://registry.npmjs.org/streamsearch/-/streamsearch-1.1.0.tgz. Extracting by manifest.
+215 silly tarball no local data for statuses@https://registry.npmjs.org/statuses/-/statuses-2.0.2.tgz. Extracting by manifest.
+216 silly tarball no local data for split@https://registry.npmjs.org/split/-/split-0.3.3.tgz. Extracting by manifest.
+217 silly tarball no local data for source-map-js@https://registry.npmjs.org/source-map-js/-/source-map-js-1.2.1.tgz. Extracting by manifest.
+218 silly tarball no local data for signal-exit@https://registry.npmjs.org/signal-exit/-/signal-exit-3.0.7.tgz. Extracting by manifest.
+219 silly tarball no local data for side-channel-map@https://registry.npmjs.org/side-channel-map/-/side-channel-map-1.0.1.tgz. Extracting by manifest.
+220 silly tarball no local data for side-channel-weakmap@https://registry.npmjs.org/side-channel-weakmap/-/side-channel-weakmap-1.0.2.tgz. Extracting by manifest.
+221 silly tarball no local data for side-channel-list@https://registry.npmjs.org/side-channel-list/-/side-channel-list-1.0.1.tgz. Extracting by manifest.
+222 silly tarball no local data for side-channel@https://registry.npmjs.org/side-channel/-/side-channel-1.1.0.tgz. Extracting by manifest.
+223 silly tarball no local data for shell-quote@https://registry.npmjs.org/shell-quote/-/shell-quote-1.8.3.tgz. Extracting by manifest.
+224 silly tarball no local data for shebang-command@https://registry.npmjs.org/shebang-command/-/shebang-command-2.0.0.tgz. Extracting by manifest.
+225 silly tarball no local data for shebang-regex@https://registry.npmjs.org/shebang-regex/-/shebang-regex-3.0.0.tgz. Extracting by manifest.
+226 silly tarball no local data for setprototypeof@https://registry.npmjs.org/setprototypeof/-/setprototypeof-1.2.0.tgz. Extracting by manifest.
+227 silly tarball no local data for set-blocking@https://registry.npmjs.org/set-blocking/-/set-blocking-2.0.0.tgz. Extracting by manifest.
+228 silly tarball no local data for serve-static@https://registry.npmjs.org/serve-static/-/serve-static-2.2.1.tgz. Extracting by manifest.
+229 silly tarball no local data for semver@https://registry.npmjs.org/semver/-/semver-7.8.0.tgz. Extracting by manifest.
+230 silly tarball no local data for selderee@https://registry.npmjs.org/selderee/-/selderee-0.11.0.tgz. Extracting by manifest.
+231 silly tarball no local data for send@https://registry.npmjs.org/send/-/send-1.2.1.tgz. Extracting by manifest.
+232 silly tarball no local data for seemly@https://registry.npmjs.org/seemly/-/seemly-0.3.10.tgz. Extracting by manifest.
+233 silly tarball no local data for scheduler@https://registry.npmjs.org/scheduler/-/scheduler-0.27.0.tgz. Extracting by manifest.
+234 silly tarball no local data for safer-buffer@https://registry.npmjs.org/safer-buffer/-/safer-buffer-2.1.2.tgz. Extracting by manifest.
+235 silly tarball no local data for safe-buffer@https://registry.npmjs.org/safe-buffer/-/safe-buffer-5.2.1.tgz. Extracting by manifest.
+236 silly tarball no local data for router@https://registry.npmjs.org/router/-/router-2.2.0.tgz. Extracting by manifest.
+237 silly tarball no local data for rimraf@https://registry.npmjs.org/rimraf/-/rimraf-3.0.2.tgz. Extracting by manifest.
+238 silly tarball no local data for rollup@https://registry.npmjs.org/rollup/-/rollup-4.60.4.tgz. Extracting by manifest.
+239 silly tarball no local data for requires-port@https://registry.npmjs.org/requires-port/-/requires-port-1.0.0.tgz. Extracting by manifest.
+240 silly tarball no local data for resend@https://registry.npmjs.org/resend/-/resend-6.4.2.tgz. Extracting by manifest.
+241 silly tarball no local data for require-directory@https://registry.npmjs.org/require-directory/-/require-directory-2.1.1.tgz. Extracting by manifest.
+242 silly tarball no local data for readable-stream@https://registry.npmjs.org/readable-stream/-/readable-stream-3.6.2.tgz. Extracting by manifest.
+243 silly tarball no local data for reflect-metadata@https://registry.npmjs.org/reflect-metadata/-/reflect-metadata-0.2.2.tgz. Extracting by manifest.
+244 silly tarball no local data for react-dom@https://registry.npmjs.org/react-dom/-/react-dom-19.2.6.tgz. Extracting by manifest.
+245 silly tarball no local data for react-promise-suspense@https://registry.npmjs.org/react-promise-suspense/-/react-promise-suspense-0.3.4.tgz. Extracting by manifest.
+246 silly tarball no local data for react@https://registry.npmjs.org/react/-/react-19.2.6.tgz. Extracting by manifest.
+247 silly tarball no local data for range-parser@https://registry.npmjs.org/range-parser/-/range-parser-1.2.1.tgz. Extracting by manifest.
+248 silly tarball no local data for qs@https://registry.npmjs.org/qs/-/qs-6.14.2.tgz. Extracting by manifest.
+249 silly tarball no local data for raw-body@https://registry.npmjs.org/raw-body/-/raw-body-2.5.3.tgz. Extracting by manifest.
+250 silly tarball no local data for querystringify@https://registry.npmjs.org/querystringify/-/querystringify-2.2.0.tgz. Extracting by manifest.
+251 silly tarball no local data for ps-tree@https://registry.npmjs.org/ps-tree/-/ps-tree-1.2.0.tgz. Extracting by manifest.
+252 silly tarball no local data for proxy-from-env@https://registry.npmjs.org/proxy-from-env/-/proxy-from-env-2.1.0.tgz. Extracting by manifest.
+253 silly tarball no local data for proxy-addr@https://registry.npmjs.org/proxy-addr/-/proxy-addr-2.0.7.tgz. Extracting by manifest.
+254 silly tarball no local data for prettier@https://registry.npmjs.org/prettier/-/prettier-3.8.3.tgz. Extracting by manifest.
+255 silly tarball no local data for prisma@https://registry.npmjs.org/prisma/-/prisma-5.22.0.tgz. Extracting by manifest.
+256 silly tarball no local data for postcss@https://registry.npmjs.org/postcss/-/postcss-8.5.14.tgz. Extracting by manifest.
+257 silly tarball no local data for pinia@https://registry.npmjs.org/pinia/-/pinia-2.3.1.tgz. Extracting by manifest.
+258 silly tarball no local data for picocolors@https://registry.npmjs.org/picocolors/-/picocolors-1.1.1.tgz. Extracting by manifest.
+259 silly tarball no local data for pause-stream@https://registry.npmjs.org/pause-stream/-/pause-stream-0.0.11.tgz. Extracting by manifest.
+260 silly tarball no local data for peberminta@https://registry.npmjs.org/peberminta/-/peberminta-0.9.0.tgz. Extracting by manifest.
+261 silly tarball no local data for pause@https://registry.npmjs.org/pause/-/pause-0.0.1.tgz. Extracting by manifest.
+262 silly tarball no local data for path-to-regexp@https://registry.npmjs.org/path-to-regexp/-/path-to-regexp-3.3.0.tgz. Extracting by manifest.
+263 silly tarball no local data for path-key@https://registry.npmjs.org/path-key/-/path-key-3.1.1.tgz. Extracting by manifest.
+264 silly tarball no local data for path-browserify@https://registry.npmjs.org/path-browserify/-/path-browserify-1.0.1.tgz. Extracting by manifest.
+265 silly tarball no local data for passport-strategy@https://registry.npmjs.org/passport-strategy/-/passport-strategy-1.0.0.tgz. Extracting by manifest.
+266 silly tarball no local data for path-is-absolute@https://registry.npmjs.org/path-is-absolute/-/path-is-absolute-1.0.1.tgz. Extracting by manifest.
+267 silly tarball no local data for passport-jwt@https://registry.npmjs.org/passport-jwt/-/passport-jwt-4.0.1.tgz. Extracting by manifest.
+268 silly tarball no local data for parseley@https://registry.npmjs.org/parseley/-/parseley-0.12.1.tgz. Extracting by manifest.
+269 silly tarball no local data for passport@https://registry.npmjs.org/passport/-/passport-0.7.0.tgz. Extracting by manifest.
+270 silly tarball no local data for once@https://registry.npmjs.org/once/-/once-1.4.0.tgz. Extracting by manifest.
+271 silly tarball no local data for parseurl@https://registry.npmjs.org/parseurl/-/parseurl-1.3.3.tgz. Extracting by manifest.
+272 silly tarball no local data for on-finished@https://registry.npmjs.org/on-finished/-/on-finished-2.4.1.tgz. Extracting by manifest.
+273 silly tarball no local data for object-inspect@https://registry.npmjs.org/object-inspect/-/object-inspect-1.13.4.tgz. Extracting by manifest.
+274 silly tarball no local data for npmlog@https://registry.npmjs.org/npmlog/-/npmlog-5.0.1.tgz. Extracting by manifest.
+275 silly tarball no local data for nopt@https://registry.npmjs.org/nopt/-/nopt-5.0.0.tgz. Extracting by manifest.
+276 silly tarball no local data for node-fetch@https://registry.npmjs.org/node-fetch/-/node-fetch-2.7.0.tgz. Extracting by manifest.
+277 silly tarball no local data for node-addon-api@https://registry.npmjs.org/node-addon-api/-/node-addon-api-5.1.0.tgz. Extracting by manifest.
+278 silly tarball no local data for negotiator@https://registry.npmjs.org/negotiator/-/negotiator-1.0.0.tgz. Extracting by manifest.
+279 silly tarball no local data for nanoid@https://registry.npmjs.org/nanoid/-/nanoid-3.3.12.tgz. Extracting by manifest.
+280 silly tarball no local data for node-cleanup@https://registry.npmjs.org/node-cleanup/-/node-cleanup-2.1.2.tgz. Extracting by manifest.
+281 silly tarball no local data for naive-ui@https://registry.npmjs.org/naive-ui/-/naive-ui-2.43.2.tgz. Extracting by manifest.
+282 silly tarball no local data for object-assign@https://registry.npmjs.org/object-assign/-/object-assign-4.1.1.tgz. Extracting by manifest.
+283 silly tarball no local data for multer@https://registry.npmjs.org/multer/-/multer-2.0.2.tgz. Extracting by manifest.
+284 silly tarball no local data for ms@https://registry.npmjs.org/ms/-/ms-2.0.0.tgz. Extracting by manifest.
+285 silly tarball no local data for muggle-string@https://registry.npmjs.org/muggle-string/-/muggle-string-0.4.1.tgz. Extracting by manifest.
+286 silly tarball no local data for mkdirp@https://registry.npmjs.org/mkdirp/-/mkdirp-0.5.6.tgz. Extracting by manifest.
+287 silly tarball no local data for minipass@https://registry.npmjs.org/minipass/-/minipass-5.0.0.tgz. Extracting by manifest.
+288 silly tarball no local data for minizlib@https://registry.npmjs.org/minizlib/-/minizlib-2.1.2.tgz. Extracting by manifest.
+289 silly tarball no local data for mime-db@https://registry.npmjs.org/mime-db/-/mime-db-1.54.0.tgz. Extracting by manifest.
+290 silly tarball no local data for minimatch@https://registry.npmjs.org/minimatch/-/minimatch-3.1.5.tgz. Extracting by manifest.
+291 silly tarball no local data for mime-types@https://registry.npmjs.org/mime-types/-/mime-types-3.0.2.tgz. Extracting by manifest.
+292 silly tarball no local data for minimist@https://registry.npmjs.org/minimist/-/minimist-1.2.8.tgz. Extracting by manifest.
+293 silly tarball no local data for mime@https://registry.npmjs.org/mime/-/mime-1.6.0.tgz. Extracting by manifest.
+294 silly tarball no local data for merge-descriptors@https://registry.npmjs.org/merge-descriptors/-/merge-descriptors-2.0.0.tgz. Extracting by manifest.
+295 silly tarball no local data for methods@https://registry.npmjs.org/methods/-/methods-1.1.2.tgz. Extracting by manifest.
+296 silly tarball no local data for math-intrinsics@https://registry.npmjs.org/math-intrinsics/-/math-intrinsics-1.1.0.tgz. Extracting by manifest.
+297 silly tarball no local data for media-typer@https://registry.npmjs.org/media-typer/-/media-typer-0.3.0.tgz. Extracting by manifest.
+298 silly tarball no local data for map-stream@https://registry.npmjs.org/map-stream/-/map-stream-0.1.0.tgz. Extracting by manifest.
+299 silly tarball no local data for magic-string@https://registry.npmjs.org/magic-string/-/magic-string-0.30.21.tgz. Extracting by manifest.
+300 silly tarball no local data for lodash.once@https://registry.npmjs.org/lodash.once/-/lodash.once-4.1.1.tgz. Extracting by manifest.
+301 silly tarball no local data for lodash.isstring@https://registry.npmjs.org/lodash.isstring/-/lodash.isstring-4.0.1.tgz. Extracting by manifest.
+302 silly tarball no local data for make-dir@https://registry.npmjs.org/make-dir/-/make-dir-3.1.0.tgz. Extracting by manifest.
+303 silly tarball no local data for lodash.isplainobject@https://registry.npmjs.org/lodash.isplainobject/-/lodash.isplainobject-4.0.6.tgz. Extracting by manifest.
+304 silly tarball no local data for lodash.isnumber@https://registry.npmjs.org/lodash.isnumber/-/lodash.isnumber-3.0.3.tgz. Extracting by manifest.
+305 silly tarball no local data for lodash.isinteger@https://registry.npmjs.org/lodash.isinteger/-/lodash.isinteger-4.0.4.tgz. Extracting by manifest.
+306 silly tarball no local data for lodash.isboolean@https://registry.npmjs.org/lodash.isboolean/-/lodash.isboolean-3.0.3.tgz. Extracting by manifest.
+307 silly tarball no local data for lodash.includes@https://registry.npmjs.org/lodash.includes/-/lodash.includes-4.3.0.tgz. Extracting by manifest.
+308 silly tarball no local data for lodash-es@https://registry.npmjs.org/lodash-es/-/lodash-es-4.18.1.tgz. Extracting by manifest.
+309 silly tarball no local data for lodash@https://registry.npmjs.org/lodash/-/lodash-4.17.21.tgz. Extracting by manifest.
+310 silly tarball no local data for libphonenumber-js@https://registry.npmjs.org/libphonenumber-js/-/libphonenumber-js-1.13.2.tgz. Extracting by manifest.
+311 silly tarball no local data for leac@https://registry.npmjs.org/leac/-/leac-0.6.0.tgz. Extracting by manifest.
+312 silly tarball no local data for jws@https://registry.npmjs.org/jws/-/jws-3.2.3.tgz. Extracting by manifest.
+313 silly tarball no local data for jwa@https://registry.npmjs.org/jwa/-/jwa-1.4.2.tgz. Extracting by manifest.
+314 silly tarball no local data for jsonwebtoken@https://registry.npmjs.org/jsonwebtoken/-/jsonwebtoken-9.0.2.tgz. Extracting by manifest.
+315 silly tarball no local data for js-yaml@https://registry.npmjs.org/js-yaml/-/js-yaml-4.1.0.tgz. Extracting by manifest.
+316 silly tarball no local data for isexe@https://registry.npmjs.org/isexe/-/isexe-2.0.0.tgz. Extracting by manifest.
+317 silly tarball no local data for iterare@https://registry.npmjs.org/iterare/-/iterare-1.2.1.tgz. Extracting by manifest.
+318 silly tarball no local data for is-promise@https://registry.npmjs.org/is-promise/-/is-promise-4.0.0.tgz. Extracting by manifest.
+319 silly tarball no local data for is-fullwidth-code-point@https://registry.npmjs.org/is-fullwidth-code-point/-/is-fullwidth-code-point-3.0.0.tgz. Extracting by manifest.
+320 silly tarball no local data for ipaddr.js@https://registry.npmjs.org/ipaddr.js/-/ipaddr.js-1.9.1.tgz. Extracting by manifest.
+321 silly tarball no local data for inherits@https://registry.npmjs.org/inherits/-/inherits-2.0.4.tgz. Extracting by manifest.
+322 silly tarball no local data for inflight@https://registry.npmjs.org/inflight/-/inflight-1.0.6.tgz. Extracting by manifest.
+323 silly tarball no local data for ieee754@https://registry.npmjs.org/ieee754/-/ieee754-1.2.1.tgz. Extracting by manifest.
+324 silly tarball no local data for iconv-lite@https://registry.npmjs.org/iconv-lite/-/iconv-lite-0.4.24.tgz. Extracting by manifest.
+325 silly tarball no local data for http-errors@https://registry.npmjs.org/http-errors/-/http-errors-2.0.1.tgz. Extracting by manifest.
+326 silly tarball no local data for https-proxy-agent@https://registry.npmjs.org/https-proxy-agent/-/https-proxy-agent-5.0.1.tgz. Extracting by manifest.
+327 silly tarball no local data for htmlparser2@https://registry.npmjs.org/htmlparser2/-/htmlparser2-8.0.2.tgz. Extracting by manifest.
+328 silly tarball no local data for html-to-text@https://registry.npmjs.org/html-to-text/-/html-to-text-9.0.5.tgz. Extracting by manifest.
+329 silly tarball no local data for highlight.js@https://registry.npmjs.org/highlight.js/-/highlight.js-11.11.1.tgz. Extracting by manifest.
+330 silly tarball no local data for helmet@https://registry.npmjs.org/helmet/-/helmet-8.1.0.tgz. Extracting by manifest.
+331 silly tarball no local data for he@https://registry.npmjs.org/he/-/he-1.2.0.tgz. Extracting by manifest.
+332 silly tarball no local data for hasown@https://registry.npmjs.org/hasown/-/hasown-2.0.3.tgz. Extracting by manifest.
+333 silly tarball no local data for has-unicode@https://registry.npmjs.org/has-unicode/-/has-unicode-2.0.1.tgz. Extracting by manifest.
+334 silly tarball no local data for has-tostringtag@https://registry.npmjs.org/has-tostringtag/-/has-tostringtag-1.0.2.tgz. Extracting by manifest.
+335 silly tarball no local data for has-symbols@https://registry.npmjs.org/has-symbols/-/has-symbols-1.1.0.tgz. Extracting by manifest.
+336 silly tarball no local data for has-flag@https://registry.npmjs.org/has-flag/-/has-flag-4.0.0.tgz. Extracting by manifest.
+337 silly tarball no local data for gopd@https://registry.npmjs.org/gopd/-/gopd-1.2.0.tgz. Extracting by manifest.
+338 silly tarball no local data for glob@https://registry.npmjs.org/glob/-/glob-7.2.3.tgz. Extracting by manifest.
+339 silly tarball no local data for get-proto@https://registry.npmjs.org/get-proto/-/get-proto-1.0.1.tgz. Extracting by manifest.
+340 silly tarball no local data for get-intrinsic@https://registry.npmjs.org/get-intrinsic/-/get-intrinsic-1.3.0.tgz. Extracting by manifest.
+341 silly tarball no local data for get-caller-file@https://registry.npmjs.org/get-caller-file/-/get-caller-file-2.0.5.tgz. Extracting by manifest.
+342 silly tarball no local data for gauge@https://registry.npmjs.org/gauge/-/gauge-3.0.2.tgz. Extracting by manifest.
+343 silly tarball no local data for function-bind@https://registry.npmjs.org/function-bind/-/function-bind-1.1.2.tgz. Extracting by manifest.
+344 silly tarball no local data for fs.realpath@https://registry.npmjs.org/fs.realpath/-/fs.realpath-1.0.0.tgz. Extracting by manifest.
+345 silly tarball no local data for from@https://registry.npmjs.org/from/-/from-0.1.7.tgz. Extracting by manifest.
+346 silly tarball no local data for fs-minipass@https://registry.npmjs.org/fs-minipass/-/fs-minipass-2.1.0.tgz. Extracting by manifest.
+347 silly tarball no local data for fresh@https://registry.npmjs.org/fresh/-/fresh-2.0.0.tgz. Extracting by manifest.
+348 silly tarball no local data for forwarded@https://registry.npmjs.org/forwarded/-/forwarded-0.2.0.tgz. Extracting by manifest.
+349 silly tarball no local data for form-data@https://registry.npmjs.org/form-data/-/form-data-4.0.5.tgz. Extracting by manifest.
+350 silly tarball no local data for follow-redirects@https://registry.npmjs.org/follow-redirects/-/follow-redirects-1.16.0.tgz. Extracting by manifest.
+351 silly tarball no local data for finalhandler@https://registry.npmjs.org/finalhandler/-/finalhandler-2.1.1.tgz. Extracting by manifest.
+352 silly tarball no local data for file-type@https://registry.npmjs.org/file-type/-/file-type-20.4.1.tgz. Extracting by manifest.
+353 silly tarball no local data for fflate@https://registry.npmjs.org/fflate/-/fflate-0.8.3.tgz. Extracting by manifest.
+354 silly tarball no local data for fast-sha256@https://registry.npmjs.org/fast-sha256/-/fast-sha256-1.3.0.tgz. Extracting by manifest.
+355 silly tarball no local data for fast-safe-stringify@https://registry.npmjs.org/fast-safe-stringify/-/fast-safe-stringify-2.1.1.tgz. Extracting by manifest.
+356 silly tarball no local data for fast-deep-equal@https://registry.npmjs.org/fast-deep-equal/-/fast-deep-equal-2.0.1.tgz. Extracting by manifest.
+357 silly tarball no local data for express@https://registry.npmjs.org/express/-/express-5.2.1.tgz. Extracting by manifest.
+358 silly tarball no local data for evtd@https://registry.npmjs.org/evtd/-/evtd-0.2.4.tgz. Extracting by manifest.
+359 silly tarball no local data for event-stream@https://registry.npmjs.org/event-stream/-/event-stream-3.3.4.tgz. Extracting by manifest.
+360 silly tarball no local data for etag@https://registry.npmjs.org/etag/-/etag-1.8.1.tgz. Extracting by manifest.
+361 silly tarball no local data for estree-walker@https://registry.npmjs.org/estree-walker/-/estree-walker-2.0.2.tgz. Extracting by manifest.
+362 silly tarball no local data for escalade@https://registry.npmjs.org/escalade/-/escalade-3.2.0.tgz. Extracting by manifest.
+363 silly tarball no local data for escape-html@https://registry.npmjs.org/escape-html/-/escape-html-1.0.3.tgz. Extracting by manifest.
+364 silly tarball no local data for esbuild@https://registry.npmjs.org/esbuild/-/esbuild-0.28.0.tgz. Extracting by manifest.
+365 silly tarball no local data for es6-promise@https://registry.npmjs.org/es6-promise/-/es6-promise-4.2.8.tgz. Extracting by manifest.
+366 silly tarball no local data for es-set-tostringtag@https://registry.npmjs.org/es-set-tostringtag/-/es-set-tostringtag-2.1.0.tgz. Extracting by manifest.
+367 silly tarball no local data for es-errors@https://registry.npmjs.org/es-errors/-/es-errors-1.3.0.tgz. Extracting by manifest.
+368 silly tarball no local data for es-object-atoms@https://registry.npmjs.org/es-object-atoms/-/es-object-atoms-1.1.1.tgz. Extracting by manifest.
+369 silly tarball no local data for es-define-property@https://registry.npmjs.org/es-define-property/-/es-define-property-1.0.1.tgz. Extracting by manifest.
+370 silly tarball no local data for entities@https://registry.npmjs.org/entities/-/entities-7.0.1.tgz. Extracting by manifest.
+371 silly tarball no local data for encodeurl@https://registry.npmjs.org/encodeurl/-/encodeurl-2.0.0.tgz. Extracting by manifest.
+372 silly tarball no local data for ee-first@https://registry.npmjs.org/ee-first/-/ee-first-1.1.1.tgz. Extracting by manifest.
+373 silly tarball no local data for emoji-regex@https://registry.npmjs.org/emoji-regex/-/emoji-regex-8.0.0.tgz. Extracting by manifest.
+374 silly tarball no local data for echarts@https://registry.npmjs.org/echarts/-/echarts-5.6.0.tgz. Extracting by manifest.
+375 silly tarball no local data for ecdsa-sig-formatter@https://registry.npmjs.org/ecdsa-sig-formatter/-/ecdsa-sig-formatter-1.0.11.tgz. Extracting by manifest.
+376 silly tarball no local data for duplexer@https://registry.npmjs.org/duplexer/-/duplexer-0.1.2.tgz. Extracting by manifest.
+377 silly tarball no local data for dunder-proto@https://registry.npmjs.org/dunder-proto/-/dunder-proto-1.0.1.tgz. Extracting by manifest.
+378 silly tarball no local data for dotenv-expand@https://registry.npmjs.org/dotenv-expand/-/dotenv-expand-10.0.0.tgz. Extracting by manifest.
+379 silly tarball no local data for dotenv@https://registry.npmjs.org/dotenv/-/dotenv-16.4.5.tgz. Extracting by manifest.
+380 silly tarball no local data for domutils@https://registry.npmjs.org/domutils/-/domutils-3.2.2.tgz. Extracting by manifest.
+381 silly tarball no local data for domelementtype@https://registry.npmjs.org/domelementtype/-/domelementtype-2.3.0.tgz. Extracting by manifest.
+382 silly tarball no local data for domhandler@https://registry.npmjs.org/domhandler/-/domhandler-5.0.3.tgz. Extracting by manifest.
+383 silly tarball no local data for dom-serializer@https://registry.npmjs.org/dom-serializer/-/dom-serializer-2.0.0.tgz. Extracting by manifest.
+384 silly tarball no local data for detect-libc@https://registry.npmjs.org/detect-libc/-/detect-libc-2.1.2.tgz. Extracting by manifest.
+385 silly tarball no local data for destroy@https://registry.npmjs.org/destroy/-/destroy-1.2.0.tgz. Extracting by manifest.
+386 silly tarball no local data for depd@https://registry.npmjs.org/depd/-/depd-2.0.0.tgz. Extracting by manifest.
+387 silly tarball no local data for delegates@https://registry.npmjs.org/delegates/-/delegates-1.0.0.tgz. Extracting by manifest.
+388 silly tarball no local data for delayed-stream@https://registry.npmjs.org/delayed-stream/-/delayed-stream-1.0.0.tgz. Extracting by manifest.
+389 silly tarball no local data for deepmerge@https://registry.npmjs.org/deepmerge/-/deepmerge-4.3.1.tgz. Extracting by manifest.
+390 silly tarball no local data for debug@https://registry.npmjs.org/debug/-/debug-2.6.9.tgz. Extracting by manifest.
+391 silly tarball no local data for de-indent@https://registry.npmjs.org/de-indent/-/de-indent-1.0.2.tgz. Extracting by manifest.
+392 silly tarball no local data for dayjs@https://registry.npmjs.org/dayjs/-/dayjs-1.11.20.tgz. Extracting by manifest.
+393 silly tarball no local data for date-fns-tz@https://registry.npmjs.org/date-fns-tz/-/date-fns-tz-3.2.0.tgz. Extracting by manifest.
+394 silly tarball no local data for date-fns@https://registry.npmjs.org/date-fns/-/date-fns-4.1.0.tgz. Extracting by manifest.
+395 silly tarball no local data for csstype@https://registry.npmjs.org/csstype/-/csstype-3.2.3.tgz. Extracting by manifest.
+396 silly tarball no local data for css-render@https://registry.npmjs.org/css-render/-/css-render-0.15.14.tgz. Extracting by manifest.
+397 silly tarball no local data for cors@https://registry.npmjs.org/cors/-/cors-2.8.5.tgz. Extracting by manifest.
+398 silly tarball no local data for cross-spawn@https://registry.npmjs.org/cross-spawn/-/cross-spawn-7.0.6.tgz. Extracting by manifest.
+399 silly tarball no local data for cookie-signature@https://registry.npmjs.org/cookie-signature/-/cookie-signature-1.2.2.tgz. Extracting by manifest.
+400 silly tarball no local data for cookie@https://registry.npmjs.org/cookie/-/cookie-0.7.2.tgz. Extracting by manifest.
+401 silly tarball no local data for content-type@https://registry.npmjs.org/content-type/-/content-type-1.0.5.tgz. Extracting by manifest.
+402 silly tarball no local data for content-disposition@https://registry.npmjs.org/content-disposition/-/content-disposition-1.1.0.tgz. Extracting by manifest.
+403 silly tarball no local data for console-control-strings@https://registry.npmjs.org/console-control-strings/-/console-control-strings-1.1.0.tgz. Extracting by manifest.
+404 silly tarball no local data for consola@https://registry.npmjs.org/consola/-/consola-2.15.3.tgz. Extracting by manifest.
+405 silly tarball no local data for concurrently@https://registry.npmjs.org/concurrently/-/concurrently-9.2.1.tgz. Extracting by manifest.
+406 silly tarball no local data for concat-stream@https://registry.npmjs.org/concat-stream/-/concat-stream-2.0.0.tgz. Extracting by manifest.
+407 silly tarball no local data for concat-map@https://registry.npmjs.org/concat-map/-/concat-map-0.0.1.tgz. Extracting by manifest.
+408 silly tarball no local data for combined-stream@https://registry.npmjs.org/combined-stream/-/combined-stream-1.0.8.tgz. Extracting by manifest.
+409 silly tarball no local data for color-support@https://registry.npmjs.org/color-support/-/color-support-1.1.3.tgz. Extracting by manifest.
+410 silly tarball no local data for color-name@https://registry.npmjs.org/color-name/-/color-name-1.1.4.tgz. Extracting by manifest.
+411 silly tarball no local data for color-convert@https://registry.npmjs.org/color-convert/-/color-convert-2.0.1.tgz. Extracting by manifest.
+412 silly tarball no local data for cliui@https://registry.npmjs.org/cliui/-/cliui-8.0.1.tgz. Extracting by manifest.
+413 silly tarball no local data for class-validator@https://registry.npmjs.org/class-validator/-/class-validator-0.14.4.tgz. Extracting by manifest.
+414 silly tarball no local data for class-transformer@https://registry.npmjs.org/class-transformer/-/class-transformer-0.5.1.tgz. Extracting by manifest.
+415 silly tarball no local data for chownr@https://registry.npmjs.org/chownr/-/chownr-2.0.0.tgz. Extracting by manifest.
+416 silly tarball no local data for chalk@https://registry.npmjs.org/chalk/-/chalk-4.1.2.tgz. Extracting by manifest.
+417 silly tarball no local data for call-bound@https://registry.npmjs.org/call-bound/-/call-bound-1.0.4.tgz. Extracting by manifest.
+418 silly tarball no local data for call-bind-apply-helpers@https://registry.npmjs.org/call-bind-apply-helpers/-/call-bind-apply-helpers-1.0.2.tgz. Extracting by manifest.
+419 silly tarball no local data for bytes@https://registry.npmjs.org/bytes/-/bytes-3.1.2.tgz. Extracting by manifest.
+420 silly tarball no local data for busboy@https://registry.npmjs.org/busboy/-/busboy-1.6.0.tgz. Extracting by manifest.
+421 silly tarball no local data for buffer-from@https://registry.npmjs.org/buffer-from/-/buffer-from-1.1.2.tgz. Extracting by manifest.
+422 silly tarball no local data for buffer-equal-constant-time@https://registry.npmjs.org/buffer-equal-constant-time/-/buffer-equal-constant-time-1.0.1.tgz. Extracting by manifest.
+423 silly tarball no local data for brace-expansion@https://registry.npmjs.org/brace-expansion/-/brace-expansion-1.1.14.tgz. Extracting by manifest.
+424 silly tarball no local data for body-parser@https://registry.npmjs.org/body-parser/-/body-parser-1.20.4.tgz. Extracting by manifest.
+425 silly tarball no local data for bcrypt@https://registry.npmjs.org/bcrypt/-/bcrypt-5.1.1.tgz. Extracting by manifest.
+426 silly tarball no local data for balanced-match@https://registry.npmjs.org/balanced-match/-/balanced-match-1.0.2.tgz. Extracting by manifest.
+427 silly tarball no local data for axios@https://registry.npmjs.org/axios/-/axios-1.16.1.tgz. Extracting by manifest.
+428 silly tarball no local data for asynckit@https://registry.npmjs.org/asynckit/-/asynckit-0.4.0.tgz. Extracting by manifest.
+429 silly tarball no local data for async-validator@https://registry.npmjs.org/async-validator/-/async-validator-4.2.5.tgz. Extracting by manifest.
+430 silly tarball no local data for array-flatten@https://registry.npmjs.org/array-flatten/-/array-flatten-1.1.1.tgz. Extracting by manifest.
+431 silly tarball no local data for argparse@https://registry.npmjs.org/argparse/-/argparse-2.0.1.tgz. Extracting by manifest.
+432 silly tarball no local data for are-we-there-yet@https://registry.npmjs.org/are-we-there-yet/-/are-we-there-yet-2.0.0.tgz. Extracting by manifest.
+433 silly tarball no local data for aproba@https://registry.npmjs.org/aproba/-/aproba-2.1.0.tgz. Extracting by manifest.
+434 silly tarball no local data for append-field@https://registry.npmjs.org/append-field/-/append-field-1.0.0.tgz. Extracting by manifest.
+435 silly tarball no local data for ansi-styles@https://registry.npmjs.org/ansi-styles/-/ansi-styles-4.3.0.tgz. Extracting by manifest.
+436 silly tarball no local data for ansi-regex@https://registry.npmjs.org/ansi-regex/-/ansi-regex-5.0.1.tgz. Extracting by manifest.
+437 silly tarball no local data for alien-signals@https://registry.npmjs.org/alien-signals/-/alien-signals-1.0.13.tgz. Extracting by manifest.
+438 silly tarball no local data for agent-base@https://registry.npmjs.org/agent-base/-/agent-base-6.0.2.tgz. Extracting by manifest.
+439 silly tarball no local data for accepts@https://registry.npmjs.org/accepts/-/accepts-2.0.0.tgz. Extracting by manifest.
+440 silly tarball no local data for abbrev@https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz. Extracting by manifest.
+441 silly tarball no local data for @vue/shared@https://registry.npmjs.org/@vue/shared/-/shared-3.5.34.tgz. Extracting by manifest.
+442 silly tarball no local data for @vue/server-renderer@https://registry.npmjs.org/@vue/server-renderer/-/server-renderer-3.5.34.tgz. Extracting by manifest.
+443 silly tarball no local data for @vue/runtime-dom@https://registry.npmjs.org/@vue/runtime-dom/-/runtime-dom-3.5.34.tgz. Extracting by manifest.
+444 silly tarball no local data for @vue/runtime-core@https://registry.npmjs.org/@vue/runtime-core/-/runtime-core-3.5.34.tgz. Extracting by manifest.
+445 silly tarball no local data for @vue/reactivity@https://registry.npmjs.org/@vue/reactivity/-/reactivity-3.5.34.tgz. Extracting by manifest.
+446 silly tarball no local data for @vue/language-core@https://registry.npmjs.org/@vue/language-core/-/language-core-2.2.12.tgz. Extracting by manifest.
+447 silly tarball no local data for @vue/devtools-api@https://registry.npmjs.org/@vue/devtools-api/-/devtools-api-6.6.4.tgz. Extracting by manifest.
+448 silly tarball no local data for @vue/compiler-vue2@https://registry.npmjs.org/@vue/compiler-vue2/-/compiler-vue2-2.7.16.tgz. Extracting by manifest.
+449 silly tarball no local data for @vue/compiler-ssr@https://registry.npmjs.org/@vue/compiler-ssr/-/compiler-ssr-3.5.34.tgz. Extracting by manifest.
+450 silly tarball no local data for @vue/compiler-sfc@https://registry.npmjs.org/@vue/compiler-sfc/-/compiler-sfc-3.5.34.tgz. Extracting by manifest.
+451 silly tarball no local data for @volar/typescript@https://registry.npmjs.org/@volar/typescript/-/typescript-2.4.15.tgz. Extracting by manifest.
+452 silly tarball no local data for @vue/compiler-dom@https://registry.npmjs.org/@vue/compiler-dom/-/compiler-dom-3.5.34.tgz. Extracting by manifest.
+453 silly tarball no local data for @volar/source-map@https://registry.npmjs.org/@volar/source-map/-/source-map-2.4.15.tgz. Extracting by manifest.
+454 silly tarball no local data for @volar/language-core@https://registry.npmjs.org/@volar/language-core/-/language-core-2.4.15.tgz. Extracting by manifest.
+455 silly tarball no local data for @vitejs/plugin-vue@https://registry.npmjs.org/@vitejs/plugin-vue/-/plugin-vue-5.2.4.tgz. Extracting by manifest.
+456 silly tarball no local data for @vue/compiler-core@https://registry.npmjs.org/@vue/compiler-core/-/compiler-core-3.5.34.tgz. Extracting by manifest.
+457 silly tarball no local data for @types/validator@https://registry.npmjs.org/@types/validator/-/validator-13.15.10.tgz. Extracting by manifest.
+458 silly tarball no local data for @types/serve-static@https://registry.npmjs.org/@types/serve-static/-/serve-static-1.15.10.tgz. Extracting by manifest.
+459 silly tarball no local data for @types/send@https://registry.npmjs.org/@types/send/-/send-1.2.1.tgz. Extracting by manifest.
+460 silly tarball no local data for @types/range-parser@https://registry.npmjs.org/@types/range-parser/-/range-parser-1.2.7.tgz. Extracting by manifest.
+461 silly tarball no local data for @types/qs@https://registry.npmjs.org/@types/qs/-/qs-6.15.1.tgz. Extracting by manifest.
+462 silly tarball no local data for @types/passport-strategy@https://registry.npmjs.org/@types/passport-strategy/-/passport-strategy-0.2.38.tgz. Extracting by manifest.
+463 silly tarball no local data for @types/passport-jwt@https://registry.npmjs.org/@types/passport-jwt/-/passport-jwt-4.0.1.tgz. Extracting by manifest.
+464 silly tarball no local data for @types/passport@https://registry.npmjs.org/@types/passport/-/passport-1.0.17.tgz. Extracting by manifest.
+465 silly tarball no local data for @types/node@https://registry.npmjs.org/@types/node/-/node-22.19.19.tgz. Extracting by manifest.
+466 silly tarball no local data for @types/mime@https://registry.npmjs.org/@types/mime/-/mime-1.3.5.tgz. Extracting by manifest.
+467 silly tarball no local data for @types/lodash-es@https://registry.npmjs.org/@types/lodash-es/-/lodash-es-4.17.12.tgz. Extracting by manifest.
+468 silly tarball no local data for @types/lodash@https://registry.npmjs.org/@types/lodash/-/lodash-4.17.24.tgz. Extracting by manifest.
+469 silly tarball no local data for @types/katex@https://registry.npmjs.org/@types/katex/-/katex-0.16.8.tgz. Extracting by manifest.
+470 silly tarball no local data for @types/jsonwebtoken@https://registry.npmjs.org/@types/jsonwebtoken/-/jsonwebtoken-9.0.5.tgz. Extracting by manifest.
+471 silly tarball no local data for @types/http-errors@https://registry.npmjs.org/@types/http-errors/-/http-errors-2.0.5.tgz. Extracting by manifest.
+472 silly tarball no local data for @types/express-serve-static-core@https://registry.npmjs.org/@types/express-serve-static-core/-/express-serve-static-core-4.19.8.tgz. Extracting by manifest.
+473 silly tarball no local data for @types/express@https://registry.npmjs.org/@types/express/-/express-4.17.25.tgz. Extracting by manifest.
+474 silly tarball no local data for @types/estree@https://registry.npmjs.org/@types/estree/-/estree-1.0.8.tgz. Extracting by manifest.
+475 silly tarball no local data for @types/connect@https://registry.npmjs.org/@types/connect/-/connect-3.4.38.tgz. Extracting by manifest.
+476 silly tarball no local data for @types/body-parser@https://registry.npmjs.org/@types/body-parser/-/body-parser-1.19.6.tgz. Extracting by manifest.
+477 silly tarball no local data for @types/bcrypt@https://registry.npmjs.org/@types/bcrypt/-/bcrypt-5.0.2.tgz. Extracting by manifest.
+478 silly tarball no local data for @tokenizer/token@https://registry.npmjs.org/@tokenizer/token/-/token-0.3.0.tgz. Extracting by manifest.
+479 silly tarball no local data for @tokenizer/inflate@https://registry.npmjs.org/@tokenizer/inflate/-/inflate-0.2.7.tgz. Extracting by manifest.
+480 silly tarball no local data for @stablelib/base64@https://registry.npmjs.org/@stablelib/base64/-/base64-1.0.1.tgz. Extracting by manifest.
+481 silly tarball no local data for @selderee/plugin-htmlparser2@https://registry.npmjs.org/@selderee/plugin-htmlparser2/-/plugin-htmlparser2-0.11.0.tgz. Extracting by manifest.
+482 silly tarball no local data for @rollup/rollup-win32-x64-msvc@https://registry.npmjs.org/@rollup/rollup-win32-x64-msvc/-/rollup-win32-x64-msvc-4.60.4.tgz. Extracting by manifest.
+483 silly tarball no local data for @rollup/rollup-win32-x64-gnu@https://registry.npmjs.org/@rollup/rollup-win32-x64-gnu/-/rollup-win32-x64-gnu-4.60.4.tgz. Extracting by manifest.
+484 silly tarball no local data for @react-email/render@https://registry.npmjs.org/@react-email/render/-/render-1.1.2.tgz. Extracting by manifest.
+485 silly tarball no local data for @prisma/get-platform@https://registry.npmjs.org/@prisma/get-platform/-/get-platform-5.22.0.tgz. Extracting by manifest.
+486 silly tarball no local data for @prisma/fetch-engine@https://registry.npmjs.org/@prisma/fetch-engine/-/fetch-engine-5.22.0.tgz. Extracting by manifest.
+487 silly tarball no local data for @prisma/engines-version@https://registry.npmjs.org/@prisma/engines-version/-/engines-version-5.22.0-44.605197351a3c8bdd595af2d2a9bc3025bca48ea2.tgz. Extracting by manifest.
+488 silly tarball no local data for @prisma/engines@https://registry.npmjs.org/@prisma/engines/-/engines-5.22.0.tgz. Extracting by manifest.
+489 silly tarball no local data for @prisma/debug@https://registry.npmjs.org/@prisma/debug/-/debug-5.22.0.tgz. Extracting by manifest.
+490 silly tarball no local data for @prisma/client@https://registry.npmjs.org/@prisma/client/-/client-5.22.0.tgz. Extracting by manifest.
+491 silly tarball no local data for @nuxtjs/opencollective@https://registry.npmjs.org/@nuxtjs/opencollective/-/opencollective-0.3.2.tgz. Extracting by manifest.
+492 silly tarball no local data for @nestjs/swagger@https://registry.npmjs.org/@nestjs/swagger/-/swagger-7.4.2.tgz. Extracting by manifest.
+493 silly tarball no local data for @nestjs/platform-express@https://registry.npmjs.org/@nestjs/platform-express/-/platform-express-10.4.22.tgz. Extracting by manifest.
+494 silly tarball no local data for @nestjs/passport@https://registry.npmjs.org/@nestjs/passport/-/passport-10.0.3.tgz. Extracting by manifest.
+495 silly tarball no local data for @nestjs/mapped-types@https://registry.npmjs.org/@nestjs/mapped-types/-/mapped-types-2.0.5.tgz. Extracting by manifest.
+496 silly tarball no local data for @nestjs/jwt@https://registry.npmjs.org/@nestjs/jwt/-/jwt-10.2.0.tgz. Extracting by manifest.
+497 silly tarball no local data for @nestjs/core@https://registry.npmjs.org/@nestjs/core/-/core-10.4.22.tgz. Extracting by manifest.
+498 silly tarball no local data for @nestjs/config@https://registry.npmjs.org/@nestjs/config/-/config-3.3.0.tgz. Extracting by manifest.
+499 silly tarball no local data for @nestjs/common@https://registry.npmjs.org/@nestjs/common/-/common-10.4.22.tgz. Extracting by manifest.
+500 silly tarball no local data for @microsoft/tsdoc@https://registry.npmjs.org/@microsoft/tsdoc/-/tsdoc-0.15.1.tgz. Extracting by manifest.
+501 silly tarball no local data for @mapbox/node-pre-gyp@https://registry.npmjs.org/@mapbox/node-pre-gyp/-/node-pre-gyp-1.0.11.tgz. Extracting by manifest.
+502 silly tarball no local data for @lukeed/csprng@https://registry.npmjs.org/@lukeed/csprng/-/csprng-1.1.0.tgz. Extracting by manifest.
+503 silly tarball no local data for @juggle/resize-observer@https://registry.npmjs.org/@juggle/resize-observer/-/resize-observer-3.4.0.tgz. Extracting by manifest.
+504 silly tarball no local data for @jridgewell/sourcemap-codec@https://registry.npmjs.org/@jridgewell/sourcemap-codec/-/sourcemap-codec-1.5.5.tgz. Extracting by manifest.
+505 silly tarball no local data for @emotion/hash@https://registry.npmjs.org/@emotion/hash/-/hash-0.8.0.tgz. Extracting by manifest.
+506 silly tarball no local data for @esbuild/win32-x64@https://registry.npmjs.org/@esbuild/win32-x64/-/win32-x64-0.28.0.tgz. Extracting by manifest.
+507 silly tarball no local data for @css-render/plugin-bem@https://registry.npmjs.org/@css-render/plugin-bem/-/plugin-bem-0.15.14.tgz. Extracting by manifest.
+508 silly tarball no local data for @css-render/vue3-ssr@https://registry.npmjs.org/@css-render/vue3-ssr/-/vue3-ssr-0.15.14.tgz. Extracting by manifest.
+509 silly tarball no local data for @babel/types@https://registry.npmjs.org/@babel/types/-/types-7.29.0.tgz. Extracting by manifest.
+510 silly tarball no local data for @borewit/text-codec@https://registry.npmjs.org/@borewit/text-codec/-/text-codec-0.2.2.tgz. Extracting by manifest.
+511 silly tarball no local data for @babel/parser@https://registry.npmjs.org/@babel/parser/-/parser-7.29.3.tgz. Extracting by manifest.
+512 silly tarball no local data for @babel/helper-validator-identifier@https://registry.npmjs.org/@babel/helper-validator-identifier/-/helper-validator-identifier-7.28.5.tgz. Extracting by manifest.
+513 silly tarball no local data for @babel/helper-string-parser@https://registry.npmjs.org/@babel/helper-string-parser/-/helper-string-parser-7.27.1.tgz. Extracting by manifest.
+514 silly tarball no local data for rxjs@https://registry.npmjs.org/rxjs/-/rxjs-7.8.2.tgz. Extracting by manifest.
+515 silly tarball no local data for tslib@https://registry.npmjs.org/tslib/-/tslib-2.3.0.tgz. Extracting by manifest.
+516 silly tarball no local data for esbuild@https://registry.npmjs.org/esbuild/-/esbuild-0.21.5.tgz. Extracting by manifest.
+517 silly tarball no local data for mime-types@https://registry.npmjs.org/mime-types/-/mime-types-2.1.35.tgz. Extracting by manifest.
+518 silly tarball no local data for @esbuild/win32-x64@https://registry.npmjs.org/@esbuild/win32-x64/-/win32-x64-0.21.5.tgz. Extracting by manifest.
+519 silly tarball no local data for mime-db@https://registry.npmjs.org/mime-db/-/mime-db-1.52.0.tgz. Extracting by manifest.
+520 silly tarball no local data for mkdirp@https://registry.npmjs.org/mkdirp/-/mkdirp-1.0.4.tgz. Extracting by manifest.
+521 silly tarball no local data for ms@https://registry.npmjs.org/ms/-/ms-2.1.3.tgz. Extracting by manifest.
+522 silly tarball no local data for path-to-regexp@https://registry.npmjs.org/path-to-regexp/-/path-to-regexp-8.4.2.tgz. Extracting by manifest.
+523 silly tarball no local data for debug@https://registry.npmjs.org/debug/-/debug-4.4.3.tgz. Extracting by manifest.
+524 silly tarball no local data for ms@https://registry.npmjs.org/ms/-/ms-2.1.3.tgz. Extracting by manifest.
+525 silly tarball no local data for debug@https://registry.npmjs.org/debug/-/debug-4.4.3.tgz. Extracting by manifest.
+526 silly tarball no local data for minipass@https://registry.npmjs.org/minipass/-/minipass-3.3.6.tgz. Extracting by manifest.
+527 silly tarball no local data for ms@https://registry.npmjs.org/ms/-/ms-2.1.3.tgz. Extracting by manifest.
+528 silly tarball no local data for semver@https://registry.npmjs.org/semver/-/semver-6.3.1.tgz. Extracting by manifest.
+529 silly tarball no local data for ms@https://registry.npmjs.org/ms/-/ms-2.1.3.tgz. Extracting by manifest.
+530 silly tarball no local data for debug@https://registry.npmjs.org/debug/-/debug-4.4.3.tgz. Extracting by manifest.
+531 silly tarball no local data for entities@https://registry.npmjs.org/entities/-/entities-4.5.0.tgz. Extracting by manifest.
+532 silly tarball no local data for minipass@https://registry.npmjs.org/minipass/-/minipass-3.3.6.tgz. Extracting by manifest.
+533 silly tarball no local data for mime-types@https://registry.npmjs.org/mime-types/-/mime-types-2.1.35.tgz. Extracting by manifest.
+534 silly tarball no local data for mime-db@https://registry.npmjs.org/mime-db/-/mime-db-1.52.0.tgz. Extracting by manifest.
+535 silly tarball no local data for ms@https://registry.npmjs.org/ms/-/ms-2.1.3.tgz. Extracting by manifest.
+536 silly tarball no local data for debug@https://registry.npmjs.org/debug/-/debug-4.4.3.tgz. Extracting by manifest.
+537 silly tarball no local data for type-is@https://registry.npmjs.org/type-is/-/type-is-2.1.0.tgz. Extracting by manifest.
+538 silly tarball no local data for content-type@https://registry.npmjs.org/content-type/-/content-type-2.0.0.tgz. Extracting by manifest.
+539 silly tarball no local data for raw-body@https://registry.npmjs.org/raw-body/-/raw-body-3.0.2.tgz. Extracting by manifest.
+540 silly tarball no local data for ms@https://registry.npmjs.org/ms/-/ms-2.1.3.tgz. Extracting by manifest.
+541 silly tarball no local data for iconv-lite@https://registry.npmjs.org/iconv-lite/-/iconv-lite-0.7.2.tgz. Extracting by manifest.
+542 silly tarball no local data for media-typer@https://registry.npmjs.org/media-typer/-/media-typer-1.1.0.tgz. Extracting by manifest.
+543 silly tarball no local data for debug@https://registry.npmjs.org/debug/-/debug-4.4.3.tgz. Extracting by manifest.
+544 silly tarball no local data for body-parser@https://registry.npmjs.org/body-parser/-/body-parser-2.2.2.tgz. Extracting by manifest.
+545 silly tarball no local data for tslib@https://registry.npmjs.org/tslib/-/tslib-2.3.0.tgz. Extracting by manifest.
+546 silly tarball no local data for csstype@https://registry.npmjs.org/csstype/-/csstype-3.0.11.tgz. Extracting by manifest.
+547 silly tarball no local data for entities@https://registry.npmjs.org/entities/-/entities-4.5.0.tgz. Extracting by manifest.
+548 silly tarball no local data for supports-color@https://registry.npmjs.org/supports-color/-/supports-color-7.2.0.tgz. Extracting by manifest.
+549 silly tarball no local data for ms@https://registry.npmjs.org/ms/-/ms-2.1.3.tgz. Extracting by manifest.
+550 silly tarball no local data for debug@https://registry.npmjs.org/debug/-/debug-4.4.3.tgz. Extracting by manifest.
+551 silly tarball no local data for minimatch@https://registry.npmjs.org/minimatch/-/minimatch-9.0.9.tgz. Extracting by manifest.
+552 silly tarball no local data for @types/send@https://registry.npmjs.org/@types/send/-/send-0.17.6.tgz. Extracting by manifest.
+553 silly tarball no local data for brace-expansion@https://registry.npmjs.org/brace-expansion/-/brace-expansion-2.1.0.tgz. Extracting by manifest.
+554 silly tarball no local data for ms@https://registry.npmjs.org/ms/-/ms-2.1.3.tgz. Extracting by manifest.
+555 silly tarball no local data for debug@https://registry.npmjs.org/debug/-/debug-4.4.3.tgz. Extracting by manifest.
+556 silly tarball no local data for serve-static@https://registry.npmjs.org/serve-static/-/serve-static-1.16.3.tgz. Extracting by manifest.
+557 silly tarball no local data for path-to-regexp@https://registry.npmjs.org/path-to-regexp/-/path-to-regexp-0.1.13.tgz. Extracting by manifest.
+558 silly tarball no local data for negotiator@https://registry.npmjs.org/negotiator/-/negotiator-0.6.3.tgz. Extracting by manifest.
+559 silly tarball no local data for send@https://registry.npmjs.org/send/-/send-0.19.2.tgz. Extracting by manifest.
+560 silly tarball no local data for ms@https://registry.npmjs.org/ms/-/ms-2.1.3.tgz. Extracting by manifest.
+561 silly tarball no local data for mime-types@https://registry.npmjs.org/mime-types/-/mime-types-2.1.35.tgz. Extracting by manifest.
+562 silly tarball no local data for mime-db@https://registry.npmjs.org/mime-db/-/mime-db-1.52.0.tgz. Extracting by manifest.
+563 silly tarball no local data for merge-descriptors@https://registry.npmjs.org/merge-descriptors/-/merge-descriptors-1.0.3.tgz. Extracting by manifest.
+564 silly tarball no local data for fresh@https://registry.npmjs.org/fresh/-/fresh-0.5.2.tgz. Extracting by manifest.
+565 silly tarball no local data for finalhandler@https://registry.npmjs.org/finalhandler/-/finalhandler-1.3.2.tgz. Extracting by manifest.
+566 silly tarball no local data for express@https://registry.npmjs.org/express/-/express-4.22.1.tgz. Extracting by manifest.
+567 silly tarball no local data for cookie-signature@https://registry.npmjs.org/cookie-signature/-/cookie-signature-1.0.7.tgz. Extracting by manifest.
+568 silly tarball no local data for accepts@https://registry.npmjs.org/accepts/-/accepts-1.3.8.tgz. Extracting by manifest.
+569 silly tarball no local data for content-disposition@https://registry.npmjs.org/content-disposition/-/content-disposition-0.5.4.tgz. Extracting by manifest.
+570 http fetch GET 200 https://registry.npmjs.org/xtend/-/xtend-4.0.2.tgz 1936ms (cache miss)
+571 http fetch GET 200 https://registry.npmjs.org/wide-align/-/wide-align-1.1.5.tgz 1982ms (cache miss)
+572 http fetch POST 200 https://registry.npmjs.org/-/npm/v1/security/advisories/bulk 2296ms
+573 silly audit report {
+573 silly audit report   '@nestjs/core': [
+573 silly audit report     {
+573 silly audit report       id: 1117063,
+573 silly audit report       url: 'https://github.com/advisories/GHSA-36xv-jgw5-4q75',
+573 silly audit report       title: "@nestjs/core Improperly Neutralizes Special Elements in Output Used by a Downstream Component ('Injection')",
+573 silly audit report       severity: 'moderate',
+573 silly audit report       vulnerable_versions: '<=11.1.17',
+573 silly audit report       cwe: [Array],
+573 silly audit report       cvss: [Object]
+573 silly audit report     }
+573 silly audit report   ],
+573 silly audit report   esbuild: [
+573 silly audit report     {
+573 silly audit report       id: 1102341,
+573 silly audit report       url: 'https://github.com/advisories/GHSA-67mh-4wv8-2f99',
+573 silly audit report       title: 'esbuild enables any website to send any requests to the development server and read the response',
+573 silly audit report       severity: 'moderate',
+573 silly audit report       vulnerable_versions: '<=0.24.2',
+573 silly audit report       cwe: [Array],
+573 silly audit report       cvss: [Object]
+573 silly audit report     }
+573 silly audit report   ],
+573 silly audit report   'file-type': [
+573 silly audit report     {
+573 silly audit report       id: 1114301,
+573 silly audit report       url: 'https://github.com/advisories/GHSA-5v7r-6r5c-r473',
+573 silly audit report       title: 'file-type affected by infinite loop in ASF parser on malformed input with zero-size sub-header',
+573 silly audit report       severity: 'moderate',
+573 silly audit report       vulnerable_versions: '>=13.0.0 <21.3.1',
+573 silly audit report       cwe: [Array],
+573 silly audit report       cvss: [Object]
+573 silly audit report     },
+573 silly audit report     {
+573 silly audit report       id: 1114726,
+573 silly audit report       url: 'https://github.com/advisories/GHSA-j47w-4g3g-c36v',
+573 silly audit report       title: 'file-type: ZIP Decompression Bomb DoS via [Content_Types].xml entry',
+573 silly audit report       severity: 'moderate',
+573 silly audit report       vulnerable_versions: '>=20.0.0 <=21.3.1',
+573 silly audit report       cwe: [Array],
+573 silly audit report       cvss: [Object]
+573 silly audit report     }
+573 silly audit report   ],
+573 silly audit report   'js-yaml': [
+573 silly audit report     {
+573 silly audit report       id: 1112715,
+573 silly audit report       url: 'https://github.com/advisories/GHSA-mh29-5h37-fv8m',
+573 silly audit report       title: 'js-yaml has prototype pollution in merge (<<)',
+573 silly audit report       severity: 'moderate',
+573 silly audit report       vulnerable_versions: '>=4.0.0 <4.1.1',
+573 silly audit report       cwe: [Array],
+573 silly audit report       cvss: [Object]
+573 silly audit report     }
+573 silly audit report   ],
+573 silly audit report   lodash: [
+573 silly audit report     {
+573 silly audit report       id: 1112455,
+573 silly audit report       url: 'https://github.com/advisories/GHSA-xxjr-mmjv-4gpg',
+573 silly audit report       title: 'Lodash has Prototype Pollution Vulnerability in `_.unset` and `_.omit` functions',
+573 silly audit report       severity: 'moderate',
+573 silly audit report       vulnerable_versions: '>=4.0.0 <=4.17.22',
+573 silly audit report       cwe: [Array],
+573 silly audit report       cvss: [Object]
+573 silly audit report     },
+573 silly audit report     {
+573 silly audit report       id: 1115806,
+573 silly audit report       url: 'https://github.com/advisories/GHSA-r5fr-rjxr-66jc',
+573 silly audit report       title: 'lodash vulnerable to Code Injection via `_.template` imports key names',
+573 silly audit report       severity: 'high',
+573 silly audit report       vulnerable_versions: '>=4.0.0 <=4.17.23',
+573 silly audit report       cwe: [Array],
+573 silly audit report       cvss: [Object]
+573 silly audit report     },
+573 silly audit report     {
+573 silly audit report       id: 1115810,
+573 silly audit report       url: 'https://github.com/advisories/GHSA-f23m-r3pf-42rh',
+573 silly audit report       title: 'lodash vulnerable to Prototype Pollution via array path bypass in `_.unset` and `_.omit`',
+573 silly audit report       severity: 'moderate',
+573 silly audit report       vulnerable_versions: '<=4.17.23',
+573 silly audit report       cwe: [Array],
+573 silly audit report       cvss: [Object]
+573 silly audit report     }
+573 silly audit report   ],
+573 silly audit report   multer: [
+573 silly audit report     {
+573 silly audit report       id: 1113635,
+573 silly audit report       url: 'https://github.com/advisories/GHSA-xf7r-hgr6-v32p',
+573 silly audit report       title: 'Multer vulnerable to Denial of Service via incomplete cleanup',
+573 silly audit report       severity: 'high',
+573 silly audit report       vulnerable_versions: '<2.1.0',
+573 silly audit report       cwe: [Array],
+573 silly audit report       cvss: [Object]
+573 silly audit report     },
+573 silly audit report     {
+573 silly audit report       id: 1113636,
+573 silly audit report       url: 'https://github.com/advisories/GHSA-v52c-386h-88mc',
+573 silly audit report       title: 'Multer vulnerable to Denial of Service via resource exhaustion',
+573 silly audit report       severity: 'high',
+573 silly audit report       vulnerable_versions: '<2.1.0',
+573 silly audit report       cwe: [Array],
+573 silly audit report       cvss: [Object]
+573 silly audit report     },
+573 silly audit report     {
+573 silly audit report       id: 1113996,
+573 silly audit report       url: 'https://github.com/advisories/GHSA-5528-5vmv-3xc2',
+573 silly audit report       title: 'Multer Vulnerable to Denial of Service via Uncontrolled Recursion',
+573 silly audit report       severity: 'high',
+573 silly audit report       vulnerable_versions: '<2.1.1',
+573 silly audit report       cwe: [Array],
+573 silly audit report       cvss: [Object]
+573 silly audit report     }
+573 silly audit report   ],
+573 silly audit report   tar: [
+573 silly audit report     {
+573 silly audit report       id: 1112659,
+573 silly audit report       url: 'https://github.com/advisories/GHSA-34x7-hfp2-rc4v',
+573 silly audit report       title: 'node-tar Vulnerable to Arbitrary File Creation/Overwrite via Hardlink Path Traversal',
+573 silly audit report       severity: 'high',
+573 silly audit report       vulnerable_versions: '<7.5.7',
+573 silly audit report       cwe: [Array],
+573 silly audit report       cvss: [Object]
+573 silly audit report     },
+573 silly audit report     {
+573 silly audit report       id: 1113300,
+573 silly audit report       url: 'https://github.com/advisories/GHSA-8qq5-rm4j-mr97',
+573 silly audit report       title: 'node-tar is Vulnerable to Arbitrary File Overwrite and Symlink Poisoning via Insufficient Path Sanitization',
+573 silly audit report       severity: 'high',
+573 silly audit report       vulnerable_versions: '<=7.5.2',
+573 silly audit report       cwe: [Array],
+573 silly audit report       cvss: [Object]
+573 silly audit report     },
+573 silly audit report     {
+573 silly audit report       id: 1113375,
+573 silly audit report       url: 'https://github.com/advisories/GHSA-83g3-92jg-28cx',
+573 silly audit report       title: 'Arbitrary File Read/Write via Hardlink Target Escape Through Symlink Chain in node-tar Extraction',
+573 silly audit report       severity: 'high',
+573 silly audit report       vulnerable_versions: '<7.5.8',
+573 silly audit report       cwe: [Array],
+573 silly audit report       cvss: [Object]
+573 silly audit report     },
+573 silly audit report     {
+573 silly audit report       id: 1114200,
+573 silly audit report       url: 'https://github.com/advisories/GHSA-qffp-2rhf-9h96',
+573 silly audit report       title: 'tar has Hardlink Path Traversal via Drive-Relative Linkpath',
+573 silly audit report       severity: 'high',
+573 silly audit report       vulnerable_versions: '<=7.5.9',
+573 silly audit report       cwe: [Array],
+573 silly audit report       cvss: [Object]
+573 silly audit report     },
+573 silly audit report     {
+573 silly audit report       id: 1114302,
+573 silly audit report       url: 'https://github.com/advisories/GHSA-9ppj-qmqm-q256',
+573 silly audit report       title: 'node-tar Symlink Path Traversal via Drive-Relative Linkpath',
+573 silly audit report       severity: 'high',
+573 silly audit report       vulnerable_versions: '<=7.5.10',
+573 silly audit report       cwe: [Array],
+573 silly audit report       cvss: [Object]
+573 silly audit report     },
+573 silly audit report     {
+573 silly audit report       id: 1114680,
+573 silly audit report       url: 'https://github.com/advisories/GHSA-r6q2-hw4h-h46w',
+573 silly audit report       title: 'Race Condition in node-tar Path Reservations via Unicode Ligature Collisions on macOS APFS',
+573 silly audit report       severity: 'high',
+573 silly audit report       vulnerable_versions: '<=7.5.3',
+573 silly audit report       cwe: [Array],
+573 silly audit report       cvss: [Object]
+573 silly audit report     }
+573 silly audit report   ],
+573 silly audit report   vite: [
+573 silly audit report     {
+573 silly audit report       id: 1116229,
+573 silly audit report       url: 'https://github.com/advisories/GHSA-4w7w-66w2-5vf9',
+573 silly audit report       title: 'Vite Vulnerable to Path Traversal in Optimized Deps `.map` Handling',
+573 silly audit report       severity: 'moderate',
+573 silly audit report       vulnerable_versions: '<=6.4.1',
+573 silly audit report       cwe: [Array],
+573 silly audit report       cvss: [Object]
+573 silly audit report     }
+573 silly audit report   ]
+573 silly audit report }
+574 silly packumentCache corgi:https://registry.npmjs.org/@nestjs%2fcore cache-miss
+575 silly packumentCache corgi:https://registry.npmjs.org/esbuild cache-miss
+576 silly packumentCache corgi:https://registry.npmjs.org/file-type cache-miss
+577 silly packumentCache corgi:https://registry.npmjs.org/js-yaml cache-miss
+578 silly packumentCache corgi:https://registry.npmjs.org/lodash cache-miss
+579 silly packumentCache corgi:https://registry.npmjs.org/multer cache-miss
+580 silly packumentCache corgi:https://registry.npmjs.org/tar cache-miss
+581 silly packumentCache corgi:https://registry.npmjs.org/vite cache-miss
+582 http fetch GET 200 https://registry.npmjs.org/which/-/which-2.0.2.tgz 2305ms (cache miss)
+583 http fetch GET 200 https://registry.npmjs.org/vue-tsc/-/vue-tsc-2.2.12.tgz 2343ms (cache miss)
+584 http fetch GET 200 https://registry.npmjs.org/vueuc/-/vueuc-0.4.65.tgz 2758ms (cache miss)
+585 http fetch GET 200 https://registry.npmjs.org/vue-demi/-/vue-demi-0.14.10.tgz 3053ms (cache miss)
+586 http fetch GET 200 https://registry.npmjs.org/vooks/-/vooks-0.2.12.tgz 3179ms (cache miss)
+587 http fetch GET 200 https://registry.npmjs.org/yallist/-/yallist-4.0.0.tgz 3216ms (cache miss)
+588 http fetch GET 200 https://registry.npmjs.org/yargs-parser/-/yargs-parser-21.1.1.tgz 3508ms (cache miss)
+589 http fetch GET 200 https://registry.npmjs.org/vdirs/-/vdirs-0.1.8.tgz 3548ms (cache miss)
+590 http fetch GET 200 https://registry.npmjs.org/vscode-uri/-/vscode-uri-3.1.0.tgz 3605ms (cache miss)
+591 http fetch GET 200 https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz 3867ms (cache miss)
+592 http fetch GET 200 https://registry.npmjs.org/wrap-ansi/-/wrap-ansi-7.0.0.tgz 4590ms (cache miss)
+593 http fetch GET 200 https://registry.npmjs.org/yargs/-/yargs-17.7.2.tgz 4601ms (cache miss)
+594 http fetch GET 200 https://registry.npmjs.org/y18n/-/y18n-5.0.8.tgz 4611ms (cache miss)
+595 http fetch GET 200 https://registry.npmjs.org/util-deprecate/-/util-deprecate-1.0.2.tgz 4962ms (cache miss)
+596 http fetch GET 200 https://registry.npmjs.org/uuid/-/uuid-10.0.0.tgz 5091ms (cache miss)
+597 warn deprecated uuid@10.0.0: uuid@10 and below is no longer supported.  For ESM codebases, update to uuid@latest.  For CommonJS codebases, use uuid@11 (but be aware this version will likely be deprecated in 2028).
+598 http fetch GET 200 https://registry.npmjs.org/uint8array-extras/-/uint8array-extras-1.5.0.tgz 5360ms (cache miss)
+599 http fetch GET 200 https://registry.npmjs.org/url-parse/-/url-parse-1.5.10.tgz 5416ms (cache miss)
+600 http fetch GET 200 https://registry.npmjs.org/utils-merge/-/utils-merge-1.0.1.tgz 5447ms (cache miss)
+601 http fetch GET 200 https://registry.npmjs.org/whatwg-url/-/whatwg-url-5.0.0.tgz 5531ms (cache miss)
+602 http fetch GET 200 https://registry.npmjs.org/vary/-/vary-1.1.2.tgz 5533ms (cache miss)
+603 http fetch GET 200 https://registry.npmjs.org/vue-router/-/vue-router-4.6.4.tgz 5540ms (cache miss)
+604 http fetch GET 200 https://registry.npmjs.org/undici-types/-/undici-types-6.21.0.tgz 5544ms (cache miss)
+605 http fetch GET 200 https://registry.npmjs.org/npm 6405ms
+606 http fetch GET 200 https://registry.npmjs.org/type-is/-/type-is-1.6.18.tgz 6180ms (cache miss)
+607 http fetch GET 200 https://registry.npmjs.org/unpipe/-/unpipe-1.0.0.tgz 6327ms (cache miss)
+608 http fetch GET 200 https://registry.npmjs.org/treemate/-/treemate-0.3.11.tgz 6448ms (cache miss)
+609 http fetch GET 200 https://registry.npmjs.org/typedarray/-/typedarray-0.0.6.tgz 6569ms (cache miss)
+610 http fetch GET 200 https://registry.npmjs.org/uid/-/uid-2.0.2.tgz 6625ms (cache miss)
+611 http fetch GET 200 https://registry.npmjs.org/webidl-conversions/-/webidl-conversions-3.0.1.tgz 6827ms (cache miss)
+612 http fetch GET 200 https://registry.npmjs.org/toidentifier/-/toidentifier-1.0.1.tgz 6814ms (cache miss)
+613 http fetch GET 200 https://registry.npmjs.org/tsc-watch/-/tsc-watch-7.2.0.tgz 6823ms (cache miss)
+614 http fetch GET 200 https://registry.npmjs.org/tree-kill/-/tree-kill-1.2.2.tgz 7097ms (cache miss)
+615 http fetch GET 200 https://registry.npmjs.org/token-types/-/token-types-6.1.2.tgz 7358ms (cache miss)
+616 http fetch GET 200 https://registry.npmjs.org/supports-color/-/supports-color-8.1.1.tgz 7560ms (cache miss)
+617 http fetch GET 200 https://registry.npmjs.org/tsx/-/tsx-4.22.1.tgz 7586ms (cache miss)
+618 http fetch GET 200 https://registry.npmjs.org/strip-ansi/-/strip-ansi-6.0.1.tgz 7974ms (cache miss)
+619 http fetch GET 200 https://registry.npmjs.org/validator/-/validator-13.15.35.tgz 8015ms (cache miss)
+620 http fetch GET 200 https://registry.npmjs.org/string-argv/-/string-argv-0.3.2.tgz 8091ms (cache miss)
+621 http fetch GET 200 https://registry.npmjs.org/swagger-ui-express/-/swagger-ui-express-5.0.1.tgz 8304ms (cache miss)
+622 http fetch GET 200 https://registry.npmjs.org/tslib/-/tslib-2.8.1.tgz 8318ms (cache miss)
+623 http fetch GET 200 https://registry.npmjs.org/through/-/through-2.3.8.tgz 8318ms (cache miss)
+624 http fetch GET 200 https://registry.npmjs.org/tar/-/tar-6.2.1.tgz 8319ms (cache miss)
+625 warn deprecated tar@6.2.1: Old versions of tar are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+626 http fetch GET 200 https://registry.npmjs.org/string-width/-/string-width-4.2.3.tgz 8402ms (cache miss)
+627 http fetch GET 200 https://registry.npmjs.org/strtok3/-/strtok3-10.3.5.tgz 8527ms (cache miss)
+628 http fetch GET 200 https://registry.npmjs.org/stream-combiner/-/stream-combiner-0.0.4.tgz 8562ms (cache miss)
+629 http fetch GET 200 https://registry.npmjs.org/side-channel-map/-/side-channel-map-1.0.1.tgz 8908ms (cache miss)
+630 http fetch GET 200 https://registry.npmjs.org/side-channel-weakmap/-/side-channel-weakmap-1.0.2.tgz 9186ms (cache miss)
+631 http fetch GET 200 https://registry.npmjs.org/streamsearch/-/streamsearch-1.1.0.tgz 9348ms (cache miss)
+632 http fetch GET 200 https://registry.npmjs.org/split/-/split-0.3.3.tgz 9358ms (cache miss)
+633 http fetch GET 200 https://registry.npmjs.org/tr46/-/tr46-0.0.3.tgz 9501ms (cache miss)
+634 http fetch GET 200 https://registry.npmjs.org/svix/-/svix-1.76.1.tgz 9523ms (cache miss)
+635 http fetch GET 200 https://registry.npmjs.org/statuses/-/statuses-2.0.2.tgz 9531ms (cache miss)
+636 http fetch GET 200 https://registry.npmjs.org/signal-exit/-/signal-exit-3.0.7.tgz 9561ms (cache miss)
+637 http fetch GET 200 https://registry.npmjs.org/shebang-command/-/shebang-command-2.0.0.tgz 9791ms (cache miss)
+638 http fetch GET 200 https://registry.npmjs.org/shebang-regex/-/shebang-regex-3.0.0.tgz 9790ms (cache miss)
+639 http fetch GET 200 https://registry.npmjs.org/vue/-/vue-3.5.34.tgz 9869ms (cache miss)
+640 http fetch GET 200 https://registry.npmjs.org/set-blocking/-/set-blocking-2.0.0.tgz 9991ms (cache miss)
+641 http fetch GET 200 https://registry.npmjs.org/serve-static/-/serve-static-2.2.1.tgz 10020ms (cache miss)
+642 http fetch GET 200 https://registry.npmjs.org/side-channel-list/-/side-channel-list-1.0.1.tgz 10147ms (cache miss)
+643 http fetch GET 200 https://registry.npmjs.org/side-channel/-/side-channel-1.1.0.tgz 10237ms (cache miss)
+644 http fetch GET 200 https://registry.npmjs.org/send/-/send-1.2.1.tgz 10309ms (cache miss)
+645 http fetch GET 200 https://registry.npmjs.org/setprototypeof/-/setprototypeof-1.2.0.tgz 10400ms (cache miss)
+646 http fetch GET 200 https://registry.npmjs.org/shell-quote/-/shell-quote-1.8.3.tgz 10410ms (cache miss)
+647 http fetch GET 200 https://registry.npmjs.org/source-map-js/-/source-map-js-1.2.1.tgz 10610ms (cache miss)
+648 http fetch GET 200 https://registry.npmjs.org/string_decoder/-/string_decoder-1.3.0.tgz 10617ms (cache miss)
+649 http fetch GET 200 https://registry.npmjs.org/safe-buffer/-/safe-buffer-5.2.1.tgz 10664ms (cache miss)
+650 http fetch GET 200 https://registry.npmjs.org/requires-port/-/requires-port-1.0.0.tgz 11033ms (cache miss)
+651 http fetch GET 200 https://registry.npmjs.org/require-directory/-/require-directory-2.1.1.tgz 11055ms (cache miss)
+652 http fetch GET 200 https://registry.npmjs.org/selderee/-/selderee-0.11.0.tgz 11093ms (cache miss)
+653 http fetch GET 200 https://registry.npmjs.org/scheduler/-/scheduler-0.27.0.tgz 11298ms (cache miss)
+654 http fetch GET 200 https://registry.npmjs.org/semver/-/semver-7.8.0.tgz 11327ms (cache miss)
+655 http fetch GET 200 https://registry.npmjs.org/router/-/router-2.2.0.tgz 11514ms (cache miss)
+656 http fetch GET 200 https://registry.npmjs.org/rimraf/-/rimraf-3.0.2.tgz 11731ms (cache miss)
+657 warn deprecated rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported
+658 http fetch GET 200 https://registry.npmjs.org/range-parser/-/range-parser-1.2.1.tgz 11920ms (cache miss)
+659 http fetch GET 200 https://registry.npmjs.org/safer-buffer/-/safer-buffer-2.1.2.tgz 12131ms (cache miss)
+660 http fetch GET 200 https://registry.npmjs.org/readable-stream/-/readable-stream-3.6.2.tgz 12141ms (cache miss)
+661 http fetch GET 200 https://registry.npmjs.org/react/-/react-19.2.6.tgz 12588ms (cache miss)
+662 http fetch GET 200 https://registry.npmjs.org/ps-tree/-/ps-tree-1.2.0.tgz 12894ms (cache miss)
+663 http fetch GET 200 https://registry.npmjs.org/seemly/-/seemly-0.3.10.tgz 12974ms (cache miss)
+664 http fetch GET 200 https://registry.npmjs.org/proxy-from-env/-/proxy-from-env-2.1.0.tgz 12986ms (cache miss)
+665 http fetch GET 200 https://registry.npmjs.org/raw-body/-/raw-body-2.5.3.tgz 13055ms (cache miss)
+666 http fetch GET 200 https://registry.npmjs.org/react-promise-suspense/-/react-promise-suspense-0.3.4.tgz 13375ms (cache miss)
+667 http fetch GET 200 https://registry.npmjs.org/reflect-metadata/-/reflect-metadata-0.2.2.tgz 13701ms (cache miss)
+668 http fetch GET 200 https://registry.npmjs.org/resend/-/resend-6.4.2.tgz 13719ms (cache miss)
+669 http fetch GET 200 https://registry.npmjs.org/proxy-addr/-/proxy-addr-2.0.7.tgz 13955ms (cache miss)
+670 http fetch GET 200 https://registry.npmjs.org/postcss/-/postcss-8.5.14.tgz 14679ms (cache miss)
+671 http fetch GET 200 https://registry.npmjs.org/pause/-/pause-0.0.1.tgz 15024ms (cache miss)
+672 http fetch GET 200 https://registry.npmjs.org/qs/-/qs-6.14.2.tgz 15139ms (cache miss)
+673 http fetch GET 200 https://registry.npmjs.org/pause-stream/-/pause-stream-0.0.11.tgz 15208ms (cache miss)
+674 http fetch GET 200 https://registry.npmjs.org/picocolors/-/picocolors-1.1.1.tgz 15220ms (cache miss)
+675 http fetch GET 200 https://registry.npmjs.org/querystringify/-/querystringify-2.2.0.tgz 15327ms (cache miss)
+676 http fetch GET 200 https://registry.npmjs.org/path-key/-/path-key-3.1.1.tgz 15581ms (cache miss)
+677 http fetch GET 200 https://registry.npmjs.org/path-is-absolute/-/path-is-absolute-1.0.1.tgz 15731ms (cache miss)
+678 http fetch GET 200 https://registry.npmjs.org/pinia/-/pinia-2.3.1.tgz 15786ms (cache miss)
+679 http fetch GET 200 https://registry.npmjs.org/vite/-/vite-5.4.21.tgz 15989ms (cache miss)
+680 http fetch GET 200 https://registry.npmjs.org/passport-strategy/-/passport-strategy-1.0.0.tgz 16140ms (cache miss)
+681 http fetch GET 200 https://registry.npmjs.org/path-to-regexp/-/path-to-regexp-3.3.0.tgz 16205ms (cache miss)
+682 http fetch GET 200 https://registry.npmjs.org/parseley/-/parseley-0.12.1.tgz 16316ms (cache miss)
+683 http fetch GET 200 https://registry.npmjs.org/once/-/once-1.4.0.tgz 16316ms (cache miss)
+684 http fetch GET 200 https://registry.npmjs.org/npmlog/-/npmlog-5.0.1.tgz 16755ms (cache miss)
+685 warn deprecated npmlog@5.0.1: This package is no longer supported.
+686 http fetch GET 200 https://registry.npmjs.org/peberminta/-/peberminta-0.9.0.tgz 16785ms (cache miss)
+687 http fetch GET 200 https://registry.npmjs.org/passport-jwt/-/passport-jwt-4.0.1.tgz 16982ms (cache miss)
+688 http fetch GET 200 https://registry.npmjs.org/nopt/-/nopt-5.0.0.tgz 17179ms (cache miss)
+689 http fetch GET 200 https://registry.npmjs.org/on-finished/-/on-finished-2.4.1.tgz 17393ms (cache miss)
+690 http fetch GET 200 https://registry.npmjs.org/parseurl/-/parseurl-1.3.3.tgz 17452ms (cache miss)
+691 http fetch GET 200 https://registry.npmjs.org/negotiator/-/negotiator-1.0.0.tgz 17596ms (cache miss)
+692 http fetch GET 200 https://registry.npmjs.org/path-browserify/-/path-browserify-1.0.1.tgz 17739ms (cache miss)
+693 http fetch GET 200 https://registry.npmjs.org/object-inspect/-/object-inspect-1.13.4.tgz 17839ms (cache miss)
+694 http fetch GET 200 https://registry.npmjs.org/passport/-/passport-0.7.0.tgz 17894ms (cache miss)
+695 http fetch GET 200 https://registry.npmjs.org/ms/-/ms-2.0.0.tgz 18358ms (cache miss)
+696 http fetch GET 200 https://registry.npmjs.org/object-assign/-/object-assign-4.1.1.tgz 18442ms (cache miss)
+697 http fetch GET 200 https://registry.npmjs.org/nanoid/-/nanoid-3.3.12.tgz 18602ms (cache miss)
+698 http fetch GET 200 https://registry.npmjs.org/multer/-/multer-2.0.2.tgz 18666ms (cache miss)
+699 http fetch GET 200 https://registry.npmjs.org/mkdirp/-/mkdirp-0.5.6.tgz 19173ms (cache miss)
+700 http fetch GET 200 https://registry.npmjs.org/minizlib/-/minizlib-2.1.2.tgz 19184ms (cache miss)
+701 http fetch GET 200 https://registry.npmjs.org/muggle-string/-/muggle-string-0.4.1.tgz 19679ms (cache miss)
+702 http fetch GET 200 https://registry.npmjs.org/node-addon-api/-/node-addon-api-5.1.0.tgz 19720ms (cache miss)
+703 http fetch GET 200 https://registry.npmjs.org/zrender/-/zrender-5.6.1.tgz 19893ms (cache miss)
+704 http fetch GET 200 https://registry.npmjs.org/node-cleanup/-/node-cleanup-2.1.2.tgz 19905ms (cache miss)
+705 http fetch GET 200 https://registry.npmjs.org/minimatch/-/minimatch-3.1.5.tgz 20183ms (cache miss)
+706 http fetch GET 200 https://registry.npmjs.org/mime-types/-/mime-types-3.0.2.tgz 20199ms (cache miss)
+707 http fetch GET 200 https://registry.npmjs.org/minipass/-/minipass-5.0.0.tgz 20674ms (cache miss)
+708 http fetch GET 200 https://registry.npmjs.org/math-intrinsics/-/math-intrinsics-1.1.0.tgz 20677ms (cache miss)
+709 http fetch GET 200 https://registry.npmjs.org/merge-descriptors/-/merge-descriptors-2.0.0.tgz 21356ms (cache miss)
+710 http fetch GET 200 https://registry.npmjs.org/node-fetch/-/node-fetch-2.7.0.tgz 21372ms (cache miss)
+711 http fetch GET 200 https://registry.npmjs.org/minimist/-/minimist-1.2.8.tgz 21624ms (cache miss)
+712 http fetch GET 200 https://registry.npmjs.org/mime/-/mime-1.6.0.tgz 21628ms (cache miss)
+713 http fetch GET 200 https://registry.npmjs.org/methods/-/methods-1.1.2.tgz 22013ms (cache miss)
+714 http fetch GET 200 https://registry.npmjs.org/make-dir/-/make-dir-3.1.0.tgz 22023ms (cache miss)
+715 http fetch GET 200 https://registry.npmjs.org/map-stream/-/map-stream-0.1.0.tgz 22120ms (cache miss)
+716 http fetch GET 200 https://registry.npmjs.org/lodash.once/-/lodash.once-4.1.1.tgz 22121ms (cache miss)
+717 http fetch GET 200 https://registry.npmjs.org/media-typer/-/media-typer-0.3.0.tgz 22169ms (cache miss)
+718 http fetch GET 200 https://registry.npmjs.org/lodash.isnumber/-/lodash.isnumber-3.0.3.tgz 22435ms (cache miss)
+719 http fetch GET 200 https://registry.npmjs.org/lodash.isplainobject/-/lodash.isplainobject-4.0.6.tgz 22440ms (cache miss)
+720 http fetch GET 200 https://registry.npmjs.org/lodash.isinteger/-/lodash.isinteger-4.0.4.tgz 22514ms (cache miss)
+721 http fetch GET 200 https://registry.npmjs.org/lodash.isboolean/-/lodash.isboolean-3.0.3.tgz 22584ms (cache miss)
+722 http fetch GET 200 https://registry.npmjs.org/lodash.includes/-/lodash.includes-4.3.0.tgz 22618ms (cache miss)
+723 http fetch GET 200 https://registry.npmjs.org/jws/-/jws-3.2.3.tgz 23102ms (cache miss)
+724 http fetch GET 200 https://registry.npmjs.org/leac/-/leac-0.6.0.tgz 23482ms (cache miss)
+725 http fetch GET 200 https://registry.npmjs.org/mime-db/-/mime-db-1.54.0.tgz 24094ms (cache miss)
+726 http fetch GET 200 https://registry.npmjs.org/react-dom/-/react-dom-19.2.6.tgz 24163ms (cache miss)
+727 http fetch GET 200 https://registry.npmjs.org/jwa/-/jwa-1.4.2.tgz 24295ms (cache miss)
+728 http fetch GET 200 https://registry.npmjs.org/jsonwebtoken/-/jsonwebtoken-9.0.2.tgz 24763ms (cache miss)
+729 http fetch GET 200 https://registry.npmjs.org/lodash.isstring/-/lodash.isstring-4.0.1.tgz 25001ms (cache miss)
+730 http fetch GET 200 https://registry.npmjs.org/is-promise/-/is-promise-4.0.0.tgz 25200ms (cache miss)
+731 http fetch GET 200 https://registry.npmjs.org/lodash-es/-/lodash-es-4.18.1.tgz 25235ms (cache miss)
+732 http fetch GET 200 https://registry.npmjs.org/isexe/-/isexe-2.0.0.tgz 25249ms (cache miss)
+733 http fetch GET 200 https://registry.npmjs.org/inflight/-/inflight-1.0.6.tgz 25622ms (cache miss)
+734 warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+735 http fetch GET 200 https://registry.npmjs.org/inherits/-/inherits-2.0.4.tgz 25738ms (cache miss)
+736 http fetch GET 200 https://registry.npmjs.org/ieee754/-/ieee754-1.2.1.tgz 26006ms (cache miss)
+737 http fetch GET 200 https://registry.npmjs.org/ipaddr.js/-/ipaddr.js-1.9.1.tgz 26232ms (cache miss)
+738 http fetch GET 200 https://registry.npmjs.org/iterare/-/iterare-1.2.1.tgz 26300ms (cache miss)
+739 http fetch GET 200 https://registry.npmjs.org/https-proxy-agent/-/https-proxy-agent-5.0.1.tgz 26722ms (cache miss)
+740 http fetch GET 200 https://registry.npmjs.org/is-fullwidth-code-point/-/is-fullwidth-code-point-3.0.0.tgz 26917ms (cache miss)
+741 http fetch GET 200 https://registry.npmjs.org/http-errors/-/http-errors-2.0.1.tgz 27125ms (cache miss)
+742 http fetch GET 200 https://registry.npmjs.org/rollup/-/rollup-4.60.4.tgz 27402ms (cache miss)
+743 http fetch GET 200 https://registry.npmjs.org/html-to-text/-/html-to-text-9.0.5.tgz 28161ms (cache miss)
+744 http fetch GET 200 https://registry.npmjs.org/hasown/-/hasown-2.0.3.tgz 28585ms (cache miss)
+745 http fetch GET 200 https://registry.npmjs.org/he/-/he-1.2.0.tgz 28774ms (cache miss)
+746 http fetch GET 200 https://registry.npmjs.org/has-unicode/-/has-unicode-2.0.1.tgz 28970ms (cache miss)
+747 http fetch GET 200 https://registry.npmjs.org/helmet/-/helmet-8.1.0.tgz 29069ms (cache miss)
+748 http fetch GET 200 https://registry.npmjs.org/has-tostringtag/-/has-tostringtag-1.0.2.tgz 29295ms (cache miss)
+749 http fetch GET 200 https://registry.npmjs.org/htmlparser2/-/htmlparser2-8.0.2.tgz 29447ms (cache miss)
+750 http fetch GET 200 https://registry.npmjs.org/gopd/-/gopd-1.2.0.tgz 29774ms (cache miss)
+751 http fetch GET 200 https://registry.npmjs.org/has-flag/-/has-flag-4.0.0.tgz 29783ms (cache miss)
+752 http fetch GET 200 https://registry.npmjs.org/has-symbols/-/has-symbols-1.1.0.tgz 30157ms (cache miss)
+753 http fetch GET 200 https://registry.npmjs.org/get-proto/-/get-proto-1.0.1.tgz 30651ms (cache miss)
+754 http fetch GET 200 https://registry.npmjs.org/lodash/-/lodash-4.17.21.tgz 30697ms (cache miss)
+755 http fetch GET 200 https://registry.npmjs.org/glob/-/glob-7.2.3.tgz 30720ms (cache miss)
+756 warn deprecated glob@7.2.3: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+757 http fetch GET 200 https://registry.npmjs.org/get-caller-file/-/get-caller-file-2.0.5.tgz 30856ms (cache miss)
+758 http fetch GET 200 https://registry.npmjs.org/gauge/-/gauge-3.0.2.tgz 31444ms (cache miss)
+759 warn deprecated gauge@3.0.2: This package is no longer supported.
+760 http fetch GET 200 https://registry.npmjs.org/function-bind/-/function-bind-1.1.2.tgz 31515ms (cache miss)
+761 http fetch GET 200 https://registry.npmjs.org/js-yaml/-/js-yaml-4.1.0.tgz 31629ms (cache miss)
+762 http fetch GET 200 https://registry.npmjs.org/fresh/-/fresh-2.0.0.tgz 31959ms (cache miss)
+763 http fetch GET 200 https://registry.npmjs.org/fs.realpath/-/fs.realpath-1.0.0.tgz 32041ms (cache miss)
+764 http fetch GET 200 https://registry.npmjs.org/forwarded/-/forwarded-0.2.0.tgz 32059ms (cache miss)
+765 http fetch GET 200 https://registry.npmjs.org/from/-/from-0.1.7.tgz 32144ms (cache miss)
+766 http fetch GET 200 https://registry.npmjs.org/magic-string/-/magic-string-0.30.21.tgz 32331ms (cache miss)
+767 http fetch GET 200 https://registry.npmjs.org/fs-minipass/-/fs-minipass-2.1.0.tgz 32372ms (cache miss)
+768 http fetch GET 200 https://registry.npmjs.org/get-intrinsic/-/get-intrinsic-1.3.0.tgz 32445ms (cache miss)
+769 http fetch GET 200 https://registry.npmjs.org/follow-redirects/-/follow-redirects-1.16.0.tgz 32541ms (cache miss)
+770 http fetch GET 200 https://registry.npmjs.org/finalhandler/-/finalhandler-2.1.1.tgz 32702ms (cache miss)
+771 http fetch GET 200 https://registry.npmjs.org/fast-deep-equal/-/fast-deep-equal-2.0.1.tgz 32995ms (cache miss)
+772 http fetch GET 200 https://registry.npmjs.org/fast-sha256/-/fast-sha256-1.3.0.tgz 33217ms (cache miss)
+773 http fetch GET 200 https://registry.npmjs.org/evtd/-/evtd-0.2.4.tgz 33510ms (cache miss)
+774 http fetch GET 200 https://registry.npmjs.org/form-data/-/form-data-4.0.5.tgz 33818ms (cache miss)
+775 http fetch GET 200 https://registry.npmjs.org/express/-/express-5.2.1.tgz 34220ms (cache miss)
+776 http fetch GET 200 https://registry.npmjs.org/event-stream/-/event-stream-3.3.4.tgz 34270ms (cache miss)
+777 http fetch GET 200 https://registry.npmjs.org/fast-safe-stringify/-/fast-safe-stringify-2.1.1.tgz 34274ms (cache miss)
+778 http fetch GET 200 https://registry.npmjs.org/estree-walker/-/estree-walker-2.0.2.tgz 34341ms (cache miss)
+779 http fetch GET 200 https://registry.npmjs.org/escape-html/-/escape-html-1.0.3.tgz 34670ms (cache miss)
+780 http fetch GET 200 https://registry.npmjs.org/escalade/-/escalade-3.2.0.tgz 34738ms (cache miss)
+781 http fetch GET 200 https://registry.npmjs.org/etag/-/etag-1.8.1.tgz 34819ms (cache miss)
+782 http fetch GET 200 https://registry.npmjs.org/es-set-tostringtag/-/es-set-tostringtag-2.1.0.tgz 35171ms (cache miss)
+783 http fetch GET 200 https://registry.npmjs.org/es-define-property/-/es-define-property-1.0.1.tgz 35616ms (cache miss)
+784 http fetch GET 200 https://registry.npmjs.org/es-errors/-/es-errors-1.3.0.tgz 36075ms (cache miss)
+785 http fetch GET 200 https://registry.npmjs.org/es6-promise/-/es6-promise-4.2.8.tgz 36343ms (cache miss)
+786 http fetch GET 200 https://registry.npmjs.org/encodeurl/-/encodeurl-2.0.0.tgz 36416ms (cache miss)
+787 http fetch GET 200 https://registry.npmjs.org/es-object-atoms/-/es-object-atoms-1.1.1.tgz 36747ms (cache miss)
+788 http fetch GET 200 https://registry.npmjs.org/ee-first/-/ee-first-1.1.1.tgz 37197ms (cache miss)
+789 http fetch GET 200 https://registry.npmjs.org/ecdsa-sig-formatter/-/ecdsa-sig-formatter-1.0.11.tgz 37678ms (cache miss)
+790 http fetch GET 200 https://registry.npmjs.org/emoji-regex/-/emoji-regex-8.0.0.tgz 37808ms (cache miss)
+791 http fetch GET 200 https://registry.npmjs.org/duplexer/-/duplexer-0.1.2.tgz 38124ms (cache miss)
+792 http fetch GET 200 https://registry.npmjs.org/dunder-proto/-/dunder-proto-1.0.1.tgz 38378ms (cache miss)
+793 http fetch GET 200 https://registry.npmjs.org/dotenv-expand/-/dotenv-expand-10.0.0.tgz 38596ms (cache miss)
+794 http fetch GET 200 https://registry.npmjs.org/file-type/-/file-type-20.4.1.tgz 38822ms (cache miss)
+795 http fetch GET 200 https://registry.npmjs.org/iconv-lite/-/iconv-lite-0.4.24.tgz 39577ms (cache miss)
+796 http fetch GET 200 https://registry.npmjs.org/domelementtype/-/domelementtype-2.3.0.tgz 39527ms (cache miss)
+797 http fetch GET 200 https://registry.npmjs.org/entities/-/entities-7.0.1.tgz 39543ms (cache miss)
+798 http fetch GET 200 https://registry.npmjs.org/domutils/-/domutils-3.2.2.tgz 39813ms (cache miss)
+799 http fetch GET 200 https://registry.npmjs.org/esbuild/-/esbuild-0.28.0.tgz 40188ms (cache miss)
+800 http fetch GET 200 https://registry.npmjs.org/destroy/-/destroy-1.2.0.tgz 40262ms (cache miss)
+801 http fetch GET 200 https://registry.npmjs.org/dotenv/-/dotenv-16.4.5.tgz 40369ms (cache miss)
+802 http fetch GET 200 https://registry.npmjs.org/dom-serializer/-/dom-serializer-2.0.0.tgz 40375ms (cache miss)
+803 http fetch GET 200 https://registry.npmjs.org/domhandler/-/domhandler-5.0.3.tgz 40386ms (cache miss)
+804 http fetch GET 200 https://registry.npmjs.org/delegates/-/delegates-1.0.0.tgz 40697ms (cache miss)
+805 http fetch GET 200 https://registry.npmjs.org/delayed-stream/-/delayed-stream-1.0.0.tgz 40840ms (cache miss)
+806 http fetch GET 200 https://registry.npmjs.org/deepmerge/-/deepmerge-4.3.1.tgz 41060ms (cache miss)
+807 http fetch GET 200 https://registry.npmjs.org/de-indent/-/de-indent-1.0.2.tgz 41094ms (cache miss)
+808 http fetch GET 200 https://registry.npmjs.org/debug/-/debug-2.6.9.tgz 41338ms (cache miss)
+809 http fetch GET 200 https://registry.npmjs.org/depd/-/depd-2.0.0.tgz 41398ms (cache miss)
+810 http fetch GET 200 https://registry.npmjs.org/detect-libc/-/detect-libc-2.1.2.tgz 41469ms (cache miss)
+811 http fetch GET 200 https://registry.npmjs.org/css-render/-/css-render-0.15.14.tgz 42203ms (cache miss)
+812 http fetch GET 200 https://registry.npmjs.org/cors/-/cors-2.8.5.tgz 42469ms (cache miss)
+813 http fetch GET 200 https://registry.npmjs.org/cookie-signature/-/cookie-signature-1.2.2.tgz 42642ms (cache miss)
+814 http fetch GET 200 https://registry.npmjs.org/cross-spawn/-/cross-spawn-7.0.6.tgz 42786ms (cache miss)
+815 http fetch GET 200 https://registry.npmjs.org/content-type/-/content-type-1.0.5.tgz 43085ms (cache miss)
+816 http fetch GET 200 https://registry.npmjs.org/date-fns-tz/-/date-fns-tz-3.2.0.tgz 43170ms (cache miss)
+817 http fetch GET 200 https://registry.npmjs.org/highlight.js/-/highlight.js-11.11.1.tgz 43364ms (cache miss)
+818 http fetch GET 200 https://registry.npmjs.org/console-control-strings/-/console-control-strings-1.1.0.tgz 43374ms (cache miss)
+819 http fetch GET 200 https://registry.npmjs.org/concat-stream/-/concat-stream-2.0.0.tgz 44027ms (cache miss)
+820 http fetch GET 200 https://registry.npmjs.org/cookie/-/cookie-0.7.2.tgz 44034ms (cache miss)
+821 http fetch GET 200 https://registry.npmjs.org/typescript/-/typescript-5.9.3.tgz 44202ms (cache miss)
+822 http fetch GET 200 https://registry.npmjs.org/libphonenumber-js/-/libphonenumber-js-1.13.2.tgz 44274ms (cache miss)
+823 http fetch GET 200 https://registry.npmjs.org/naive-ui/-/naive-ui-2.43.2.tgz 44301ms (cache miss)
+824 http fetch GET 200 https://registry.npmjs.org/color-support/-/color-support-1.1.3.tgz 44232ms (cache miss)
+825 http fetch GET 200 https://registry.npmjs.org/concat-map/-/concat-map-0.0.1.tgz 44305ms (cache miss)
+826 http fetch GET 200 https://registry.npmjs.org/consola/-/consola-2.15.3.tgz 44335ms (cache miss)
+827 http fetch GET 200 https://registry.npmjs.org/content-disposition/-/content-disposition-1.1.0.tgz 44434ms (cache miss)
+828 http fetch GET 200 https://registry.npmjs.org/cliui/-/cliui-8.0.1.tgz 44842ms (cache miss)
+829 http fetch GET 200 https://registry.npmjs.org/chownr/-/chownr-2.0.0.tgz 45301ms (cache miss)
+830 http fetch GET 200 https://registry.npmjs.org/combined-stream/-/combined-stream-1.0.8.tgz 45323ms (cache miss)
+831 http fetch GET 200 https://registry.npmjs.org/color-convert/-/color-convert-2.0.1.tgz 45388ms (cache miss)
+832 http fetch GET 200 https://registry.npmjs.org/csstype/-/csstype-3.2.3.tgz 45503ms (cache miss)
+833 http fetch GET 200 https://registry.npmjs.org/color-name/-/color-name-1.1.4.tgz 45722ms (cache miss)
+834 http fetch GET 200 https://registry.npmjs.org/call-bind-apply-helpers/-/call-bind-apply-helpers-1.0.2.tgz 45772ms (cache miss)
+835 http fetch GET 200 https://registry.npmjs.org/call-bound/-/call-bound-1.0.4.tgz 46104ms (cache miss)
+836 http fetch GET 200 https://registry.npmjs.org/buffer-from/-/buffer-from-1.1.2.tgz 46157ms (cache miss)
+837 http fetch GET 200 https://registry.npmjs.org/swagger-ui-dist/-/swagger-ui-dist-5.17.14.tgz 46424ms (cache miss)
+838 http fetch GET 200 https://registry.npmjs.org/bytes/-/bytes-3.1.2.tgz 46432ms (cache miss)
+839 http fetch GET 200 https://registry.npmjs.org/brace-expansion/-/brace-expansion-1.1.14.tgz 46551ms (cache miss)
+840 http fetch GET 200 https://registry.npmjs.org/body-parser/-/body-parser-1.20.4.tgz 46749ms (cache miss)
+841 http fetch GET 200 https://registry.npmjs.org/chalk/-/chalk-4.1.2.tgz 46923ms (cache miss)
+842 http fetch GET 200 https://registry.npmjs.org/buffer-equal-constant-time/-/buffer-equal-constant-time-1.0.1.tgz 47010ms (cache miss)
+843 http fetch GET 200 https://registry.npmjs.org/busboy/-/busboy-1.6.0.tgz 47134ms (cache miss)
+844 http fetch GET 200 https://registry.npmjs.org/fflate/-/fflate-0.8.3.tgz 47241ms (cache miss)
+845 http fetch GET 200 https://registry.npmjs.org/asynckit/-/asynckit-0.4.0.tgz 47520ms (cache miss)
+846 http fetch GET 200 https://registry.npmjs.org/bcrypt/-/bcrypt-5.1.1.tgz 47570ms (cache miss)
+847 http fetch GET 200 https://registry.npmjs.org/are-we-there-yet/-/are-we-there-yet-2.0.0.tgz 48050ms (cache miss)
+848 warn deprecated are-we-there-yet@2.0.0: This package is no longer supported.
+849 http fetch GET 200 https://registry.npmjs.org/balanced-match/-/balanced-match-1.0.2.tgz 48296ms (cache miss)
+850 http fetch GET 200 https://registry.npmjs.org/dayjs/-/dayjs-1.11.20.tgz 48350ms (cache miss)
+851 http fetch GET 200 https://registry.npmjs.org/array-flatten/-/array-flatten-1.1.1.tgz 48419ms (cache miss)
+852 http fetch GET 200 https://registry.npmjs.org/append-field/-/append-field-1.0.0.tgz 48537ms (cache miss)
+853 http fetch GET 200 https://registry.npmjs.org/async-validator/-/async-validator-4.2.5.tgz 48579ms (cache miss)
+854 http fetch GET 200 https://registry.npmjs.org/ansi-regex/-/ansi-regex-5.0.1.tgz 48673ms (cache miss)
+855 http fetch GET 200 https://registry.npmjs.org/ansi-styles/-/ansi-styles-4.3.0.tgz 48859ms (cache miss)
+856 http fetch GET 200 https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz 49071ms (cache miss)
+857 http fetch GET 200 https://registry.npmjs.org/accepts/-/accepts-2.0.0.tgz 49371ms (cache miss)
+858 http fetch GET 200 https://registry.npmjs.org/alien-signals/-/alien-signals-1.0.13.tgz 49756ms (cache miss)
+859 http fetch GET 200 https://registry.npmjs.org/@vue/shared/-/shared-3.5.34.tgz 49813ms (cache miss)
+860 http fetch GET 200 https://registry.npmjs.org/agent-base/-/agent-base-6.0.2.tgz 49971ms (cache miss)
+861 http fetch GET 200 https://registry.npmjs.org/aproba/-/aproba-2.1.0.tgz 49991ms (cache miss)
+862 http fetch GET 200 https://registry.npmjs.org/concurrently/-/concurrently-9.2.1.tgz 50117ms (cache miss)
+863 http fetch GET 200 https://registry.npmjs.org/prisma/-/prisma-5.22.0.tgz 50686ms (cache miss)
+864 http fetch GET 200 https://registry.npmjs.org/argparse/-/argparse-2.0.1.tgz 50549ms (cache miss)
+865 http fetch GET 200 https://registry.npmjs.org/@vue/server-renderer/-/server-renderer-3.5.34.tgz 50969ms (cache miss)
+866 http fetch GET 200 https://registry.npmjs.org/@vue/devtools-api/-/devtools-api-6.6.4.tgz 52572ms (cache miss)
+867 http fetch GET 200 https://registry.npmjs.org/class-transformer/-/class-transformer-0.5.1.tgz 52923ms (cache miss)
+868 http fetch GET 200 https://registry.npmjs.org/@vue/language-core/-/language-core-2.2.12.tgz 53099ms (cache miss)
+869 http fetch GET 200 https://registry.npmjs.org/@volar/typescript/-/typescript-2.4.15.tgz 53592ms (cache miss)
+870 http fetch GET 200 https://registry.npmjs.org/@vue/compiler-vue2/-/compiler-vue2-2.7.16.tgz 53617ms (cache miss)
+871 http fetch GET 200 https://registry.npmjs.org/@vue/reactivity/-/reactivity-3.5.34.tgz 53637ms (cache miss)
+872 http fetch GET 200 https://registry.npmjs.org/@volar/language-core/-/language-core-2.4.15.tgz 53646ms (cache miss)
+873 http fetch GET 200 https://registry.npmjs.org/@vue/compiler-ssr/-/compiler-ssr-3.5.34.tgz 53739ms (cache miss)
+874 http fetch GET 200 https://registry.npmjs.org/@volar/source-map/-/source-map-2.4.15.tgz 53783ms (cache miss)
+875 http fetch GET 200 https://registry.npmjs.org/@vue/runtime-core/-/runtime-core-3.5.34.tgz 53954ms (cache miss)
+876 http fetch GET 200 https://registry.npmjs.org/@types/serve-static/-/serve-static-1.15.10.tgz 54188ms (cache miss)
+877 http fetch GET 200 https://registry.npmjs.org/@types/range-parser/-/range-parser-1.2.7.tgz 54263ms (cache miss)
+878 http fetch GET 200 https://registry.npmjs.org/@types/qs/-/qs-6.15.1.tgz 54344ms (cache miss)
+879 http fetch GET 200 https://registry.npmjs.org/@types/passport-jwt/-/passport-jwt-4.0.1.tgz 54743ms (cache miss)
+880 http fetch GET 200 https://registry.npmjs.org/@types/send/-/send-1.2.1.tgz 55019ms (cache miss)
+881 http fetch GET 200 https://registry.npmjs.org/@types/validator/-/validator-13.15.10.tgz 55178ms (cache miss)
+882 http fetch GET 200 https://registry.npmjs.org/@types/passport-strategy/-/passport-strategy-0.2.38.tgz 55209ms (cache miss)
+883 http fetch GET 200 https://registry.npmjs.org/@vue/runtime-dom/-/runtime-dom-3.5.34.tgz 55711ms (cache miss)
+884 http fetch GET 200 https://registry.npmjs.org/axios/-/axios-1.16.1.tgz 55995ms (cache miss)
+885 http fetch GET 200 https://registry.npmjs.org/@vitejs/plugin-vue/-/plugin-vue-5.2.4.tgz 55993ms (cache miss)
+886 http fetch GET 200 https://registry.npmjs.org/@types/katex/-/katex-0.16.8.tgz 56148ms (cache miss)
+887 http fetch GET 200 https://registry.npmjs.org/@types/jsonwebtoken/-/jsonwebtoken-9.0.5.tgz 56267ms (cache miss)
+888 http fetch GET 200 https://registry.npmjs.org/@types/lodash-es/-/lodash-es-4.17.12.tgz 56313ms (cache miss)
+889 http fetch GET 200 https://registry.npmjs.org/@types/http-errors/-/http-errors-2.0.5.tgz 56392ms (cache miss)
+890 http fetch GET 200 https://registry.npmjs.org/@vue/compiler-dom/-/compiler-dom-3.5.34.tgz 56444ms (cache miss)
+891 http fetch GET 200 https://registry.npmjs.org/@types/express/-/express-4.17.25.tgz 56556ms (cache miss)
+892 http fetch GET 200 https://registry.npmjs.org/@types/passport/-/passport-1.0.17.tgz 56562ms (cache miss)
+893 http fetch GET 200 https://registry.npmjs.org/@types/body-parser/-/body-parser-1.19.6.tgz 56819ms (cache miss)
+894 http fetch GET 200 https://registry.npmjs.org/@types/bcrypt/-/bcrypt-5.0.2.tgz 56999ms (cache miss)
+895 http fetch GET 200 https://registry.npmjs.org/@types/mime/-/mime-1.3.5.tgz 57017ms (cache miss)
+896 http fetch GET 200 https://registry.npmjs.org/@tokenizer/token/-/token-0.3.0.tgz 57025ms (cache miss)
+897 http fetch GET 200 https://registry.npmjs.org/@types/express-serve-static-core/-/express-serve-static-core-4.19.8.tgz 57343ms (cache miss)
+898 http fetch GET 200 https://registry.npmjs.org/@types/estree/-/estree-1.0.8.tgz 57390ms (cache miss)
+899 http fetch GET 200 https://registry.npmjs.org/@vue/compiler-core/-/compiler-core-3.5.34.tgz 57483ms (cache miss)
+900 http fetch GET 200 https://registry.npmjs.org/@selderee/plugin-htmlparser2/-/plugin-htmlparser2-0.11.0.tgz 57470ms (cache miss)
+901 http fetch GET 200 https://registry.npmjs.org/@types/connect/-/connect-3.4.38.tgz 57572ms (cache miss)
+902 http fetch GET 200 https://registry.npmjs.org/@react-email/render/-/render-1.1.2.tgz 57903ms (cache miss)
+903 http fetch GET 200 https://registry.npmjs.org/@stablelib/base64/-/base64-1.0.1.tgz 57986ms (cache miss)
+904 http fetch GET 200 https://registry.npmjs.org/@prisma/debug/-/debug-5.22.0.tgz 58396ms (cache miss)
+905 http fetch GET 200 https://registry.npmjs.org/@tokenizer/inflate/-/inflate-0.2.7.tgz 58577ms (cache miss)
+906 http fetch GET 200 https://registry.npmjs.org/@types/lodash/-/lodash-4.17.24.tgz 58711ms (cache miss)
+907 http fetch GET 200 https://registry.npmjs.org/@prisma/engines-version/-/engines-version-5.22.0-44.605197351a3c8bdd595af2d2a9bc3025bca48ea2.tgz 58729ms (cache miss)
+908 http fetch GET 200 https://registry.npmjs.org/@prisma/engines/-/engines-5.22.0.tgz 59092ms (cache miss)
+909 http fetch GET 200 https://registry.npmjs.org/@nestjs/passport/-/passport-10.0.3.tgz 59490ms (cache miss)
+910 http fetch GET 200 https://registry.npmjs.org/@nuxtjs/opencollective/-/opencollective-0.3.2.tgz 59519ms (cache miss)
+911 http fetch GET 200 https://registry.npmjs.org/@nestjs/mapped-types/-/mapped-types-2.0.5.tgz 59966ms (cache miss)
+912 http fetch GET 200 https://registry.npmjs.org/@nestjs/platform-express/-/platform-express-10.4.22.tgz 60025ms (cache miss)
+913 http fetch GET 200 https://registry.npmjs.org/@prisma/fetch-engine/-/fetch-engine-5.22.0.tgz 60266ms (cache miss)
+914 http fetch GET 200 https://registry.npmjs.org/@nestjs/jwt/-/jwt-10.2.0.tgz 60515ms (cache miss)
+915 http fetch GET 200 https://registry.npmjs.org/@nestjs/config/-/config-3.3.0.tgz 60569ms (cache miss)
+916 http fetch GET 200 https://registry.npmjs.org/@prisma/get-platform/-/get-platform-5.22.0.tgz 60816ms (cache miss)
+917 http fetch GET 200 https://registry.npmjs.org/@lukeed/csprng/-/csprng-1.1.0.tgz 61297ms (cache miss)
+918 http fetch GET 200 https://registry.npmjs.org/prettier/-/prettier-3.8.3.tgz 61744ms (cache miss)
+919 http fetch GET 200 https://registry.npmjs.org/@nestjs/swagger/-/swagger-7.4.2.tgz 61779ms (cache miss)
+920 http fetch GET 200 https://registry.npmjs.org/@jridgewell/sourcemap-codec/-/sourcemap-codec-1.5.5.tgz 62635ms (cache miss)
+921 http fetch GET 200 https://registry.npmjs.org/@juggle/resize-observer/-/resize-observer-3.4.0.tgz 62643ms (cache miss)
+922 http fetch GET 200 https://registry.npmjs.org/@emotion/hash/-/hash-0.8.0.tgz 62727ms (cache miss)
+923 http fetch GET 200 https://registry.npmjs.org/@mapbox/node-pre-gyp/-/node-pre-gyp-1.0.11.tgz 62879ms (cache miss)
+924 http fetch GET 200 https://registry.npmjs.org/@nestjs/core/-/core-10.4.22.tgz 63047ms (cache miss)
+925 http fetch GET 200 https://registry.npmjs.org/@css-render/plugin-bem/-/plugin-bem-0.15.14.tgz 63200ms (cache miss)
+926 http fetch GET 200 https://registry.npmjs.org/@nestjs/common/-/common-10.4.22.tgz 63400ms (cache miss)
+927 http fetch GET 200 https://registry.npmjs.org/@borewit/text-codec/-/text-codec-0.2.2.tgz 64029ms (cache miss)
+928 http fetch GET 200 https://registry.npmjs.org/@babel/helper-validator-identifier/-/helper-validator-identifier-7.28.5.tgz 64266ms (cache miss)
+929 http fetch GET 200 https://registry.npmjs.org/@babel/helper-string-parser/-/helper-string-parser-7.27.1.tgz 64482ms (cache miss)
+930 http fetch GET 200 https://registry.npmjs.org/@css-render/vue3-ssr/-/vue3-ssr-0.15.14.tgz 64613ms (cache miss)
+931 http fetch GET 200 https://registry.npmjs.org/esbuild/-/esbuild-0.21.5.tgz 66052ms (cache miss)
+932 http fetch GET 200 https://registry.npmjs.org/tslib/-/tslib-2.3.0.tgz 66515ms (cache miss)
+933 http fetch GET 200 https://registry.npmjs.org/mime-types/-/mime-types-2.1.35.tgz 66548ms (cache miss)
+934 http fetch GET 200 https://registry.npmjs.org/@babel/types/-/types-7.29.0.tgz 68464ms (cache miss)
+935 http fetch GET 200 https://registry.npmjs.org/mkdirp/-/mkdirp-1.0.4.tgz 68877ms (cache miss)
+936 http fetch GET 200 https://registry.npmjs.org/@microsoft/tsdoc/-/tsdoc-0.15.1.tgz 69315ms (cache miss)
+937 http fetch GET 200 https://registry.npmjs.org/@rollup/rollup-win32-x64-msvc/-/rollup-win32-x64-msvc-4.60.4.tgz 69518ms (cache miss)
+938 http fetch GET 200 https://registry.npmjs.org/mime-db/-/mime-db-1.52.0.tgz 69931ms (cache miss)
+939 http fetch GET 200 https://registry.npmjs.org/@babel/parser/-/parser-7.29.3.tgz 69948ms (cache miss)
+940 http fetch GET 200 https://registry.npmjs.org/ms/-/ms-2.1.3.tgz 70674ms (cache miss)
+941 http fetch GET 200 https://registry.npmjs.org/@types/node/-/node-22.19.19.tgz 70842ms (cache miss)
+942 http fetch GET 200 https://registry.npmjs.org/debug/-/debug-4.4.3.tgz 70810ms (cache miss)
+943 http fetch GET 200 https://registry.npmjs.org/path-to-regexp/-/path-to-regexp-8.4.2.tgz 70896ms (cache miss)
+944 http fetch GET 200 https://registry.npmjs.org/ms/-/ms-2.1.3.tgz 71189ms (cache miss)
+945 http fetch GET 200 https://registry.npmjs.org/ms/-/ms-2.1.3.tgz 71334ms (cache miss)
+946 http fetch GET 200 https://registry.npmjs.org/ms/-/ms-2.1.3.tgz 71434ms (cache miss)
+947 http fetch GET 200 https://registry.npmjs.org/debug/-/debug-4.4.3.tgz 71760ms (cache miss)
+948 http fetch GET 200 https://registry.npmjs.org/minipass/-/minipass-3.3.6.tgz 72062ms (cache miss)
+949 http fetch GET 200 https://registry.npmjs.org/debug/-/debug-4.4.3.tgz 72175ms (cache miss)
+950 http fetch GET 200 https://registry.npmjs.org/semver/-/semver-6.3.1.tgz 72204ms (cache miss)
+951 http fetch GET 200 https://registry.npmjs.org/@vue/compiler-sfc/-/compiler-sfc-3.5.34.tgz 72462ms (cache miss)
+952 http fetch GET 200 https://registry.npmjs.org/ms/-/ms-2.1.3.tgz 72620ms (cache miss)
+953 http fetch GET 200 https://registry.npmjs.org/minipass/-/minipass-3.3.6.tgz 73027ms (cache miss)
+954 http fetch GET 200 https://registry.npmjs.org/content-type/-/content-type-2.0.0.tgz 73094ms (cache miss)
+955 http fetch GET 200 https://registry.npmjs.org/ms/-/ms-2.1.3.tgz 73528ms (cache miss)
+956 http fetch GET 200 https://registry.npmjs.org/mime-types/-/mime-types-2.1.35.tgz 74043ms (cache miss)
+957 http fetch GET 200 https://registry.npmjs.org/type-is/-/type-is-2.1.0.tgz 74065ms (cache miss)
+958 http fetch GET 200 https://registry.npmjs.org/entities/-/entities-4.5.0.tgz 74102ms (cache miss)
+959 http fetch GET 200 https://registry.npmjs.org/raw-body/-/raw-body-3.0.2.tgz 74194ms (cache miss)
+960 http fetch GET 200 https://registry.npmjs.org/debug/-/debug-4.4.3.tgz 74376ms (cache miss)
+961 http fetch GET 200 https://registry.npmjs.org/mime-db/-/mime-db-1.52.0.tgz 74395ms (cache miss)
+962 http fetch GET 200 https://registry.npmjs.org/media-typer/-/media-typer-1.1.0.tgz 74504ms (cache miss)
+963 http fetch GET 200 https://registry.npmjs.org/tslib/-/tslib-2.3.0.tgz 74671ms (cache miss)
+964 http fetch GET 200 https://registry.npmjs.org/supports-color/-/supports-color-7.2.0.tgz 74919ms (cache miss)
+965 http fetch GET 200 https://registry.npmjs.org/ms/-/ms-2.1.3.tgz 75081ms (cache miss)
+966 http fetch GET 200 https://registry.npmjs.org/body-parser/-/body-parser-2.2.2.tgz 75216ms (cache miss)
+967 http fetch GET 200 https://registry.npmjs.org/debug/-/debug-4.4.3.tgz 75222ms (cache miss)
+968 http fetch GET 200 https://registry.npmjs.org/@types/send/-/send-0.17.6.tgz 75733ms (cache miss)
+969 http fetch GET 200 https://registry.npmjs.org/ms/-/ms-2.1.3.tgz 76209ms (cache miss)
+970 http fetch GET 200 https://registry.npmjs.org/debug/-/debug-4.4.3.tgz 76296ms (cache miss)
+971 http fetch GET 200 https://registry.npmjs.org/brace-expansion/-/brace-expansion-2.1.0.tgz 76639ms (cache miss)
+972 http fetch GET 200 https://registry.npmjs.org/entities/-/entities-4.5.0.tgz 77052ms (cache miss)
+973 http fetch GET 200 https://registry.npmjs.org/serve-static/-/serve-static-1.16.3.tgz 77910ms (cache miss)
+974 http fetch GET 200 https://registry.npmjs.org/path-to-regexp/-/path-to-regexp-0.1.13.tgz 78101ms (cache miss)
+975 http fetch GET 200 https://registry.npmjs.org/negotiator/-/negotiator-0.6.3.tgz 78248ms (cache miss)
+976 http fetch GET 200 https://registry.npmjs.org/debug/-/debug-4.4.3.tgz 78491ms (cache miss)
+977 http fetch GET 200 https://registry.npmjs.org/ms/-/ms-2.1.3.tgz 78680ms (cache miss)
+978 http fetch GET 200 https://registry.npmjs.org/mime-types/-/mime-types-2.1.35.tgz 78683ms (cache miss)
+979 http fetch GET 200 https://registry.npmjs.org/minimatch/-/minimatch-9.0.9.tgz 78818ms (cache miss)
+980 http fetch GET 200 https://registry.npmjs.org/send/-/send-0.19.2.tgz 78939ms (cache miss)
+981 http fetch GET 200 https://registry.npmjs.org/fresh/-/fresh-0.5.2.tgz 79099ms (cache miss)
+982 http fetch GET 200 https://registry.npmjs.org/iconv-lite/-/iconv-lite-0.7.2.tgz 79350ms (cache miss)
+983 http fetch GET 200 https://registry.npmjs.org/cookie-signature/-/cookie-signature-1.0.7.tgz 79546ms (cache miss)
+984 http fetch GET 200 https://registry.npmjs.org/rxjs/-/rxjs-7.8.2.tgz 79689ms (cache miss)
+985 http fetch GET 200 https://registry.npmjs.org/accepts/-/accepts-1.3.8.tgz 79831ms (cache miss)
+986 http fetch GET 200 https://registry.npmjs.org/finalhandler/-/finalhandler-1.3.2.tgz 79902ms (cache miss)
+987 http fetch GET 200 https://registry.npmjs.org/merge-descriptors/-/merge-descriptors-1.0.3.tgz 79969ms (cache miss)
+988 http fetch GET 200 https://registry.npmjs.org/mime-db/-/mime-db-1.52.0.tgz 80020ms (cache miss)
+989 http fetch GET 200 https://registry.npmjs.org/content-disposition/-/content-disposition-0.5.4.tgz 80729ms (cache miss)
+990 http fetch GET 200 https://registry.npmjs.org/file-type 80105ms (cache miss)
+991 silly packumentCache corgi:https://registry.npmjs.org/file-type set size:undefined disposed:false
+992 http fetch GET 200 https://registry.npmjs.org/lodash 80176ms (cache miss)
+993 silly packumentCache corgi:https://registry.npmjs.org/lodash set size:undefined disposed:false
+994 http fetch GET 200 https://registry.npmjs.org/multer 80251ms (cache miss)
+995 silly packumentCache corgi:https://registry.npmjs.org/multer set size:undefined disposed:false
+996 http fetch GET 200 https://registry.npmjs.org/express/-/express-4.22.1.tgz 82610ms (cache miss)
+997 http fetch GET 200 https://registry.npmjs.org/js-yaml 80975ms (cache miss)
+998 silly packumentCache corgi:https://registry.npmjs.org/js-yaml set size:undefined disposed:false
+999 http fetch GET 200 https://registry.npmjs.org/@nestjs%2fcore 82383ms (cache miss)
+1000 silly packumentCache corgi:https://registry.npmjs.org/@nestjs%2fcore set size:undefined disposed:false
+1001 http fetch GET 200 https://registry.npmjs.org/tar 82991ms (cache miss)
+1002 silly packumentCache corgi:https://registry.npmjs.org/tar set size:undefined disposed:false
+1003 http fetch GET 200 https://registry.npmjs.org/class-validator/-/class-validator-0.14.4.tgz 85416ms (cache miss)
+1004 http fetch GET 200 https://registry.npmjs.org/@rollup/rollup-win32-x64-gnu/-/rollup-win32-x64-gnu-4.60.4.tgz 86989ms (cache miss)
+1005 http fetch GET 200 https://registry.npmjs.org/esbuild 85575ms (cache miss)
+1006 silly packumentCache corgi:https://registry.npmjs.org/esbuild set size:undefined disposed:false
+1007 http fetch GET 200 https://registry.npmjs.org/csstype/-/csstype-3.0.11.tgz 91723ms (cache miss)
+1008 http fetch GET 200 https://registry.npmjs.org/date-fns/-/date-fns-4.1.0.tgz 92366ms (cache miss)
+1009 http fetch GET 200 https://registry.npmjs.org/vite 97884ms (cache miss)
+1010 silly packumentCache corgi:https://registry.npmjs.org/vite set size:undefined disposed:false
+1011 silly packumentCache corgi:https://registry.npmjs.org/@nestjs%2fplatform-express cache-miss
+1012 silly packumentCache corgi:https://registry.npmjs.org/@nestjs%2fswagger cache-miss
+1013 http fetch GET 200 https://registry.npmjs.org/@prisma/client/-/client-5.22.0.tgz 99915ms (cache miss)
+1014 http fetch GET 200 https://registry.npmjs.org/@nestjs%2fswagger 8276ms (cache miss)
+1015 silly packumentCache corgi:https://registry.npmjs.org/@nestjs%2fswagger set size:undefined disposed:false
+1016 http fetch GET 200 https://registry.npmjs.org/@esbuild/win32-x64/-/win32-x64-0.21.5.tgz 113247ms (cache miss)
+1017 http fetch GET 200 https://registry.npmjs.org/@esbuild/win32-x64/-/win32-x64-0.28.0.tgz 116347ms (cache miss)
+1018 http fetch GET 200 https://registry.npmjs.org/@nestjs%2fplatform-express 18314ms (cache miss)
+1019 silly packumentCache corgi:https://registry.npmjs.org/@nestjs%2fplatform-express set size:undefined disposed:false
+1020 silly packumentCache corgi:https://registry.npmjs.org/@nestjs%2fcommon cache-miss
+1021 http fetch GET 200 https://registry.npmjs.org/@nestjs%2fcommon 15162ms (cache miss)
+1022 silly packumentCache corgi:https://registry.npmjs.org/@nestjs%2fcommon set size:undefined disposed:false
+1023 silly packumentCache corgi:https://registry.npmjs.org/@nestjs%2fconfig cache-miss
+1024 silly packumentCache corgi:https://registry.npmjs.org/naive-ui cache-miss
+1025 http fetch GET 200 https://registry.npmjs.org/@nestjs%2fconfig 1456ms (cache miss)
+1026 silly packumentCache corgi:https://registry.npmjs.org/@nestjs%2fconfig set size:undefined disposed:false
+1027 http fetch GET 200 https://registry.npmjs.org/naive-ui 2800ms (cache miss)
+1028 silly packumentCache corgi:https://registry.npmjs.org/naive-ui set size:undefined disposed:false
+1029 silly packumentCache corgi:https://registry.npmjs.org/@mapbox%2fnode-pre-gyp cache-miss
+1030 http fetch GET 200 https://registry.npmjs.org/@mapbox%2fnode-pre-gyp 1105ms (cache miss)
+1031 silly packumentCache corgi:https://registry.npmjs.org/@mapbox%2fnode-pre-gyp set size:undefined disposed:false
+1032 silly packumentCache corgi:https://registry.npmjs.org/@vitejs%2fplugin-vue cache-miss
+1033 http fetch GET 200 https://registry.npmjs.org/@vitejs%2fplugin-vue 2932ms (cache miss)
+1034 silly packumentCache corgi:https://registry.npmjs.org/@vitejs%2fplugin-vue set size:undefined disposed:false
+1035 silly packumentCache corgi:https://registry.npmjs.org/@nestjs%2fjwt cache-miss
+1036 silly packumentCache corgi:https://registry.npmjs.org/@nestjs%2fmapped-types cache-miss
+1037 silly packumentCache corgi:https://registry.npmjs.org/@nestjs%2fpassport cache-miss
+1038 http fetch GET 200 https://registry.npmjs.org/@nestjs%2fpassport 1273ms (cache miss)
+1039 silly packumentCache corgi:https://registry.npmjs.org/@nestjs%2fpassport set size:undefined disposed:false
+1040 http fetch GET 200 https://registry.npmjs.org/@nestjs%2fjwt 1707ms (cache miss)
+1041 silly packumentCache corgi:https://registry.npmjs.org/@nestjs%2fjwt set size:undefined disposed:false
+1042 http fetch GET 200 https://registry.npmjs.org/@nestjs%2fmapped-types 2371ms (cache miss)
+1043 silly packumentCache corgi:https://registry.npmjs.org/@nestjs%2fmapped-types set size:undefined disposed:false
+1044 silly packumentCache corgi:https://registry.npmjs.org/bcrypt cache-miss
+1045 http fetch GET 200 https://registry.npmjs.org/bcrypt 1370ms (cache miss)
+1046 silly packumentCache corgi:https://registry.npmjs.org/bcrypt set size:undefined disposed:false
+1047 http fetch GET 200 https://registry.npmjs.org/echarts/-/echarts-5.6.0.tgz 187915ms (cache miss)
+1048 info run prisma@5.22.0 preinstall node_modules/prisma node scripts/preinstall-entry.js
+1049 info run prisma@5.22.0 preinstall { code: 0, signal: null }
+1050 info run bcrypt@5.1.1 install node_modules/bcrypt node-pre-gyp install --fallback-to-build
+1051 info run bcrypt@5.1.1 install { code: 0, signal: null }
+1052 info run @nestjs/core@10.4.22 postinstall node_modules/@nestjs/core opencollective || exit 0
+1053 info run @prisma/client@5.22.0 postinstall node_modules/@prisma/client node scripts/postinstall.js
+1054 info run @prisma/engines@5.22.0 postinstall node_modules/@prisma/engines node scripts/postinstall.js
+1055 info run esbuild@0.28.0 postinstall node_modules/esbuild node install.js
+1056 info run vue-demi@0.14.10 postinstall node_modules/vue-demi node -e "try{require('./scripts/postinstall.js')}catch(e){}"
+1057 info run esbuild@0.21.5 postinstall node_modules/vite/node_modules/esbuild node install.js
+1058 info run vue-demi@0.14.10 postinstall { code: 0, signal: null }
+1059 info run esbuild@0.28.0 postinstall { code: 0, signal: null }
+1060 info run esbuild@0.21.5 postinstall { code: 0, signal: null }
+1061 info run @nestjs/core@10.4.22 postinstall { code: 0, signal: null }
+1062 info run @prisma/client@5.22.0 postinstall { code: 0, signal: null }
+1063 info run @prisma/engines@5.22.0 postinstall { code: 0, signal: null }
+1064 silly ADD node_modules/@eigp/api
+1065 silly ADD node_modules/@dvtp/web
+1066 silly ADD node_modules/zrender
+1067 silly ADD node_modules/zrender/node_modules/tslib
+1068 silly ADD node_modules/yargs-parser
+1069 silly ADD node_modules/yargs
+1070 silly ADD node_modules/yallist
+1071 silly ADD node_modules/y18n
+1072 silly ADD node_modules/xtend
+1073 silly ADD node_modules/wrappy
+1074 silly ADD node_modules/wrap-ansi
+1075 silly ADD node_modules/wide-align
+1076 silly ADD node_modules/which
+1077 silly ADD node_modules/whatwg-url
+1078 silly ADD node_modules/webidl-conversions
+1079 silly ADD node_modules/vueuc
+1080 silly ADD node_modules/vue-tsc
+1081 silly ADD node_modules/vue-router
+1082 silly ADD node_modules/vue-demi
+1083 silly ADD node_modules/vue
+1084 silly ADD node_modules/vscode-uri
+1085 silly ADD node_modules/vooks
+1086 silly ADD node_modules/vite
+1087 silly ADD node_modules/vite/node_modules/esbuild
+1088 silly ADD node_modules/vite/node_modules/@esbuild/win32-x64
+1089 silly ADD
+1090 silly ADD
+1091 silly ADD
+1092 silly ADD
+1093 silly ADD
+1094 silly ADD
+1095 silly ADD
+1096 silly ADD
+1097 silly ADD
+1098 silly ADD
+1099 silly ADD
+1100 silly ADD
+1101 silly ADD
+1102 silly ADD
+1103 silly ADD
+1104 silly ADD
+1105 silly ADD
+1106 silly ADD
+1107 silly ADD
+1108 silly ADD
+1109 silly ADD
+1110 silly ADD
+1111 silly ADD node_modules/vdirs
+1112 silly ADD node_modules/vary
+1113 silly ADD node_modules/validator
+1114 silly ADD node_modules/uuid
+1115 silly ADD node_modules/utils-merge
+1116 silly ADD node_modules/util-deprecate
+1117 silly ADD node_modules/url-parse
+1118 silly ADD node_modules/unpipe
+1119 silly ADD node_modules/undici-types
+1120 silly ADD node_modules/uint8array-extras
+1121 silly ADD node_modules/uid
+1122 silly ADD node_modules/typescript
+1123 silly ADD node_modules/typedarray
+1124 silly ADD node_modules/type-is
+1125 silly ADD node_modules/type-is/node_modules/mime-types
+1126 silly ADD node_modules/type-is/node_modules/mime-db
+1127 silly ADD node_modules/tsx
+1128 silly ADD node_modules/tslib
+1129 silly ADD node_modules/tsc-watch
+1130 silly ADD node_modules/treemate
+1131 silly ADD node_modules/tree-kill
+1132 silly ADD node_modules/tr46
+1133 silly ADD node_modules/token-types
+1134 silly ADD node_modules/toidentifier
+1135 silly ADD node_modules/through
+1136 silly ADD node_modules/tar
+1137 silly ADD node_modules/tar/node_modules/mkdirp
+1138 silly ADD node_modules/swagger-ui-express
+1139 silly ADD node_modules/swagger-ui-dist
+1140 silly ADD node_modules/svix
+1141 silly ADD node_modules/supports-color
+1142 silly ADD node_modules/strtok3
+1143 silly ADD node_modules/strip-ansi
+1144 silly ADD node_modules/string-width
+1145 silly ADD node_modules/string-argv
+1146 silly ADD node_modules/string_decoder
+1147 silly ADD node_modules/streamsearch
+1148 silly ADD node_modules/stream-combiner
+1149 silly ADD node_modules/statuses
+1150 silly ADD node_modules/split
+1151 silly ADD node_modules/source-map-js
+1152 silly ADD node_modules/signal-exit
+1153 silly ADD node_modules/side-channel-weakmap
+1154 silly ADD node_modules/side-channel-map
+1155 silly ADD node_modules/side-channel-list
+1156 silly ADD node_modules/side-channel
+1157 silly ADD node_modules/shell-quote
+1158 silly ADD node_modules/shebang-regex
+1159 silly ADD node_modules/shebang-command
+1160 silly ADD node_modules/setprototypeof
+1161 silly ADD node_modules/set-blocking
+1162 silly ADD node_modules/serve-static
+1163 silly ADD node_modules/send
+1164 silly ADD node_modules/send/node_modules/ms
+1165 silly ADD node_modules/send/node_modules/debug
+1166 silly ADD node_modules/semver
+1167 silly ADD node_modules/selderee
+1168 silly ADD node_modules/seemly
+1169 silly ADD node_modules/scheduler
+1170 silly ADD node_modules/safer-buffer
+1171 silly ADD node_modules/safe-buffer
+1172 silly ADD node_modules/router
+1173 silly ADD node_modules/router/node_modules/path-to-regexp
+1174 silly ADD node_modules/router/node_modules/ms
+1175 silly ADD node_modules/router/node_modules/debug
+1176 silly ADD node_modules/rollup
+1177 silly ADD node_modules/rimraf
+1178 silly ADD node_modules/resend
+1179 silly ADD node_modules/requires-port
+1180 silly ADD node_modules/require-directory
+1181 silly ADD node_modules/reflect-metadata
+1182 silly ADD node_modules/readable-stream
+1183 silly ADD node_modules/react-promise-suspense
+1184 silly ADD node_modules/react-dom
+1185 silly ADD node_modules/react
+1186 silly ADD node_modules/raw-body
+1187 silly ADD node_modules/range-parser
+1188 silly ADD node_modules/querystringify
+1189 silly ADD node_modules/qs
+1190 silly ADD node_modules/ps-tree
+1191 silly ADD node_modules/proxy-from-env
+1192 silly ADD node_modules/proxy-addr
+1193 silly ADD node_modules/prisma
+1194 silly ADD node_modules/prettier
+1195 silly ADD node_modules/postcss
+1196 silly ADD node_modules/pinia
+1197 silly ADD node_modules/picocolors
+1198 silly ADD node_modules/peberminta
+1199 silly ADD node_modules/pause-stream
+1200 silly ADD node_modules/pause
+1201 silly ADD node_modules/path-to-regexp
+1202 silly ADD node_modules/path-key
+1203 silly ADD node_modules/path-is-absolute
+1204 silly ADD node_modules/path-browserify
+1205 silly ADD node_modules/passport-strategy
+1206 silly ADD node_modules/passport-jwt
+1207 silly ADD node_modules/passport
+1208 silly ADD node_modules/parseurl
+1209 silly ADD node_modules/parseley
+1210 silly ADD node_modules/once
+1211 silly ADD node_modules/on-finished
+1212 silly ADD node_modules/object-inspect
+1213 silly ADD node_modules/object-assign
+1214 silly ADD node_modules/npmlog
+1215 silly ADD node_modules/nopt
+1216 silly ADD node_modules/node-fetch
+1217 silly ADD node_modules/node-cleanup
+1218 silly ADD node_modules/node-addon-api
+1219 silly ADD node_modules/negotiator
+1220 silly ADD node_modules/nanoid
+1221 silly ADD node_modules/naive-ui
+1222 silly ADD node_modules/multer
+1223 silly ADD node_modules/muggle-string
+1224 silly ADD node_modules/ms
+1225 silly ADD node_modules/mkdirp
+1226 silly ADD node_modules/minizlib
+1227 silly ADD node_modules/minizlib/node_modules/minipass
+1228 silly ADD node_modules/minipass
+1229 silly ADD node_modules/minimist
+1230 silly ADD node_modules/minimatch
+1231 silly ADD node_modules/mime-types
+1232 silly ADD node_modules/mime-db
+1233 silly ADD node_modules/mime
+1234 silly ADD node_modules/methods
+1235 silly ADD node_modules/merge-descriptors
+1236 silly ADD node_modules/media-typer
+1237 silly ADD node_modules/math-intrinsics
+1238 silly ADD node_modules/map-stream
+1239 silly ADD node_modules/make-dir
+1240 silly ADD node_modules/make-dir/node_modules/semver
+1241 silly ADD node_modules/magic-string
+1242 silly ADD node_modules/lodash.once
+1243 silly ADD node_modules/lodash.isstring
+1244 silly ADD node_modules/lodash.isplainobject
+1245 silly ADD node_modules/lodash.isnumber
+1246 silly ADD node_modules/lodash.isinteger
+1247 silly ADD node_modules/lodash.isboolean
+1248 silly ADD node_modules/lodash.includes
+1249 silly ADD node_modules/lodash-es
+1250 silly ADD node_modules/lodash
+1251 silly ADD node_modules/libphonenumber-js
+1252 silly ADD node_modules/leac
+1253 silly ADD node_modules/jws
+1254 silly ADD node_modules/jwa
+1255 silly ADD node_modules/jsonwebtoken
+1256 silly ADD node_modules/jsonwebtoken/node_modules/ms
+1257 silly ADD node_modules/js-yaml
+1258 silly ADD node_modules/iterare
+1259 silly ADD node_modules/isexe
+1260 silly ADD node_modules/is-promise
+1261 silly ADD node_modules/is-fullwidth-code-point
+1262 silly ADD node_modules/ipaddr.js
+1263 silly ADD node_modules/inherits
+1264 silly ADD node_modules/inflight
+1265 silly ADD node_modules/ieee754
+1266 silly ADD node_modules/iconv-lite
+1267 silly ADD node_modules/https-proxy-agent
+1268 silly ADD node_modules/https-proxy-agent/node_modules/ms
+1269 silly ADD node_modules/https-proxy-agent/node_modules/debug
+1270 silly ADD node_modules/http-errors
+1271 silly ADD node_modules/htmlparser2
+1272 silly ADD node_modules/htmlparser2/node_modules/entities
+1273 silly ADD node_modules/html-to-text
+1274 silly ADD node_modules/highlight.js
+1275 silly ADD node_modules/helmet
+1276 silly ADD node_modules/he
+1277 silly ADD node_modules/hasown
+1278 silly ADD node_modules/has-unicode
+1279 silly ADD node_modules/has-tostringtag
+1280 silly ADD node_modules/has-symbols
+1281 silly ADD node_modules/has-flag
+1282 silly ADD node_modules/gopd
+1283 silly ADD node_modules/glob
+1284 silly ADD node_modules/get-proto
+1285 silly ADD node_modules/get-intrinsic
+1286 silly ADD node_modules/get-caller-file
+1287 silly ADD node_modules/gauge
+1288 silly ADD node_modules/function-bind
+1289 silly ADD
+1290 silly ADD node_modules/fs.realpath
+1291 silly ADD node_modules/fs-minipass
+1292 silly ADD node_modules/fs-minipass/node_modules/minipass
+1293 silly ADD node_modules/from
+1294 silly ADD node_modules/fresh
+1295 silly ADD node_modules/forwarded
+1296 silly ADD node_modules/form-data
+1297 silly ADD node_modules/form-data/node_modules/mime-types
+1298 silly ADD node_modules/form-data/node_modules/mime-db
+1299 silly ADD node_modules/follow-redirects
+1300 silly ADD node_modules/finalhandler
+1301 silly ADD node_modules/finalhandler/node_modules/ms
+1302 silly ADD node_modules/finalhandler/node_modules/debug
+1303 silly ADD node_modules/file-type
+1304 silly ADD node_modules/fflate
+1305 silly ADD node_modules/fast-sha256
+1306 silly ADD node_modules/fast-safe-stringify
+1307 silly ADD node_modules/fast-deep-equal
+1308 silly ADD node_modules/express
+1309 silly ADD node_modules/express/node_modules/type-is
+1310 silly ADD node_modules/express/node_modules/type-is/node_modules/content-type
+1311 silly ADD node_modules/express/node_modules/raw-body
+1312 silly ADD node_modules/express/node_modules/ms
+1313 silly ADD node_modules/express/node_modules/media-typer
+1314 silly ADD node_modules/express/node_modules/iconv-lite
+1315 silly ADD node_modules/express/node_modules/debug
+1316 silly ADD node_modules/express/node_modules/body-parser
+1317 silly ADD node_modules/evtd
+1318 silly ADD node_modules/event-stream
+1319 silly ADD node_modules/etag
+1320 silly ADD node_modules/estree-walker
+1321 silly ADD node_modules/escape-html
+1322 silly ADD node_modules/escalade
+1323 silly ADD node_modules/esbuild
+1324 silly ADD node_modules/es6-promise
+1325 silly ADD node_modules/es-set-tostringtag
+1326 silly ADD node_modules/es-object-atoms
+1327 silly ADD node_modules/es-errors
+1328 silly ADD node_modules/es-define-property
+1329 silly ADD node_modules/entities
+1330 silly ADD node_modules/encodeurl
+1331 silly ADD node_modules/emoji-regex
+1332 silly ADD node_modules/ee-first
+1333 silly ADD node_modules/echarts
+1334 silly ADD node_modules/echarts/node_modules/tslib
+1335 silly ADD node_modules/ecdsa-sig-formatter
+1336 silly ADD node_modules/duplexer
+1337 silly ADD node_modules/dunder-proto
+1338 silly ADD node_modules/dotenv-expand
+1339 silly ADD node_modules/dotenv
+1340 silly ADD node_modules/domutils
+1341 silly ADD node_modules/domhandler
+1342 silly ADD node_modules/domelementtype
+1343 silly ADD node_modules/dom-serializer
+1344 silly ADD node_modules/dom-serializer/node_modules/entities
+1345 silly ADD node_modules/detect-libc
+1346 silly ADD node_modules/destroy
+1347 silly ADD node_modules/depd
+1348 silly ADD node_modules/delegates
+1349 silly ADD node_modules/delayed-stream
+1350 silly ADD node_modules/deepmerge
+1351 silly ADD node_modules/debug
+1352 silly ADD node_modules/de-indent
+1353 silly ADD node_modules/dayjs
+1354 silly ADD node_modules/date-fns-tz
+1355 silly ADD node_modules/date-fns
+1356 silly ADD node_modules/csstype
+1357 silly ADD node_modules/css-render
+1358 silly ADD node_modules/css-render/node_modules/csstype
+1359 silly ADD node_modules/cross-spawn
+1360 silly ADD node_modules/cors
+1361 silly ADD node_modules/cookie-signature
+1362 silly ADD node_modules/cookie
+1363 silly ADD node_modules/content-type
+1364 silly ADD node_modules/content-disposition
+1365 silly ADD node_modules/console-control-strings
+1366 silly ADD node_modules/consola
+1367 silly ADD node_modules/concurrently
+1368 silly ADD node_modules/concat-stream
+1369 silly ADD node_modules/concat-map
+1370 silly ADD node_modules/combined-stream
+1371 silly ADD node_modules/color-support
+1372 silly ADD node_modules/color-name
+1373 silly ADD node_modules/color-convert
+1374 silly ADD node_modules/cliui
+1375 silly ADD node_modules/class-validator
+1376 silly ADD node_modules/class-transformer
+1377 silly ADD node_modules/chownr
+1378 silly ADD node_modules/chalk
+1379 silly ADD node_modules/chalk/node_modules/supports-color
+1380 silly ADD node_modules/call-bound
+1381 silly ADD node_modules/call-bind-apply-helpers
+1382 silly ADD node_modules/bytes
+1383 silly ADD node_modules/busboy
+1384 silly ADD node_modules/buffer-from
+1385 silly ADD node_modules/buffer-equal-constant-time
+1386 silly ADD node_modules/brace-expansion
+1387 silly ADD node_modules/body-parser
+1388 silly ADD node_modules/bcrypt
+1389 silly ADD node_modules/balanced-match
+1390 silly ADD node_modules/axios
+1391 silly ADD node_modules/asynckit
+1392 silly ADD node_modules/async-validator
+1393 silly ADD node_modules/array-flatten
+1394 silly ADD node_modules/argparse
+1395 silly ADD node_modules/are-we-there-yet
+1396 silly ADD node_modules/aproba
+1397 silly ADD node_modules/append-field
+1398 silly ADD node_modules/ansi-styles
+1399 silly ADD node_modules/ansi-regex
+1400 silly ADD node_modules/alien-signals
+1401 silly ADD node_modules/agent-base
+1402 silly ADD node_modules/agent-base/node_modules/ms
+1403 silly ADD node_modules/agent-base/node_modules/debug
+1404 silly ADD node_modules/accepts
+1405 silly ADD node_modules/abbrev
+1406 silly ADD node_modules/@vue/shared
+1407 silly ADD node_modules/@vue/server-renderer
+1408 silly ADD node_modules/@vue/runtime-dom
+1409 silly ADD node_modules/@vue/runtime-core
+1410 silly ADD node_modules/@vue/reactivity
+1411 silly ADD node_modules/@vue/language-core
+1412 silly ADD node_modules/@vue/language-core/node_modules/minimatch
+1413 silly ADD node_modules/@vue/language-core/node_modules/brace-expansion
+1414 silly ADD node_modules/@vue/devtools-api
+1415 silly ADD node_modules/@vue/compiler-vue2
+1416 silly ADD node_modules/@vue/compiler-ssr
+1417 silly ADD node_modules/@vue/compiler-sfc
+1418 silly ADD node_modules/@vue/compiler-dom
+1419 silly ADD node_modules/@vue/compiler-core
+1420 silly ADD node_modules/@volar/typescript
+1421 silly ADD node_modules/@volar/source-map
+1422 silly ADD node_modules/@volar/language-core
+1423 silly ADD node_modules/@vitejs/plugin-vue
+1424 silly ADD node_modules/@types/validator
+1425 silly ADD node_modules/@types/serve-static
+1426 silly ADD node_modules/@types/serve-static/node_modules/@types/send
+1427 silly ADD node_modules/@types/send
+1428 silly ADD node_modules/@types/range-parser
+1429 silly ADD node_modules/@types/qs
+1430 silly ADD node_modules/@types/passport-strategy
+1431 silly ADD node_modules/@types/passport-jwt
+1432 silly ADD node_modules/@types/passport
+1433 silly ADD node_modules/@types/node
+1434 silly ADD node_modules/@types/mime
+1435 silly ADD node_modules/@types/lodash-es
+1436 silly ADD node_modules/@types/lodash
+1437 silly ADD node_modules/@types/katex
+1438 silly ADD node_modules/@types/jsonwebtoken
+1439 silly ADD node_modules/@types/http-errors
+1440 silly ADD node_modules/@types/express-serve-static-core
+1441 silly ADD node_modules/@types/express
+1442 silly ADD node_modules/@types/estree
+1443 silly ADD node_modules/@types/connect
+1444 silly ADD node_modules/@types/body-parser
+1445 silly ADD node_modules/@types/bcrypt
+1446 silly ADD node_modules/@tokenizer/token
+1447 silly ADD node_modules/@tokenizer/inflate
+1448 silly ADD node_modules/@tokenizer/inflate/node_modules/ms
+1449 silly ADD node_modules/@tokenizer/inflate/node_modules/debug
+1450 silly ADD node_modules/@stablelib/base64
+1451 silly ADD node_modules/@selderee/plugin-htmlparser2
+1452 silly ADD node_modules/@rollup/rollup-win32-x64-msvc
+1453 silly ADD node_modules/@rollup/rollup-win32-x64-gnu
+1454 silly ADD
+1455 silly ADD
+1456 silly ADD
+1457 silly ADD
+1458 silly ADD
+1459 silly ADD
+1460 silly ADD
+1461 silly ADD
+1462 silly ADD
+1463 silly ADD
+1464 silly ADD
+1465 silly ADD
+1466 silly ADD
+1467 silly ADD
+1468 silly ADD
+1469 silly ADD
+1470 silly ADD
+1471 silly ADD
+1472 silly ADD
+1473 silly ADD
+1474 silly ADD
+1475 silly ADD
+1476 silly ADD
+1477 silly ADD node_modules/@react-email/render
+1478 silly ADD node_modules/@prisma/get-platform
+1479 silly ADD node_modules/@prisma/fetch-engine
+1480 silly ADD node_modules/@prisma/engines-version
+1481 silly ADD node_modules/@prisma/engines
+1482 silly ADD node_modules/@prisma/debug
+1483 silly ADD node_modules/@prisma/client
+1484 silly ADD node_modules/@nuxtjs/opencollective
+1485 silly ADD node_modules/@nestjs/swagger
+1486 silly ADD node_modules/@nestjs/platform-express
+1487 silly ADD node_modules/@nestjs/platform-express/node_modules/serve-static
+1488 silly ADD node_modules/@nestjs/platform-express/node_modules/send
+1489 silly ADD node_modules/@nestjs/platform-express/node_modules/path-to-regexp
+1490 silly ADD node_modules/@nestjs/platform-express/node_modules/negotiator
+1491 silly ADD node_modules/@nestjs/platform-express/node_modules/ms
+1492 silly ADD node_modules/@nestjs/platform-express/node_modules/mime-types
+1493 silly ADD node_modules/@nestjs/platform-express/node_modules/mime-db
+1494 silly ADD node_modules/@nestjs/platform-express/node_modules/merge-descriptors
+1495 silly ADD node_modules/@nestjs/platform-express/node_modules/fresh
+1496 silly ADD node_modules/@nestjs/platform-express/node_modules/finalhandler
+1497 silly ADD node_modules/@nestjs/platform-express/node_modules/express
+1498 silly ADD node_modules/@nestjs/platform-express/node_modules/cookie-signature
+1499 silly ADD node_modules/@nestjs/platform-express/node_modules/content-disposition
+1500 silly ADD node_modules/@nestjs/platform-express/node_modules/accepts
+1501 silly ADD node_modules/@nestjs/passport
+1502 silly ADD node_modules/@nestjs/mapped-types
+1503 silly ADD node_modules/@nestjs/jwt
+1504 silly ADD node_modules/@nestjs/core
+1505 silly ADD node_modules/@nestjs/config
+1506 silly ADD node_modules/@nestjs/common
+1507 silly ADD node_modules/@microsoft/tsdoc
+1508 silly ADD node_modules/@mapbox/node-pre-gyp
+1509 silly ADD node_modules/@lukeed/csprng
+1510 silly ADD node_modules/@juggle/resize-observer
+1511 silly ADD node_modules/@jridgewell/sourcemap-codec
+1512 silly ADD node_modules/@esbuild/win32-x64
+1513 silly ADD
+1514 silly ADD
+1515 silly ADD
+1516 silly ADD
+1517 silly ADD
+1518 silly ADD
+1519 silly ADD
+1520 silly ADD
+1521 silly ADD
+1522 silly ADD
+1523 silly ADD
+1524 silly ADD
+1525 silly ADD
+1526 silly ADD
+1527 silly ADD
+1528 silly ADD
+1529 silly ADD
+1530 silly ADD
+1531 silly ADD
+1532 silly ADD
+1533 silly ADD
+1534 silly ADD
+1535 silly ADD
+1536 silly ADD
+1537 silly ADD
+1538 silly ADD node_modules/@emotion/hash
+1539 silly ADD node_modules/@css-render/vue3-ssr
+1540 silly ADD node_modules/@css-render/plugin-bem
+1541 silly ADD node_modules/@borewit/text-codec
+1542 silly ADD node_modules/@babel/types
+1543 silly ADD node_modules/@babel/parser
+1544 silly ADD node_modules/@babel/helper-validator-identifier
+1545 silly ADD node_modules/@babel/helper-string-parser
+1546 silly CHANGE node_modules/rxjs
+1547 verbose cwd F:\我的项目\EIGP-item
+1548 verbose os Windows_NT 10.0.19045
+1549 verbose node v18.20.5
+1550 verbose npm  v10.8.2
+1551 notice
+1551 notice New major version of npm available! 10.8.2 -> 11.14.1
+1551 notice Changelog: https://github.com/npm/cli/releases/tag/v11.14.1
+1551 notice To update run: npm install -g npm@11.14.1
+1551 notice  { force: true, [Symbol(proc-log.meta)]: true }
+1552 verbose exit 0
+1553 info ok
+1554 error A complete log of this run can be found in: F:\我的项目\EIGP-item\.npm-cache\_logs\2026-05-17T13_42_23_770Z-debug-0.log

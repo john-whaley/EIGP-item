@@ -1,0 +1,172 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum VerificationCodePurpose {
+  REGISTER
+  LOGIN
+  RESET_PASSWORD
+}
+
+model User {
+  id              String          @id @default(uuid()) @db.Uuid
+  email           String          @unique
+  passwordHash    String
+  nickname        String
+  avatar          String?
+  emailVerifiedAt DateTime?
+  createdAt       DateTime        @default(now())
+  updatedAt       DateTime        @updatedAt
+  primaryEmails   PrimaryEmail[]
+  recoveryEmails  RecoveryEmail[]
+  registerPhones  RegisterPhone[]
+  recoveryPhones  RecoveryPhone[]
+  platforms       Platform[]
+}
+
+model PrimaryEmail {
+  id                 String             @id @default(uuid()) @db.Uuid
+  userId             String             @db.Uuid
+  email              String
+  passwordCiphertext String
+  note               String?
+  createdAt          DateTime           @default(now())
+  updatedAt          DateTime           @updatedAt
+  user               User               @relation(fields: [userId], references: [id], onDelete: Cascade)
+  platformLinks      EmailPlatform[]
+  recoveryEmailLinks EmailRecoveryEmail[]
+  registerPhoneLinks EmailRegisterPhone[]
+  recoveryPhoneLinks EmailRecoveryPhone[]
+
+  @@unique([userId, email])
+  @@index([createdAt])
+  @@index([updatedAt])
+}
+
+model RecoveryEmail {
+  id         String               @id @default(uuid()) @db.Uuid
+  userId     String               @db.Uuid
+  email      String
+  note       String?
+  createdAt  DateTime             @default(now())
+  updatedAt  DateTime             @updatedAt
+  user       User                 @relation(fields: [userId], references: [id], onDelete: Cascade)
+  emailLinks EmailRecoveryEmail[]
+
+  @@unique([userId, email])
+  @@index([createdAt])
+  @@index([updatedAt])
+}
+
+model RegisterPhone {
+  id          String               @id @default(uuid()) @db.Uuid
+  userId      String               @db.Uuid
+  phone       String
+  countryCode String
+  note        String?
+  createdAt   DateTime             @default(now())
+  updatedAt   DateTime             @updatedAt
+  user        User                 @relation(fields: [userId], references: [id], onDelete: Cascade)
+  emailLinks  EmailRegisterPhone[]
+
+  @@unique([userId, countryCode, phone])
+  @@index([createdAt])
+  @@index([updatedAt])
+}
+
+model RecoveryPhone {
+  id          String               @id @default(uuid()) @db.Uuid
+  userId      String               @db.Uuid
+  phone       String
+  countryCode String
+  note        String?
+  createdAt   DateTime             @default(now())
+  updatedAt   DateTime             @updatedAt
+  user        User                 @relation(fields: [userId], references: [id], onDelete: Cascade)
+  emailLinks  EmailRecoveryPhone[]
+
+  @@unique([userId, countryCode, phone])
+  @@index([createdAt])
+  @@index([updatedAt])
+}
+
+model Platform {
+  id         String          @id @default(uuid()) @db.Uuid
+  userId     String          @db.Uuid
+  name       String
+  type       String
+  note       String?
+  createdAt  DateTime        @default(now())
+  updatedAt  DateTime        @updatedAt
+  user       User            @relation(fields: [userId], references: [id], onDelete: Cascade)
+  emailLinks EmailPlatform[]
+
+  @@unique([userId, type, name])
+  @@index([createdAt])
+  @@index([updatedAt])
+}
+
+model EmailPlatform {
+  emailId    String       @db.Uuid
+  platformId String       @db.Uuid
+  createdAt  DateTime     @default(now())
+  email      PrimaryEmail @relation(fields: [emailId], references: [id], onDelete: Cascade)
+  platform   Platform     @relation(fields: [platformId], references: [id], onDelete: Cascade)
+
+  @@id([emailId, platformId])
+  @@index([platformId])
+  @@index([createdAt])
+}
+
+model EmailRecoveryEmail {
+  emailId         String       @db.Uuid
+  recoveryEmailId String       @db.Uuid
+  createdAt       DateTime      @default(now())
+  email           PrimaryEmail  @relation(fields: [emailId], references: [id], onDelete: Cascade)
+  recoveryEmail   RecoveryEmail @relation(fields: [recoveryEmailId], references: [id], onDelete: Cascade)
+
+  @@id([emailId, recoveryEmailId])
+  @@index([recoveryEmailId])
+  @@index([createdAt])
+}
+
+model EmailRegisterPhone {
+  emailId         String       @db.Uuid
+  registerPhoneId String       @db.Uuid
+  createdAt       DateTime      @default(now())
+  email           PrimaryEmail  @relation(fields: [emailId], references: [id], onDelete: Cascade)
+  registerPhone   RegisterPhone @relation(fields: [registerPhoneId], references: [id], onDelete: Cascade)
+
+  @@id([emailId, registerPhoneId])
+  @@index([registerPhoneId])
+  @@index([createdAt])
+}
+
+model EmailRecoveryPhone {
+  emailId         String       @db.Uuid
+  recoveryPhoneId String       @db.Uuid
+  createdAt       DateTime      @default(now())
+  email           PrimaryEmail  @relation(fields: [emailId], references: [id], onDelete: Cascade)
+  recoveryPhone   RecoveryPhone @relation(fields: [recoveryPhoneId], references: [id], onDelete: Cascade)
+
+  @@id([emailId, recoveryPhoneId])
+  @@index([recoveryPhoneId])
+  @@index([createdAt])
+}
+
+model VerificationCode {
+  id         String                  @id @default(uuid()) @db.Uuid
+  email      String
+  purpose    VerificationCodePurpose
+  codeHash   String
+  expiresAt  DateTime
+  consumedAt DateTime?
+  createdAt  DateTime                @default(now())
+
+  @@index([email, purpose, createdAt])
+}

@@ -1,0 +1,303 @@
+:root {
+  color-scheme: dark;
+  font-family: "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  background:
+    radial-gradient(circle at top right, rgba(77, 212, 255, 0.14), transparent 28%),
+    radial-gradient(circle at bottom left, rgba(52, 211, 153, 0.12), transparent 32%),
+    linear-gradient(180deg, #07111a 0%, #0b1622 48%, #0e1e2f 100%);
+  color: #e7f1fb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+code {
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: rgba(77, 212, 255, 0.12);
+  color: #d8f6ff;
+}
+
+.page-shell {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.glass-panel {
+  background: rgba(10, 20, 31, 0.86);
+  border: 1px solid rgba(109, 141, 176, 0.16);
+  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.24);
+  backdrop-filter: blur(18px);
+}
+
+.grid-cards {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.grid-two {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+.metric-value {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.metric-caption {
+  color: #8ca5c6;
+  font-size: 13px;
+}
+
+.badge-soft {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  color: #d9f8f3;
+  background: rgba(52, 211, 153, 0.14);
+  border: 1px solid rgba(45, 212, 191, 0.16);
+}
+
+.split-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.chart-box {
+  min-height: 320px;
+}
+
+.soft-muted {
+  color: #8ca5c6;
+}
+
+.auth-shell {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
+.auth-card {
+  width: min(1180px, 100%);
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  overflow: hidden;
+  border-radius: 28px;
+}
+
+.auth-aside {
+  padding: 44px;
+  background:
+    linear-gradient(160deg, rgba(77, 212, 255, 0.18), rgba(8, 17, 29, 0) 52%),
+    linear-gradient(140deg, rgba(52, 211, 153, 0.16), rgba(8, 17, 29, 0) 48%),
+    #08111d;
+  border-right: 1px solid rgba(109, 141, 176, 0.16);
+}
+
+.auth-panel {
+  padding: 44px;
+}
+
+.hero-number {
+  font-size: clamp(34px, 4.4vw, 62px);
+  line-height: 1.05;
+  margin: 18px 0;
+  font-weight: 800;
+  color: #f8fafc;
+}
+
+.list-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.entity-list {
+  display: grid;
+  gap: 18px;
+}
+
+.entity-card {
+  padding: 16px 18px;
+  border-radius: 18px;
+  border: 1px solid rgba(109, 141, 176, 0.12);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.entity-meta {
+  display: grid;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.mini-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 10px;
+  border-radius: 999px;
+  background: rgba(77, 212, 255, 0.08);
+  border: 1px solid rgba(77, 212, 255, 0.12);
+  color: #d9eef8;
+  font-size: 12px;
+}
+
+.graph-layout {
+  align-items: start;
+}
+
+.graph-stage {
+  position: relative;
+  min-height: 700px;
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+.graph-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.graph-edge {
+  stroke: rgba(93, 194, 255, 0.5);
+  stroke-width: 0.32;
+  transition: opacity 0.2s ease;
+}
+
+.graph-edge.dimmed {
+  opacity: 0.12;
+}
+
+.graph-node {
+  position: absolute;
+  width: 150px;
+  min-height: 72px;
+  padding: 12px 14px;
+  border-radius: 18px;
+  border: 1px solid rgba(109, 141, 176, 0.18);
+  background: rgba(9, 18, 27, 0.9);
+  color: #f4fbff;
+  transform: translate(-50%, -50%);
+  text-align: left;
+  cursor: pointer;
+  transition: transform 0.18s ease, opacity 0.18s ease, border-color 0.18s ease;
+}
+
+.graph-node strong {
+  display: block;
+  font-size: 13px;
+  line-height: 1.35;
+}
+
+.graph-node span {
+  display: block;
+  margin-top: 6px;
+  color: #8ca5c6;
+  font-size: 12px;
+}
+
+.graph-node.primaryEmail {
+  border-color: rgba(77, 212, 255, 0.35);
+}
+
+.graph-node.registerPhone {
+  border-color: rgba(250, 204, 21, 0.35);
+}
+
+.graph-node.recoveryEmail {
+  border-color: rgba(52, 211, 153, 0.35);
+}
+
+.graph-node.recoveryPhone {
+  border-color: rgba(251, 113, 133, 0.35);
+}
+
+.graph-node.platform {
+  border-color: rgba(167, 139, 250, 0.35);
+}
+
+.graph-node.active {
+  transform: translate(-50%, -50%) scale(1.04);
+  border-color: rgba(240, 249, 255, 0.78);
+}
+
+.graph-node.dimmed {
+  opacity: 0.18;
+}
+
+.graph-legend {
+  position: absolute;
+  bottom: 14px;
+  left: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.graph-legend span {
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.05);
+  color: #c8daef;
+  font-size: 12px;
+}
+
+.detail-list {
+  display: grid;
+  gap: 12px;
+}
+
+@media (max-width: 960px) {
+  .auth-card {
+    grid-template-columns: 1fr;
+  }
+
+  .auth-aside {
+    border-right: none;
+    border-bottom: 1px solid rgba(109, 141, 176, 0.16);
+  }
+
+  .graph-stage {
+    min-height: 900px;
+  }
+
+  .graph-node {
+    width: 132px;
+  }
+}

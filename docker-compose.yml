@@ -1,0 +1,48 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: eigp-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: eigp
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - '5432:5432'
+    volumes:
+      - eigp-postgres-data:/var/lib/postgresql/data
+
+  api:
+    build:
+      context: .
+      dockerfile: apps/api/Dockerfile
+    container_name: eigp-api
+    restart: unless-stopped
+    depends_on:
+      - postgres
+    environment:
+      PORT: 3000
+      DATABASE_URL: ${DATABASE_URL:-postgresql://postgres:postgres@postgres:5432/eigp?schema=public}
+      JWT_SECRET: ${JWT_SECRET:-change-this-before-production}
+      APP_ENCRYPTION_KEY: ${APP_ENCRYPTION_KEY:-change-this-too-before-production}
+      FRONTEND_URL: ${FRONTEND_URL:-http://localhost}
+      RESEND_API_KEY: ${RESEND_API_KEY:-}
+      RESEND_FROM_EMAIL: ${RESEND_FROM_EMAIL:-EIGP <onboarding@resend.dev>}
+      MAIL_DEBUG: ${MAIL_DEBUG:-true}
+      VERIFICATION_CODE_EXPIRES_MINUTES: ${VERIFICATION_CODE_EXPIRES_MINUTES:-10}
+    ports:
+      - '3000:3000'
+
+  web:
+    build:
+      context: .
+      dockerfile: apps/web/Dockerfile
+    container_name: eigp-web
+    restart: unless-stopped
+    depends_on:
+      - api
+    ports:
+      - '80:80'
+
+volumes:
+  eigp-postgres-data:
