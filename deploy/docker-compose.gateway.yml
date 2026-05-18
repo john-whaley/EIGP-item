@@ -1,0 +1,25 @@
+services:
+  caddy:
+    image: caddy:2.8-alpine
+    container_name: eigp-gateway
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./gateway/Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+    networks:
+      - public
+
+volumes:
+  caddy_data:
+    name: eigp_caddy_data
+  caddy_config:
+    name: eigp_caddy_config
+
+networks:
+  public:
+    external: true
+    name: eigp-public

@@ -11,3 +11,5 @@ apps/api/prisma/dev.db
 npm-debug.log*
 deploy/instances/*.env
 !deploy/instances/.gitkeep
+deploy/instances/*/
+deploy/gateway/Caddyfile

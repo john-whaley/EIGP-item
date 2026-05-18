@@ -1,155 +1,152 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-REPO_ROOT="$(cd "${SCRIPT_DIR}/.." && pwd)"
-INSTANCES_DIR="${SCRIPT_DIR}/instances"
-COMPOSE_FILE="${SCRIPT_DIR}/docker-compose.vps.yml"
+脚本目录="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+仓库根目录="$(cd "${脚本目录}/.." && pwd)"
+实例目录="${脚本目录}/instances"
+实例编排文件="${脚本目录}/docker-compose.vps.yml"
+网关编排文件="${脚本目录}/docker-compose.gateway.yml"
+网关目录="${脚本目录}/gateway"
+网关配置文件="${网关目录}/Caddyfile"
+公网网络名称="eigp-public"
 
-mkdir -p "${INSTANCES_DIR}"
-touch "${INSTANCES_DIR}/.gitkeep"
+mkdir -p "${实例目录}" "${网关目录}"
+touch "${实例目录}/.gitkeep" "${网关目录}/.gitkeep"
 
-require_cmd() {
-  local cmd="$1"
-  if ! command -v "${cmd}" >/dev/null 2>&1; then
-    echo "Missing command: ${cmd}"
+检查命令() {
+  local 命令="$1"
+  if ! command -v "${命令}" >/dev/null 2>&1; then
+    echo "缺少命令：${命令}"
     exit 1
   fi
 }
 
-require_cmd docker
+检查命令 docker
 docker compose version >/dev/null
 
-trim() {
-  local value="$1"
-  value="${value#"${value%%[![:space:]]*}"}"
-  value="${value%"${value##*[![:space:]]}"}"
-  printf '%s' "${value}"
+去空格() {
+  local 值="$1"
+  值="${值#"${值%%[![:space:]]*}"}"
+  值="${值%"${值##*[![:space:]]}"}"
+  printf '%s' "${值}"
 }
 
-prompt_default() {
-  local prompt="$1"
-  local default_value="${2:-}"
-  local answer
+输入必填() {
+  local 提示="$1"
+  local 默认值="${2:-}"
+  local 输入值
 
-  if [[ -n "${default_value}" ]]; then
-    read -r -p "${prompt} [${default_value}]: " answer
-    answer="$(trim "${answer}")"
-    printf '%s' "${answer:-${default_value}}"
+  if [[ -n "${默认值}" ]]; then
+    read -r -p "${提示} [${默认值}]: " 输入值
+    输入值="$(去空格 "${输入值}")"
+    printf '%s' "${输入值:-${默认值}}"
     return
   fi
 
   while true; do
-    read -r -p "${prompt}: " answer
-    answer="$(trim "${answer}")"
-    if [[ -n "${answer}" ]]; then
-      printf '%s' "${answer}"
+    read -r -p "${提示}: " 输入值
+    输入值="$(去空格 "${输入值}")"
+    if [[ -n "${输入值}" ]]; then
+      printf '%s' "${输入值}"
       return
     fi
-    echo "This field is required."
+    echo "该项不能为空。"
   done
 }
 
-prompt_optional() {
-  local prompt="$1"
-  local default_value="${2:-}"
-  local answer
+输入可留空() {
+  local 提示="$1"
+  local 默认值="${2:-}"
+  local 输入值
 
-  if [[ -n "${default_value}" ]]; then
-    read -r -p "${prompt} [${default_value}]: " answer
-    answer="$(trim "${answer}")"
-    printf '%s' "${answer:-${default_value}}"
+  if [[ -n "${默认值}" ]]; then
+    read -r -p "${提示} [${默认值}]: " 输入值
+    输入值="$(去空格 "${输入值}")"
+    printf '%s' "${输入值:-${默认值}}"
     return
   fi
 
-  read -r -p "${prompt}: " answer
-  answer="$(trim "${answer}")"
-  printf '%s' "${answer}"
+  read -r -p "${提示}: " 输入值
+  输入值="$(去空格 "${输入值}")"
+  printf '%s' "${输入值}"
 }
 
-prompt_yes_no() {
-  local prompt="$1"
-  local default_value="${2:-y}"
-  local suffix="[Y/n]"
-  local answer
+确认是非() {
+  local 提示="$1"
+  local 默认值="${2:-y}"
+  local 后缀="[Y/n]"
+  local 输入值
 
-  if [[ "${default_value}" == "n" ]]; then
-    suffix="[y/N]"
+  if [[ "${默认值}" == "n" ]]; then
+    后缀="[y/N]"
   fi
 
   while true; do
-    read -r -p "${prompt} ${suffix}: " answer
-    answer="$(trim "${answer}")"
-    answer="${answer,,}"
-    if [[ -z "${answer}" ]]; then
-      answer="${default_value}"
+    read -r -p "${提示} ${后缀}: " 输入值
+    输入值="$(去空格 "${输入值}")"
+    输入值="${输入值,,}"
+    if [[ -z "${输入值}" ]]; then
+      输入值="${默认值}"
     fi
 
-    case "${answer}" in
+    case "${输入值}" in
       y|yes) return 0 ;;
       n|no) return 1 ;;
-      *) echo "Please enter y or n." ;;
+      *) echo "请输入 y 或 n。" ;;
     esac
   done
 }
 
-random_secret() {
+生成随机密钥() {
   if command -v openssl >/dev/null 2>&1; then
     openssl rand -hex 32
     return
   fi
-
   tr -dc 'A-Za-z0-9' </dev/urandom | head -c 64
 }
 
-sanitize_instance_name() {
-  local raw="$1"
-  raw="${raw,,}"
-  raw="$(printf '%s' "${raw}" | sed -E 's/[^a-z0-9]+/-/g; s/^-+//; s/-+$//')"
-  printf '%s' "${raw}"
+规范实例名() {
+  local 原始="$1"
+  原始="${原始,,}"
+  原始="$(printf '%s' "${原始}" | sed -E 's/[^a-z0-9]+/-/g; s/^-+//; s/-+$//')"
+  printf '%s' "${原始}"
 }
 
-instance_env_file() {
-  local instance_name="$1"
-  printf '%s/%s.env' "${INSTANCES_DIR}" "${instance_name}"
+实例环境文件() {
+  local 实例名="$1"
+  printf '%s/%s.env' "${实例目录}" "${实例名}"
 }
 
-instance_dir() {
-  local instance_name="$1"
-  printf '%s/%s' "${INSTANCES_DIR}" "${instance_name}"
+实例工作目录() {
+  local 实例名="$1"
+  printf '%s/%s' "${实例目录}" "${实例名}"
 }
 
-load_env_file() {
-  local file="$1"
+载入环境文件() {
+  local 文件="$1"
   set -a
   # shellcheck disable=SC1090
-  source "${file}"
+  source "${文件}"
   set +a
 }
 
-build_frontend_url() {
-  local scheme="$1"
-  local host="$2"
-  local port="$3"
-
-  if [[ ("${scheme}" == "http" && "${port}" == "80") || ("${scheme}" == "https" && "${port}" == "443") ]]; then
-    printf '%s://%s' "${scheme}" "${host}"
-    return
+生成前端地址() {
+  local 域名="$1"
+  local 启用HTTPS="$2"
+  if [[ "${启用HTTPS}" == "true" ]]; then
+    printf 'https://%s' "${域名}"
+  else
+    printf 'http://%s' "${域名}"
   fi
-
-  printf '%s://%s:%s' "${scheme}" "${host}" "${port}"
 }
 
-write_instance_env() {
-  local file="$1"
-
-  cat >"${file}" <<EOF
+写入实例环境() {
+  local 文件="$1"
+  cat >"${文件}" <<EOF
 INSTANCE_NAME="${INSTANCE_NAME}"
 STACK_NAME="${STACK_NAME}"
-PUBLIC_HOST="${PUBLIC_HOST}"
-PUBLIC_SCHEME="${PUBLIC_SCHEME}"
-WEB_BIND_ADDRESS="${WEB_BIND_ADDRESS}"
-WEB_PORT="${WEB_PORT}"
+DOMAIN="${DOMAIN}"
+ENABLE_HTTPS="${ENABLE_HTTPS}"
 FRONTEND_URL="${FRONTEND_URL}"
 POSTGRES_DB="${POSTGRES_DB}"
 POSTGRES_USER="${POSTGRES_USER}"
@@ -163,430 +160,485 @@ VERIFICATION_CODE_EXPIRES_MINUTES="${VERIFICATION_CODE_EXPIRES_MINUTES}"
 EOF
 }
 
-write_instance_support_files() {
-  local instance_name="$1"
-  local env_file="$2"
-  local dir
-  dir="$(instance_dir "${instance_name}")"
+写入实例辅助文件() {
+  local 实例名="$1"
+  local 环境文件="$2"
+  local 目录
+  目录="$(实例工作目录 "${实例名}")"
 
-  mkdir -p "${dir}"
-  cp "${env_file}" "${dir}/.env"
+  mkdir -p "${目录}"
+  cp "${环境文件}" "${目录}/.env"
 
-  cat >"${dir}/up.sh" <<'EOF'
+  cat >"${目录}/启动并重建.sh" <<'EOF'
 #!/usr/bin/env bash
 set -euo pipefail
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-REPO_ROOT="$(cd "${SCRIPT_DIR}/../../.." && pwd)"
-ENV_FILE="${SCRIPT_DIR}/.env"
-COMPOSE_FILE="${REPO_ROOT}/deploy/docker-compose.vps.yml"
+脚本目录="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+仓库根目录="$(cd "${脚本目录}/../../.." && pwd)"
+环境文件="${脚本目录}/.env"
+实例编排文件="${仓库根目录}/deploy/docker-compose.vps.yml"
+网关编排文件="${仓库根目录}/deploy/docker-compose.gateway.yml"
 
 set -a
-source "${ENV_FILE}"
+source "${环境文件}"
 set +a
 
-docker compose --env-file "${ENV_FILE}" --project-name "${STACK_NAME}" -f "${COMPOSE_FILE}" up -d --build --remove-orphans
+docker compose --env-file "${环境文件}" --project-name "${STACK_NAME}" -f "${实例编排文件}" up -d --build --remove-orphans
+docker compose -f "${网关编排文件}" up -d --remove-orphans
 EOF
 
-  cat >"${dir}/update.sh" <<'EOF'
+  cat >"${目录}/拉取更新并重建.sh" <<'EOF'
 #!/usr/bin/env bash
 set -euo pipefail
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-REPO_ROOT="$(cd "${SCRIPT_DIR}/../../.." && pwd)"
-ENV_FILE="${SCRIPT_DIR}/.env"
-COMPOSE_FILE="${REPO_ROOT}/deploy/docker-compose.vps.yml"
+脚本目录="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+仓库根目录="$(cd "${脚本目录}/../../.." && pwd)"
+环境文件="${脚本目录}/.env"
+实例编排文件="${仓库根目录}/deploy/docker-compose.vps.yml"
+网关编排文件="${仓库根目录}/deploy/docker-compose.gateway.yml"
 
-git -C "${REPO_ROOT}" pull --ff-only
+git -C "${仓库根目录}" pull --ff-only
 
 set -a
-source "${ENV_FILE}"
+source "${环境文件}"
 set +a
 
-docker compose --env-file "${ENV_FILE}" --project-name "${STACK_NAME}" -f "${COMPOSE_FILE}" up -d --build --remove-orphans
+docker compose --env-file "${环境文件}" --project-name "${STACK_NAME}" -f "${实例编排文件}" up -d --build --remove-orphans
+docker compose -f "${网关编排文件}" up -d --remove-orphans
 EOF
 
-  cat >"${dir}/start.sh" <<'EOF'
+  cat >"${目录}/仅启动.sh" <<'EOF'
 #!/usr/bin/env bash
 set -euo pipefail
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-REPO_ROOT="$(cd "${SCRIPT_DIR}/../../.." && pwd)"
-ENV_FILE="${SCRIPT_DIR}/.env"
-COMPOSE_FILE="${REPO_ROOT}/deploy/docker-compose.vps.yml"
+脚本目录="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+仓库根目录="$(cd "${脚本目录}/../../.." && pwd)"
+环境文件="${脚本目录}/.env"
+实例编排文件="${仓库根目录}/deploy/docker-compose.vps.yml"
+网关编排文件="${仓库根目录}/deploy/docker-compose.gateway.yml"
 
 set -a
-source "${ENV_FILE}"
+source "${环境文件}"
 set +a
 
-docker compose --env-file "${ENV_FILE}" --project-name "${STACK_NAME}" -f "${COMPOSE_FILE}" up -d
+docker compose --env-file "${环境文件}" --project-name "${STACK_NAME}" -f "${实例编排文件}" up -d
+docker compose -f "${网关编排文件}" up -d --remove-orphans
 EOF
 
-  cat >"${dir}/stop.sh" <<'EOF'
+  cat >"${目录}/停止.sh" <<'EOF'
 #!/usr/bin/env bash
 set -euo pipefail
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-REPO_ROOT="$(cd "${SCRIPT_DIR}/../../.." && pwd)"
-ENV_FILE="${SCRIPT_DIR}/.env"
-COMPOSE_FILE="${REPO_ROOT}/deploy/docker-compose.vps.yml"
+脚本目录="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+仓库根目录="$(cd "${脚本目录}/../../.." && pwd)"
+环境文件="${脚本目录}/.env"
+实例编排文件="${仓库根目录}/deploy/docker-compose.vps.yml"
 
 set -a
-source "${ENV_FILE}"
+source "${环境文件}"
 set +a
 
-docker compose --env-file "${ENV_FILE}" --project-name "${STACK_NAME}" -f "${COMPOSE_FILE}" stop
+docker compose --env-file "${环境文件}" --project-name "${STACK_NAME}" -f "${实例编排文件}" stop
 EOF
 
-  cat >"${dir}/remove-keep-db.sh" <<'EOF'
+  cat >"${目录}/删除容器保留数据库.sh" <<'EOF'
 #!/usr/bin/env bash
 set -euo pipefail
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-REPO_ROOT="$(cd "${SCRIPT_DIR}/../../.." && pwd)"
-ENV_FILE="${SCRIPT_DIR}/.env"
-COMPOSE_FILE="${REPO_ROOT}/deploy/docker-compose.vps.yml"
+脚本目录="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+仓库根目录="$(cd "${脚本目录}/../../.." && pwd)"
+环境文件="${脚本目录}/.env"
+实例编排文件="${仓库根目录}/deploy/docker-compose.vps.yml"
 
 set -a
-source "${ENV_FILE}"
+source "${环境文件}"
 set +a
 
-docker compose --env-file "${ENV_FILE}" --project-name "${STACK_NAME}" -f "${COMPOSE_FILE}" down --remove-orphans
+docker compose --env-file "${环境文件}" --project-name "${STACK_NAME}" -f "${实例编排文件}" down --remove-orphans
 EOF
 
-  cat >"${dir}/logs.sh" <<'EOF'
+  cat >"${目录}/查看日志.sh" <<'EOF'
 #!/usr/bin/env bash
 set -euo pipefail
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-REPO_ROOT="$(cd "${SCRIPT_DIR}/../../.." && pwd)"
-ENV_FILE="${SCRIPT_DIR}/.env"
-COMPOSE_FILE="${REPO_ROOT}/deploy/docker-compose.vps.yml"
+脚本目录="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+仓库根目录="$(cd "${脚本目录}/../../.." && pwd)"
+环境文件="${脚本目录}/.env"
+实例编排文件="${仓库根目录}/deploy/docker-compose.vps.yml"
 
 set -a
-source "${ENV_FILE}"
+source "${环境文件}"
 set +a
 
-docker compose --env-file "${ENV_FILE}" --project-name "${STACK_NAME}" -f "${COMPOSE_FILE}" logs -f
+docker compose --env-file "${环境文件}" --project-name "${STACK_NAME}" -f "${实例编排文件}" logs -f
 EOF
 
-  cat >"${dir}/README.txt" <<EOF
-Instance name: ${INSTANCE_NAME}
-Compose project: ${STACK_NAME}
-Access URL: ${FRONTEND_URL}
-VPS bind address: ${WEB_BIND_ADDRESS}
-VPS port: ${WEB_PORT}
-Database volume: ${STACK_NAME}_postgres_data
+  cat >"${目录}/说明.txt" <<EOF
+实例名称：${INSTANCE_NAME}
+Compose 项目名：${STACK_NAME}
+绑定域名：${DOMAIN}
+前端访问地址：${FRONTEND_URL}
+数据库卷：${STACK_NAME}_postgres_data
 
-Files created automatically:
-- ${dir}/.env
-- ${dir}/up.sh
-- ${dir}/update.sh
-- ${dir}/start.sh
-- ${dir}/stop.sh
-- ${dir}/remove-keep-db.sh
-- ${dir}/logs.sh
+已自动生成：
+- ${目录}/.env
+- ${目录}/启动并重建.sh
+- ${目录}/拉取更新并重建.sh
+- ${目录}/仅启动.sh
+- ${目录}/停止.sh
+- ${目录}/删除容器保留数据库.sh
+- ${目录}/查看日志.sh
 
-Important notes:
-1. You must point your domain A record to the VPS IP yourself.
-2. If WEB_PORT is not 80 or 443, you must access the site with :PORT.
-3. VPS firewall and cloud security group must allow WEB_PORT.
-4. Database data survives stop, restart, rebuild, and docker compose down.
-5. Database is deleted only if you remove the volume or run down -v.
+访问前请确认：
+1. 域名 A 记录已经手动指向 VPS 公网 IP。
+2. VPS 的 80/443 端口已经放行。
+3. 如果启用 HTTPS，首次签证书时域名必须已经解析到当前服务器。
+4. 数据库不会因为容器停止、重建、docker compose down 而丢失。
+5. 只有手动 down -v 或删除 volume 才会真的删库。
 EOF
 
   chmod +x \
-    "${dir}/up.sh" \
-    "${dir}/update.sh" \
-    "${dir}/start.sh" \
-    "${dir}/stop.sh" \
-    "${dir}/remove-keep-db.sh" \
-    "${dir}/logs.sh"
+    "${目录}/启动并重建.sh" \
+    "${目录}/拉取更新并重建.sh" \
+    "${目录}/仅启动.sh" \
+    "${目录}/停止.sh" \
+    "${目录}/删除容器保留数据库.sh" \
+    "${目录}/查看日志.sh"
 }
 
-sync_instance_artifacts() {
-  local instance_name="$1"
-  local env_file="$2"
-  write_instance_support_files "${instance_name}" "${env_file}"
+确保公网网络() {
+  if ! docker network inspect "${公网网络名称}" >/dev/null 2>&1; then
+    docker network create "${公网网络名称}" >/dev/null
+  fi
 }
 
-instance_status() {
-  local stack_name="$1"
-  local running
-  local all
+实例状态() {
+  local 项目名="$1"
+  local 运行中
+  local 全部
 
-  running="$(docker ps --filter "label=com.docker.compose.project=${stack_name}" -q | wc -l | tr -d ' ')"
-  if [[ "${running}" != "0" ]]; then
-    printf 'running'
+  运行中="$(docker ps --filter "label=com.docker.compose.project=${项目名}" -q | wc -l | tr -d ' ')"
+  if [[ "${运行中}" != "0" ]]; then
+    printf '运行中'
     return
   fi
 
-  all="$(docker ps -a --filter "label=com.docker.compose.project=${stack_name}" -q | wc -l | tr -d ' ')"
-  if [[ "${all}" != "0" ]]; then
-    printf 'stopped'
+  全部="$(docker ps -a --filter "label=com.docker.compose.project=${项目名}" -q | wc -l | tr -d ' ')"
+  if [[ "${全部}" != "0" ]]; then
+    printf '已停止'
     return
   fi
 
-  printf 'configured'
+  printf '仅配置未启动'
 }
 
-compose_for_instance() {
-  local env_file="$1"
-  local stack_name="$2"
+实例编排() {
+  local 环境文件="$1"
+  local 项目名="$2"
   shift 2
-  docker compose --env-file "${env_file}" --project-name "${stack_name}" -f "${COMPOSE_FILE}" "$@"
+  docker compose --env-file "${环境文件}" --project-name "${项目名}" -f "${实例编排文件}" "$@"
 }
 
-print_instance_summary() {
+生成网关配置() {
+  mapfile -t 环境文件列表 < <(find "${实例目录}" -maxdepth 1 -type f -name '*.env' | sort)
+
+  cat >"${网关配置文件}" <<'EOF'
+{
+  auto_https disable_redirects
+}
+
+EOF
+
+  local 文件
+  for 文件 in "${环境文件列表[@]}"; do
+    载入环境文件 "${文件}"
+    if [[ "${ENABLE_HTTPS}" == "true" ]]; then
+      cat >>"${网关配置文件}" <<EOF
+${DOMAIN} {
+  reverse_proxy ${STACK_NAME}-web:80
+}
+
+EOF
+    else
+      cat >>"${网关配置文件}" <<EOF
+http://${DOMAIN} {
+  reverse_proxy ${STACK_NAME}-web:80
+}
+
+EOF
+    fi
+  done
+}
+
+启动或更新网关() {
+  确保公网网络
+  生成网关配置
+  docker compose -f "${网关编排文件}" up -d --remove-orphans
+}
+
+打印实例摘要() {
   cat <<EOF
 
-Instance name: ${INSTANCE_NAME}
-Compose project: ${STACK_NAME}
-Domain or IP: ${PUBLIC_HOST}
-Scheme: ${PUBLIC_SCHEME}
-VPS public port: ${WEB_PORT}
-Frontend URL: ${FRONTEND_URL}
-Database name: ${POSTGRES_DB}
-Database user: ${POSTGRES_USER}
-Database volume: ${STACK_NAME}_postgres_data
-Resend Key: $( [[ -n "${RESEND_API_KEY}" ]] && printf 'configured' || printf 'empty' )
-MAIL_DEBUG: ${MAIL_DEBUG}
+实例名称：${INSTANCE_NAME}
+Compose 项目名：${STACK_NAME}
+绑定域名：${DOMAIN}
+启用 HTTPS：${ENABLE_HTTPS}
+前端访问地址：${FRONTEND_URL}
+数据库名：${POSTGRES_DB}
+数据库用户：${POSTGRES_USER}
+数据库卷：${STACK_NAME}_postgres_data
+Resend Key：$( [[ -n "${RESEND_API_KEY}" ]] && printf '已填写' || printf '未填写' )
+MAIL_DEBUG：${MAIL_DEBUG}
 
-Reminders:
-- JWT_SECRET, APP_ENCRYPTION_KEY, and POSTGRES_PASSWORD should be strong random values.
-- DNS A record is not created by this script; point your domain to the VPS IP manually.
-- If WEB_PORT is not 80/443, the browser must access the site with the port.
-- VPS firewall and cloud security group must allow WEB_PORT.
-- Database data survives stop, rebuild, and docker compose down.
-- Only down -v or manual volume removal will delete the database.
-- After pulling new code, rebuild the instance so prisma migrate deploy runs.
+提醒：
+- JWT_SECRET、APP_ENCRYPTION_KEY、POSTGRES_PASSWORD 建议使用强随机值。
+- 脚本会自动创建实例 .env、实例管理脚本以及网关配置。
+- 域名解析不会自动在 DNS 厂商后台创建，你必须手动把 A 记录指向 VPS 公网 IP。
+- 只要 80/443 已放行，并且域名已解析到本机，使用域名即可直接访问前端页面。
+- 数据库不会因为容器停止、重建、docker compose down 而丢失。
+- 只有手动 down -v 或删除 volume 才会真的删库。
 EOF
 }
 
-collect_instance_config() {
-  local mode="$1"
+采集实例配置() {
+  local 模式="$1"
 
-  if [[ "${mode}" == "new" ]]; then
-    local raw_name
-    raw_name="$(prompt_default "Enter instance name (for example prod, demo, client-a)")"
-    INSTANCE_NAME="$(sanitize_instance_name "${raw_name}")"
+  if [[ "${模式}" == "新建" ]]; then
+    local 原始名称
+    原始名称="$(输入必填 "请输入实例名称（例如 prod、demo、client-a）")"
+    INSTANCE_NAME="$(规范实例名 "${原始名称}")"
     if [[ -z "${INSTANCE_NAME}" ]]; then
-      echo "Invalid instance name."
+      echo "实例名称无效。"
       exit 1
     fi
 
     STACK_NAME="eigp-${INSTANCE_NAME}"
-    PUBLIC_HOST="$(prompt_default "Enter domain or public IP")"
-    PUBLIC_SCHEME="$(prompt_default "Enter access scheme (http or https)" "http")"
-    WEB_BIND_ADDRESS="$(prompt_default "Enter bind address" "0.0.0.0")"
-    WEB_PORT="$(prompt_default "Enter VPS public access port" "80")"
-    POSTGRES_DB="$(prompt_default "Enter PostgreSQL database name" "eigp")"
-    POSTGRES_USER="$(prompt_default "Enter PostgreSQL username" "postgres")"
+    DOMAIN="$(输入必填 "请输入要绑定的域名")"
+    if 确认是非 "是否启用 HTTPS 自动证书" "y"; then
+      ENABLE_HTTPS="true"
+    else
+      ENABLE_HTTPS="false"
+    fi
+    FRONTEND_URL="$(生成前端地址 "${DOMAIN}" "${ENABLE_HTTPS}")"
+    POSTGRES_DB="$(输入必填 "请输入 PostgreSQL 数据库名" "eigp")"
+    POSTGRES_USER="$(输入必填 "请输入 PostgreSQL 用户名" "postgres")"
 
-    local db_password_input
-    db_password_input="$(prompt_optional "Enter PostgreSQL password (leave blank to auto-generate)")"
-    POSTGRES_PASSWORD="${db_password_input:-$(random_secret)}"
+    local 数据库密码输入
+    数据库密码输入="$(输入可留空 "请输入 PostgreSQL 密码（留空自动生成）")"
+    POSTGRES_PASSWORD="${数据库密码输入:-$(生成随机密钥)}"
 
-    local jwt_input
-    jwt_input="$(prompt_optional "Enter JWT_SECRET (leave blank to auto-generate)")"
-    JWT_SECRET="${jwt_input:-$(random_secret)}"
+    local jwt输入
+    jwt输入="$(输入可留空 "请输入 JWT_SECRET（留空自动生成）")"
+    JWT_SECRET="${jwt输入:-$(生成随机密钥)}"
 
-    local enc_input
-    enc_input="$(prompt_optional "Enter APP_ENCRYPTION_KEY (leave blank to auto-generate)")"
-    APP_ENCRYPTION_KEY="${enc_input:-$(random_secret)}"
+    local 加密输入
+    加密输入="$(输入可留空 "请输入 APP_ENCRYPTION_KEY（留空自动生成）")"
+    APP_ENCRYPTION_KEY="${加密输入:-$(生成随机密钥)}"
 
-    RESEND_API_KEY="$(prompt_optional "Enter RESEND_API_KEY (optional)")"
-    RESEND_FROM_EMAIL="$(prompt_default "Enter sender label" "EIGP <onboarding@resend.dev>")"
-    MAIL_DEBUG="$(prompt_default "Enable MAIL_DEBUG (true/false)" "false")"
-    VERIFICATION_CODE_EXPIRES_MINUTES="$(prompt_default "Verification code expiry minutes" "10")"
-    FRONTEND_URL="$(build_frontend_url "${PUBLIC_SCHEME}" "${PUBLIC_HOST}" "${WEB_PORT}")"
+    RESEND_API_KEY="$(输入可留空 "请输入 RESEND_API_KEY（选填）")"
+    RESEND_FROM_EMAIL="$(输入必填 "请输入发件邮箱标识" "EIGP <onboarding@resend.dev>")"
+    MAIL_DEBUG="$(输入必填 "是否启用 MAIL_DEBUG（true/false）" "false")"
+    VERIFICATION_CODE_EXPIRES_MINUTES="$(输入必填 "验证码有效期（分钟）" "10")"
     return
   fi
 
-  PUBLIC_HOST="$(prompt_default "Domain or public IP" "${PUBLIC_HOST}")"
-  PUBLIC_SCHEME="$(prompt_default "Access scheme (http or https)" "${PUBLIC_SCHEME}")"
-  WEB_BIND_ADDRESS="$(prompt_default "Bind address" "${WEB_BIND_ADDRESS}")"
-  WEB_PORT="$(prompt_default "VPS public access port" "${WEB_PORT}")"
-  RESEND_API_KEY="$(prompt_optional "RESEND_API_KEY (optional)" "${RESEND_API_KEY}")"
-  RESEND_FROM_EMAIL="$(prompt_default "Sender label" "${RESEND_FROM_EMAIL}")"
-  MAIL_DEBUG="$(prompt_default "MAIL_DEBUG (true/false)" "${MAIL_DEBUG}")"
-  VERIFICATION_CODE_EXPIRES_MINUTES="$(prompt_default "Verification code expiry minutes" "${VERIFICATION_CODE_EXPIRES_MINUTES}")"
-  FRONTEND_URL="$(build_frontend_url "${PUBLIC_SCHEME}" "${PUBLIC_HOST}" "${WEB_PORT}")"
+  DOMAIN="$(输入必填 "域名" "${DOMAIN}")"
+  if 确认是非 "是否启用 HTTPS 自动证书" "$( [[ "${ENABLE_HTTPS}" == "true" ]] && printf 'y' || printf 'n' )"; then
+    ENABLE_HTTPS="true"
+  else
+    ENABLE_HTTPS="false"
+  fi
+  FRONTEND_URL="$(生成前端地址 "${DOMAIN}" "${ENABLE_HTTPS}")"
+  RESEND_API_KEY="$(输入可留空 "RESEND_API_KEY（选填）" "${RESEND_API_KEY}")"
+  RESEND_FROM_EMAIL="$(输入必填 "发件邮箱标识" "${RESEND_FROM_EMAIL}")"
+  MAIL_DEBUG="$(输入必填 "MAIL_DEBUG（true/false）" "${MAIL_DEBUG}")"
+  VERIFICATION_CODE_EXPIRES_MINUTES="$(输入必填 "验证码有效期（分钟）" "${VERIFICATION_CODE_EXPIRES_MINUTES}")"
 }
 
-create_new_instance() {
-  collect_instance_config "new"
-  local env_file
-  env_file="$(instance_env_file "${INSTANCE_NAME}")"
+新建实例() {
+  采集实例配置 "新建"
+  local 环境文件
+  环境文件="$(实例环境文件 "${INSTANCE_NAME}")"
 
-  if [[ -f "${env_file}" ]]; then
-    echo "Instance ${INSTANCE_NAME} already exists."
+  if [[ -f "${环境文件}" ]]; then
+    echo "实例 ${INSTANCE_NAME} 已存在。"
     return
   fi
 
-  print_instance_summary
-  if ! prompt_yes_no "Create and start this instance now?" "y"; then
-    echo "Cancelled."
+  打印实例摘要
+  if ! 确认是非 "确认创建并启动该实例？" "y"; then
+    echo "已取消。"
     return
   fi
 
-  write_instance_env "${env_file}"
-  sync_instance_artifacts "${INSTANCE_NAME}" "${env_file}"
-  compose_for_instance "${env_file}" "${STACK_NAME}" up -d --build --remove-orphans
-  echo "Instance ${INSTANCE_NAME} created and started."
-  echo "Generated files: $(instance_dir "${INSTANCE_NAME}")"
+  写入实例环境 "${环境文件}"
+  写入实例辅助文件 "${INSTANCE_NAME}" "${环境文件}"
+  确保公网网络
+  实例编排 "${环境文件}" "${STACK_NAME}" up -d --build --remove-orphans
+  启动或更新网关
+  echo "实例 ${INSTANCE_NAME} 已创建并启动。"
+  echo "已生成目录：$(实例工作目录 "${INSTANCE_NAME}")"
 }
 
-pick_existing_instance() {
-  mapfile -t env_files < <(find "${INSTANCES_DIR}" -maxdepth 1 -type f -name '*.env' | sort)
-  if [[ ${#env_files[@]} -eq 0 ]]; then
-    echo "No configured instances found."
+选择已有实例() {
+  mapfile -t 环境文件列表 < <(find "${实例目录}" -maxdepth 1 -type f -name '*.env' | sort)
+  if [[ ${#环境文件列表[@]} -eq 0 ]]; then
+    echo "当前没有已配置实例。"
     return 1
   fi
 
   echo
-  echo "Available instances:"
-  local index=1
-  local file
-  for file in "${env_files[@]}"; do
-    load_env_file "${file}"
-    local status
-    status="$(instance_status "${STACK_NAME}")"
-    printf '%s) %s [%s] -> %s (%s)\n' "${index}" "${INSTANCE_NAME}" "${status}" "${PUBLIC_HOST}" "${WEB_PORT}"
-    index=$((index + 1))
+  echo "可管理实例："
+  local 序号=1
+  local 文件
+  for 文件 in "${环境文件列表[@]}"; do
+    载入环境文件 "${文件}"
+    local 状态
+    状态="$(实例状态 "${STACK_NAME}")"
+    printf '%s) %s [%s] -> %s\n' "${序号}" "${INSTANCE_NAME}" "${状态}" "${DOMAIN}"
+    序号=$((序号 + 1))
   done
-  echo "0) Back"
+  echo "0) 返回"
 
-  local choice
+  local 选择
   while true; do
-    read -r -p "Choose an instance: " choice
-    choice="$(trim "${choice}")"
-    if [[ "${choice}" == "0" ]]; then
+    read -r -p "请选择实例: " 选择
+    选择="$(去空格 "${选择}")"
+    if [[ "${选择}" == "0" ]]; then
       return 1
     fi
 
-    if [[ "${choice}" =~ ^[0-9]+$ ]] && (( choice >= 1 && choice <= ${#env_files[@]} )); then
-      SELECTED_ENV_FILE="${env_files[$((choice - 1))]}"
-      load_env_file "${SELECTED_ENV_FILE}"
-      sync_instance_artifacts "${INSTANCE_NAME}" "${SELECTED_ENV_FILE}"
+    if [[ "${选择}" =~ ^[0-9]+$ ]] && (( 选择 >= 1 && 选择 <= ${#环境文件列表[@]} )); then
+      SELECTED_ENV_FILE="${环境文件列表[$((选择 - 1))]}"
+      载入环境文件 "${SELECTED_ENV_FILE}"
+      写入实例辅助文件 "${INSTANCE_NAME}" "${SELECTED_ENV_FILE}"
       return 0
     fi
 
-    echo "Invalid choice, try again."
+    echo "输入无效，请重新选择。"
   done
 }
 
-update_instance_from_current_code() {
-  local env_file="$1"
-  local stack_name="$2"
-  compose_for_instance "${env_file}" "${stack_name}" up -d --build --remove-orphans
-  echo "Instance ${INSTANCE_NAME} rebuilt from current code."
+从当前代码重建实例() {
+  local 环境文件="$1"
+  local 项目名="$2"
+  实例编排 "${环境文件}" "${项目名}" up -d --build --remove-orphans
+  启动或更新网关
+  echo "实例 ${INSTANCE_NAME} 已基于当前代码重建完成。"
 }
 
-pull_latest_code() {
-  if ! git -C "${REPO_ROOT}" rev-parse --is-inside-work-tree >/dev/null 2>&1; then
-    echo "Current directory is not a Git repository; cannot run git pull."
+拉取最新代码() {
+  if ! git -C "${仓库根目录}" rev-parse --is-inside-work-tree >/dev/null 2>&1; then
+    echo "当前目录不是 Git 仓库，无法执行 git pull。"
     return 1
   fi
 
-  git -C "${REPO_ROOT}" pull --ff-only
+  git -C "${仓库根目录}" pull --ff-only
 }
 
-manage_existing_instance() {
-  if ! pick_existing_instance; then
+管理已有实例() {
+  if ! 选择已有实例; then
     return
   fi
 
   while true; do
     echo
-    echo "Current instance: ${INSTANCE_NAME} (${STACK_NAME})"
-    echo "1) Show config summary"
-    echo "2) Edit config and rebuild"
-    echo "3) Rebuild/restart with current config"
-    echo "4) Git pull and rebuild"
-    echo "5) Stop instance"
-    echo "6) Start instance"
-    echo "7) Remove containers but keep database"
-    echo "8) Remove containers and database (danger)"
-    echo "0) Back to main menu"
+    echo "当前实例：${INSTANCE_NAME} (${STACK_NAME})"
+    echo "1) 查看配置摘要"
+    echo "2) 修改配置并更新实例"
+    echo "3) 直接重建/重启实例"
+    echo "4) 拉取最新代码并更新实例"
+    echo "5) 停止实例"
+    echo "6) 启动实例"
+    echo "7) 删除实例容器（保留数据库）"
+    echo "8) 删除实例容器和数据库（危险）"
+    echo "9) 重新生成域名网关配置"
+    echo "0) 返回主菜单"
 
-    local action
-    read -r -p "Choose an action: " action
-    action="$(trim "${action}")"
+    local 操作
+    read -r -p "请选择操作: " 操作
+    操作="$(去空格 "${操作}")"
 
-    case "${action}" in
+    case "${操作}" in
       1)
-        print_instance_summary
+        打印实例摘要
         ;;
       2)
-        collect_instance_config "edit"
-        print_instance_summary
-        if prompt_yes_no "Save changes and rebuild this instance?" "y"; then
-          write_instance_env "${SELECTED_ENV_FILE}"
-          sync_instance_artifacts "${INSTANCE_NAME}" "${SELECTED_ENV_FILE}"
-          update_instance_from_current_code "${SELECTED_ENV_FILE}" "${STACK_NAME}"
+        采集实例配置 "编辑"
+        打印实例摘要
+        if 确认是非 "确认保存配置并更新该实例？" "y"; then
+          写入实例环境 "${SELECTED_ENV_FILE}"
+          写入实例辅助文件 "${INSTANCE_NAME}" "${SELECTED_ENV_FILE}"
+          从当前代码重建实例 "${SELECTED_ENV_FILE}" "${STACK_NAME}"
         fi
         ;;
       3)
-        update_instance_from_current_code "${SELECTED_ENV_FILE}" "${STACK_NAME}"
+        从当前代码重建实例 "${SELECTED_ENV_FILE}" "${STACK_NAME}"
         ;;
       4)
-        if prompt_yes_no "Run git pull and rebuild this instance?" "y"; then
-          pull_latest_code
-          update_instance_from_current_code "${SELECTED_ENV_FILE}" "${STACK_NAME}"
+        if 确认是非 "确认先 git pull 再更新该实例？" "y"; then
+          拉取最新代码
+          从当前代码重建实例 "${SELECTED_ENV_FILE}" "${STACK_NAME}"
         fi
         ;;
       5)
-        compose_for_instance "${SELECTED_ENV_FILE}" "${STACK_NAME}" stop
-        echo "Instance stopped."
+        实例编排 "${SELECTED_ENV_FILE}" "${STACK_NAME}" stop
+        echo "实例已停止。"
         ;;
       6)
-        compose_for_instance "${SELECTED_ENV_FILE}" "${STACK_NAME}" up -d
-        echo "Instance started."
+        实例编排 "${SELECTED_ENV_FILE}" "${STACK_NAME}" up -d
+        启动或更新网关
+        echo "实例已启动。"
         ;;
       7)
-        if prompt_yes_no "Remove containers but keep the database volume?" "n"; then
-          compose_for_instance "${SELECTED_ENV_FILE}" "${STACK_NAME}" down --remove-orphans
-          echo "Containers removed, database volume preserved."
+        if 确认是非 "确认删除实例容器但保留数据库卷？" "n"; then
+          实例编排 "${SELECTED_ENV_FILE}" "${STACK_NAME}" down --remove-orphans
+          启动或更新网关
+          echo "实例容器已删除，数据库卷仍然保留。"
         fi
         ;;
       8)
-        if prompt_yes_no "Remove containers and database volume? This cannot be undone." "n"; then
-          compose_for_instance "${SELECTED_ENV_FILE}" "${STACK_NAME}" down -v --remove-orphans
-          if prompt_yes_no "Delete generated instance files too?" "n"; then
+        if 确认是非 "确认删除实例容器和数据库卷？此操作不可恢复。" "n"; then
+          实例编排 "${SELECTED_ENV_FILE}" "${STACK_NAME}" down -v --remove-orphans
+          if 确认是非 "是否同时删除该实例配置文件和实例目录？" "n"; then
             rm -f "${SELECTED_ENV_FILE}"
-            rm -rf "$(instance_dir "${INSTANCE_NAME}")"
-            echo "Instance files removed."
+            rm -rf "$(实例工作目录 "${INSTANCE_NAME}")"
+            echo "实例配置文件和实例目录已删除。"
           fi
-          echo "Instance and database volume removed."
+          启动或更新网关
+          echo "实例及数据库卷已删除。"
           return
         fi
+        ;;
+      9)
+        启动或更新网关
+        echo "域名网关配置已重新生成并重载。"
         ;;
       0)
         return
         ;;
       *)
-        echo "Invalid choice, try again."
+        echo "输入无效，请重新选择。"
         ;;
     esac
   done
 }
 
-main_menu() {
+主菜单() {
   while true; do
     echo
     echo "=============================="
-    echo " EIGP VPS Container Manager"
+    echo " EIGP VPS 容器管理脚本"
     echo "=============================="
-    echo "1) Manage existing instances"
-    echo "2) Create a new instance"
-    echo "0) Exit"
+    echo "1) 管理已有实例"
+    echo "2) 新建实例并启动"
+    echo "0) 退出"
 
-    local choice
-    read -r -p "Choose an action: " choice
-    choice="$(trim "${choice}")"
+    local 选择
+    read -r -p "请选择操作: " 选择
+    选择="$(去空格 "${选择}")"
 
-    case "${choice}" in
-      1) manage_existing_instance ;;
-      2) create_new_instance ;;
+    case "${选择}" in
+      1) 管理已有实例 ;;
+      2) 新建实例 ;;
       0) exit 0 ;;
-      *) echo "Invalid choice, try again." ;;
+      *) echo "输入无效，请重新选择。" ;;
     esac
   done
 }
 
-main_menu
+主菜单

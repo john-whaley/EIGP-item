@@ -1,6 +1,7 @@
 services:
   postgres:
     image: postgres:16-alpine
+    container_name: ${STACK_NAME}-postgres
     restart: unless-stopped
     environment:
       POSTGRES_DB: ${POSTGRES_DB}
@@ -13,11 +14,14 @@ services:
       interval: 10s
       timeout: 5s
       retries: 10
+    networks:
+      - internal
 
   api:
     build:
       context: ..
       dockerfile: apps/api/Dockerfile
+    container_name: ${STACK_NAME}-api
     restart: unless-stopped
     depends_on:
       postgres:
@@ -34,18 +38,31 @@ services:
       VERIFICATION_CODE_EXPIRES_MINUTES: ${VERIFICATION_CODE_EXPIRES_MINUTES}
     expose:
       - "3000"
+    networks:
+      - internal
 
   web:
     build:
       context: ..
       dockerfile: apps/web/Dockerfile
+    container_name: ${STACK_NAME}-web
     restart: unless-stopped
     depends_on:
       api:
         condition: service_started
-    ports:
-      - "${WEB_BIND_ADDRESS:-0.0.0.0}:${WEB_PORT}:80"
+    expose:
+      - "80"
+    networks:
+      - internal
+      - public
 
 volumes:
   postgres_data:
     name: ${STACK_NAME}_postgres_data
+
+networks:
+  internal:
+    name: ${STACK_NAME}_internal
+  public:
+    external: true
+    name: eigp-public
