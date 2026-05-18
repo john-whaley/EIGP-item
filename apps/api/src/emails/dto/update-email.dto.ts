@@ -1,5 +1,6 @@
 import { Transform } from 'class-transformer';
 import {
+  ArrayMaxSize,
   IsArray,
   IsEmail,
   IsOptional,
@@ -28,16 +29,19 @@ export class UpdateEmailDto {
 
   @IsOptional()
   @IsArray()
+  @ArrayMaxSize(1)
   @IsUUID('4', { each: true })
   registerPhoneIds?: string[];
 
   @IsOptional()
   @IsArray()
+  @ArrayMaxSize(1)
   @IsUUID('4', { each: true })
   recoveryEmailIds?: string[];
 
   @IsOptional()
   @IsArray()
+  @ArrayMaxSize(1)
   @IsUUID('4', { each: true })
   recoveryPhoneIds?: string[];
 

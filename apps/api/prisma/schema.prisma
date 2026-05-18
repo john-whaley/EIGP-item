@@ -11,6 +11,7 @@ enum VerificationCodePurpose {
   REGISTER
   LOGIN
   RESET_PASSWORD
+  CHANGE_PASSWORD
 }
 
 model User {

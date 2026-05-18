@@ -75,6 +75,7 @@ import { searchApi } from '@/api/services';
 import PageHeader from '@/components/PageHeader.vue';
 import StatCard from '@/components/StatCard.vue';
 import type { SearchResponse } from '@/types';
+import { extractErrorMessage } from '@/utils/error';
 
 const pageSize = 5;
 const message = useMessage();
@@ -111,7 +112,7 @@ async function runSearch() {
       groupPages[group.key] = 1;
     }
   } catch (error: any) {
-    message.error(error.response?.data?.message || '搜索失败');
+    message.error(extractErrorMessage(error, '搜索失败'));
   } finally {
     loading.value = false;
   }

@@ -7,7 +7,7 @@ import {
 import { ConfigService } from '@nestjs/config';
 import { Resend } from 'resend';
 
-type AuthMailPurpose = 'register' | 'login' | 'reset-password';
+type AuthMailPurpose = 'register' | 'login' | 'reset-password' | 'change-password';
 
 interface SendAuthCodeMailInput {
   code: string;
@@ -90,6 +90,11 @@ export class EmailService {
         return {
           subject: 'EIGP 登录验证码',
           intro: '你正在使用邮箱验证码登录 Email Identity Graph Platform。'
+        };
+      case 'change-password':
+        return {
+          subject: 'EIGP 修改密码验证码',
+          intro: '你正在修改 Email Identity Graph Platform 的登录密码。'
         };
       case 'reset-password':
       default:

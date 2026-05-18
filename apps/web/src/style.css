@@ -180,6 +180,23 @@ code {
   align-items: start;
 }
 
+.graph-full-page {
+  min-height: calc(100vh - 48px);
+}
+
+.graph-full-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 360px;
+  gap: 20px;
+  align-items: start;
+}
+
+.graph-detail-panel {
+  border-radius: 24px;
+  position: sticky;
+  top: 20px;
+}
+
 .graph-stage {
   position: relative;
   min-height: 700px;
@@ -299,5 +316,13 @@ code {
 
   .graph-node {
     width: 132px;
+  }
+
+  .graph-full-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .graph-detail-panel {
+    position: static;
   }
 }

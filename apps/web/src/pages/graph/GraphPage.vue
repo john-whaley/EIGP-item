@@ -1,12 +1,15 @@
 <template>
   <n-spin :show="loading">
-    <div class="page-shell">
+    <div class="page-shell graph-full-page">
       <page-header
         title="关系图谱"
-        eyebrow="图谱"
-        description="悬停高亮关联链路，点击节点查看详情。这一页是整个 Email Identity Graph Platform 的核心视图。"
+        eyebrow="全屏图谱"
+        description="全屏查看主邮箱、邮箱目录、手机目录与平台标签之间的关系。"
       >
-        <n-button secondary @click="loadGraph">刷新图谱</n-button>
+        <n-space>
+          <n-button @click="goBack">返回</n-button>
+          <n-button secondary @click="loadGraph">刷新图谱</n-button>
+        </n-space>
       </page-header>
 
       <div class="grid-cards">
@@ -17,7 +20,7 @@
         <stat-card label="关系边" :value="String(graph?.summary.relationships ?? 0)" hint="当前所有连接" accent="blue" />
       </div>
 
-      <div class="grid-two graph-layout">
+      <div class="graph-full-layout">
         <graph-canvas
           v-if="graph"
           :nodes="graph.nodes"
@@ -26,7 +29,7 @@
           @select="selectedNode = $event"
         />
 
-        <n-card class="glass-panel" :bordered="false" style="border-radius: 22px">
+        <n-card class="glass-panel graph-detail-panel" :bordered="false">
           <h3 style="margin-top: 0">详情面板</h3>
           <div v-if="selectedNode" class="detail-list">
             <div><strong>标题：</strong>{{ selectedNode.label }}</div>
@@ -46,13 +49,16 @@
 
 <script setup lang="ts">
 import { computed, onMounted, ref } from 'vue';
-import { NButton, NCard, NEmpty, NSpin, useMessage } from 'naive-ui';
+import { useRouter } from 'vue-router';
+import { NButton, NCard, NEmpty, NSpace, NSpin, useMessage } from 'naive-ui';
 import { graphApi } from '@/api/services';
 import GraphCanvas from '@/components/GraphCanvas.vue';
 import PageHeader from '@/components/PageHeader.vue';
 import StatCard from '@/components/StatCard.vue';
 import type { GraphNode, GraphResponse } from '@/types';
+import { extractErrorMessage } from '@/utils/error';
 
+const router = useRouter();
 const message = useMessage();
 const loading = ref(false);
 const graph = ref<GraphResponse | null>(null);
@@ -74,13 +80,22 @@ function formatDetail(value: unknown) {
   return String(value ?? '');
 }
 
+function goBack() {
+  if (window.history.length > 1) {
+    router.back();
+    return;
+  }
+
+  router.push('/dashboard');
+}
+
 async function loadGraph() {
   loading.value = true;
   try {
     graph.value = await graphApi.fetch();
     selectedNode.value = graph.value.nodes[0] || null;
   } catch (error: any) {
-    message.error(error.response?.data?.message || '加载图谱失败');
+    message.error(extractErrorMessage(error, '加载图谱失败'));
   } finally {
     loading.value = false;
   }

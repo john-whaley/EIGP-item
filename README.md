@@ -1,8 +1,8 @@
 # Email Identity Graph Platform
 
-基于 `Email Identity Graph Platform V1 Spec Cn.pdf` 落地的前后端分离 MVP，目标是把主邮箱、注册手机号、辅助邮箱、辅助手机号、平台标签之间的关系统一管理、快速检索并图谱化展示。
+基于 `Email Identity Graph Platform V1 Spec Cn.pdf` 落地的前后端分离 MVP，目标是把主邮箱、辅助邮箱、注册号码、辅助号码、平台标签之间的关系统一管理、快速检索并图谱化展示。
 
-这次实现优先复用了 `DVTP-item` 的成熟工程结构，因此技术栈采用：
+当前技术栈：
 
 - 前端：Vue 3 + TypeScript + Vite + Pinia + Naive UI + ECharts
 - 后端：NestJS + Prisma + PostgreSQL + JWT + Swagger
@@ -14,15 +14,12 @@
 - 邮箱 + 密码登录
 - 邮箱验证码登录
 - 忘记密码 / 修改密码
-- 主邮箱 CRUD
-- 辅助邮箱 CRUD
-- 注册手机号 CRUD
-- 辅助手机号 CRUD
-- 平台标签 CRUD
-- 主邮箱与四类实体的多对多关系维护
-- Dashboard 统计总览
+- 主邮箱管理
+- 统一实体目录
+- 平台标签管理
+- 关系图谱全屏页
 - 全局搜索
-- 关系图谱页面
+- Dashboard 统计总览
 - Docker / Nginx / PostgreSQL 部署配置
 
 ## 项目结构
@@ -44,11 +41,6 @@
 - Node.js 18+
 - npm 10+
 - PostgreSQL 16+
-
-说明：
-
-- 当前项目代码已经完成 `npm run build` 验证。
-- 我所在的执行环境里没有 `docker` 和 `psql`，所以这里没法替你把数据库或容器真正启动起来；你在本机装好 PostgreSQL 或 Docker Desktop 后即可按下面步骤跑起来。
 
 ### 2. 配置后端环境变量
 
@@ -120,7 +112,7 @@ MAIL_DEBUG=false
 VERIFICATION_CODE_EXPIRES_MINUTES=10
 ```
 
-### 2. 启动容器
+### 2. 启动或更新容器
 
 ```bash
 docker compose up -d --build
@@ -133,7 +125,22 @@ docker compose up -d --build
 - `postgres` 容器暴露 `5432`
 - `web` 内置 Nginx，会把 `/api/*` 反代到 `api:3000`
 
-### 3. 域名访问方式
+### 3. 数据库持久化说明
+
+这个项目的 PostgreSQL 使用的是命名卷 `eigp-postgres-data`，所以：
+
+- 你执行 `docker compose up -d --build` 更新容器时，数据库会保留
+- 你执行 `docker compose down` 停掉容器时，数据库也会保留
+- 后续再次 `docker compose up -d`，仍会继续使用原来的数据库数据
+
+只有以下情况数据库才会真正删除：
+
+- 手动执行 `docker compose down -v`
+- 手动删除卷：`docker volume rm eigp-postgres-data`
+
+换句话说，除非你主动删卷，否则数据库会一直存在。
+
+### 4. 域名访问方式
 
 如果你是直接把容器宿主机暴露到公网：
 
@@ -185,6 +192,6 @@ docker compose up -d --build
 
 ## 说明
 
-- 规格中推荐了 Next.js / React Flow；这次实现为了最大化复用 `DVTP-item` 并保证本地可直接接着开发，采用了 Vue + Nest 的同构工程方式。
-- 图谱页面没有引入额外图库，而是做了一个轻量的 SVG 节点边可视化，已经满足 V1 的悬停高亮、点击详情要求。
+- 规格里推荐了 Next.js / React Flow；这次实现为了最大化复用 `DVTP-item` 并保证本地可继续快速开发，采用了 Vue + Nest 的同构工程方式。
+- 关系图谱页目前使用轻量 SVG 方案，并已支持悬停高亮、节点详情和全屏查看。
 - 当前重点是 V1 核心链路，后续还可以继续补：Excel 导入导出、批量编辑、多用户协作、审计日志、自动化检测等。

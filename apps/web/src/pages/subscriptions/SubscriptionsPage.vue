@@ -3,7 +3,7 @@
     <page-header
       title="实体目录"
       eyebrow="实体目录"
-      description="这里维护统一的邮箱目录、手机目录和平台标签。添加主邮箱时，在哪个字段选中它，它就会以那个角色参与关系。"
+      description="这里维护统一的邮箱目录、手机目录和平台标签。主邮箱表单里选到哪个字段，就以那个字段的角色参与关系。"
     />
 
     <n-card class="glass-panel" :bordered="false" style="border-radius: 22px">
@@ -99,12 +99,6 @@
               <n-input v-model:value="form.phone" placeholder="13800000000" />
             </n-form-item>
           </div>
-          <n-form-item label="可承担的角色">
-            <n-space>
-              <n-checkbox v-model:checked="form.useAsRegister">可作为注册号码</n-checkbox>
-              <n-checkbox v-model:checked="form.useAsRecovery">可作为辅助号码</n-checkbox>
-            </n-space>
-          </n-form-item>
         </template>
 
         <template v-else>
@@ -139,7 +133,6 @@ import { computed, onMounted, reactive, ref, watch } from 'vue';
 import {
   NButton,
   NCard,
-  NCheckbox,
   NEmpty,
   NForm,
   NFormItem,
@@ -163,6 +156,7 @@ import {
 } from '@/api/services';
 import PageHeader from '@/components/PageHeader.vue';
 import type { Platform, PrimaryEmail, RecoveryEmail, RecoveryPhone, RegisterPhone } from '@/types';
+import { extractErrorMessage } from '@/utils/error';
 
 type DirectoryTab = 'emails' | 'phones' | 'platforms';
 type DirectoryRecord = Platform | CombinedPhoneItem | CombinedEmailItem;
@@ -218,9 +212,7 @@ const form = reactive({
   phone: '',
   name: '',
   type: '平台',
-  note: '',
-  useAsRegister: true,
-  useAsRecovery: false
+  note: ''
 });
 
 const modalTitle = computed(() => (editingRecord.value ? '编辑记录' : '新增记录'));
@@ -376,8 +368,6 @@ function resetForm() {
   form.name = '';
   form.type = '平台';
   form.note = '';
-  form.useAsRegister = true;
-  form.useAsRecovery = false;
 }
 
 function openCreate() {
@@ -400,8 +390,6 @@ function openEdit(record: DirectoryRecord) {
     form.countryCode = countryCode;
     form.phone = phone;
     form.note = phoneRecord.note || '';
-    form.useAsRegister = Boolean(phoneRecord.registerRecord);
-    form.useAsRecovery = Boolean(phoneRecord.recoveryRecord);
   } else {
     const platform = record as Platform;
     form.name = platform.name;
@@ -436,46 +424,25 @@ async function handleSubmit() {
       const payload = { email: form.email, note: form.note };
       const current = editingRecord.value as CombinedEmailItem | null;
 
-      if (current?.primaryRecord) {
-        await emailsApi.update(current.primaryRecord.id, {
-          email: form.email,
-          note: form.note
-        });
-      }
-
       if (current?.recoveryRecord) {
         await recoveryEmailsApi.update(current.recoveryRecord.id, payload);
-      }
-
-      if (!current) {
+      } else {
         await recoveryEmailsApi.create(payload);
       }
     } else if (activeTab.value === 'phones') {
-      if (!form.useAsRegister && !form.useAsRecovery) {
-        throw new Error('号码至少需要保留一种用途');
-      }
-
       const current = editingRecord.value as CombinedPhoneItem | null;
       const payload = { countryCode: form.countryCode, phone: form.phone, note: form.note };
 
-      if (form.useAsRegister) {
-        if (current?.registerRecord) {
-          await registerPhonesApi.update(current.registerRecord.id, payload);
-        } else {
-          await registerPhonesApi.create(payload);
-        }
-      } else if (current?.registerRecord) {
-        await registerPhonesApi.remove(current.registerRecord.id);
+      if (current?.registerRecord) {
+        await registerPhonesApi.update(current.registerRecord.id, payload);
+      } else {
+        await registerPhonesApi.create(payload);
       }
 
-      if (form.useAsRecovery) {
-        if (current?.recoveryRecord) {
-          await recoveryPhonesApi.update(current.recoveryRecord.id, payload);
-        } else {
-          await recoveryPhonesApi.create(payload);
-        }
-      } else if (current?.recoveryRecord) {
-        await recoveryPhonesApi.remove(current.recoveryRecord.id);
+      if (current?.recoveryRecord) {
+        await recoveryPhonesApi.update(current.recoveryRecord.id, payload);
+      } else {
+        await recoveryPhonesApi.create(payload);
       }
     } else {
       const payload = { name: form.name, type: form.type, note: form.note };
@@ -490,7 +457,7 @@ async function handleSubmit() {
     message.success('保存成功');
     await loadAll();
   } catch (error: any) {
-    message.error(error.response?.data?.message || error.message || '保存失败');
+    message.error(extractErrorMessage(error, '保存失败'));
   } finally {
     saving.value = false;
   }
@@ -500,10 +467,13 @@ async function handleDelete(record: DirectoryRecord) {
   try {
     if (activeTab.value === 'emails') {
       const emailRecord = record as CombinedEmailItem;
-      await Promise.all([
-        emailRecord.primaryRecord ? emailsApi.remove(emailRecord.primaryRecord.id) : Promise.resolve(),
-        emailRecord.recoveryRecord ? recoveryEmailsApi.remove(emailRecord.recoveryRecord.id) : Promise.resolve()
-      ]);
+      if (emailRecord.primaryRecord) {
+        throw new Error('该邮箱已被主邮箱使用，请先在主邮箱管理中处理后再删除目录项');
+      }
+
+      if (emailRecord.recoveryRecord) {
+        await recoveryEmailsApi.remove(emailRecord.recoveryRecord.id);
+      }
     } else if (activeTab.value === 'phones') {
       const phoneRecord = record as CombinedPhoneItem;
       await Promise.all([
@@ -523,7 +493,7 @@ async function handleDelete(record: DirectoryRecord) {
       currentPage.value -= 1;
     }
   } catch (error: any) {
-    message.error(error.response?.data?.message || '删除失败');
+    message.error(extractErrorMessage(error, '删除失败'));
   }
 }
 

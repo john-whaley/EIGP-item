@@ -48,6 +48,12 @@ export class AuthController {
     return this.authService.resetPassword(payload);
   }
 
+  @Post('password/change/send-code')
+  @UseGuards(JwtAuthGuard)
+  sendChangePasswordCode(@CurrentUser() user: { userId: string }) {
+    return this.authService.sendChangePasswordCode(user.userId);
+  }
+
   @Post('password/change')
   @UseGuards(JwtAuthGuard)
   changePassword(

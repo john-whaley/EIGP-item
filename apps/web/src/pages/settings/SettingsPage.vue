@@ -18,12 +18,19 @@
       <n-card class="glass-panel" :bordered="false" style="border-radius: 22px">
         <h3 style="margin-top: 0">修改密码</h3>
         <n-form label-placement="top">
-          <n-form-item label="当前密码">
-            <n-input
-              v-model:value="passwordForm.currentPassword"
-              type="password"
-              show-password-on="click"
-            />
+          <n-form-item label="邮箱验证码">
+            <n-input-group>
+              <n-input v-model:value="passwordForm.code" placeholder="输入 6 位邮箱验证码" />
+              <n-button
+                type="primary"
+                secondary
+                :disabled="countdown > 0"
+                :loading="codeSending"
+                @click="handleSendChangePasswordCode"
+              >
+                {{ countdown > 0 ? `${countdown}s 后重发` : '发送验证码' }}
+              </n-button>
+            </n-input-group>
           </n-form-item>
           <n-form-item label="新密码">
             <n-input
@@ -33,13 +40,13 @@
             />
           </n-form-item>
           <n-button type="primary" :loading="saving" @click="handleChangePassword">
-            保存新密码
+            确认修改密码
           </n-button>
         </n-form>
       </n-card>
     </div>
 
-    <n-card class="glass-panel" :bordered="false" style="border-radius: 22px">
+    <!-- <n-card class="glass-panel" :bordered="false" style="border-radius: 22px">
       <h3 style="margin-top: 0">运行与部署提示</h3>
       <div class="list-stack">
         <div class="entity-card">
@@ -56,35 +63,88 @@
           <div class="soft-muted">3. 将域名 A 记录指向 VPS，直接访问宿主机 `80` 端口即可；如需 HTTPS，外层再接 Nginx / Caddy 反代。</div>
         </div>
       </div>
-    </n-card>
+    </n-card> -->
   </div>
 </template>
 
 <script setup lang="ts">
-import { reactive, ref } from 'vue';
-import { NButton, NCard, NForm, NFormItem, NInput, useMessage } from 'naive-ui';
-import PageHeader from '@/components/PageHeader.vue';
-import { useAuthStore } from '@/stores/auth';
+  import { onBeforeUnmount, reactive, ref } from 'vue'
+  import { useRouter } from 'vue-router'
+  import { NButton, NCard, NForm, NFormItem, NInput, NInputGroup, useMessage } from 'naive-ui'
+  import PageHeader from '@/components/PageHeader.vue'
+  import { useAuthStore } from '@/stores/auth'
+  import { extractErrorMessage } from '@/utils/error'
 
-const authStore = useAuthStore();
-const message = useMessage();
-const saving = ref(false);
-const passwordForm = reactive({
-  currentPassword: '',
-  newPassword: ''
-});
+  const router = useRouter()
+  const authStore = useAuthStore()
+  const message = useMessage()
+  const saving = ref(false)
+  const codeSending = ref(false)
+  const countdown = ref(0)
+  let timer: ReturnType<typeof setInterval> | null = null
 
-async function handleChangePassword() {
-  saving.value = true;
-  try {
-    const response = await authStore.changePassword(passwordForm);
-    message.success(response.message || '密码已更新');
-    passwordForm.currentPassword = '';
-    passwordForm.newPassword = '';
-  } catch (error: any) {
-    message.error(error.response?.data?.message || '修改密码失败');
-  } finally {
-    saving.value = false;
+  const passwordForm = reactive({
+    code: '',
+    newPassword: '',
+  })
+
+  function startCountdown(seconds = 60) {
+    countdown.value = seconds
+
+    if (timer) {
+      clearInterval(timer)
+    }
+
+    timer = setInterval(() => {
+      countdown.value -= 1
+      if (countdown.value <= 0) {
+        if (timer) {
+          clearInterval(timer)
+        }
+        timer = null
+      }
+    }, 1000)
   }
-}
+
+  async function handleSendChangePasswordCode() {
+    codeSending.value = true
+    try {
+      const response = await authStore.sendChangePasswordCode()
+      startCountdown()
+      message.success(
+        response.debugCode
+          ? `${response.message}（当前开发环境验证码：${response.debugCode}）`
+          : response.message,
+      )
+    } catch (error) {
+      message.error(extractErrorMessage(error, '发送验证码失败'))
+    } finally {
+      codeSending.value = false
+    }
+  }
+
+  async function handleChangePassword() {
+    saving.value = true
+    try {
+      const response = await authStore.changePassword({
+        code: passwordForm.code.trim(),
+        newPassword: passwordForm.newPassword.trim(),
+      })
+      message.success(response.message || '密码已更新，请重新登录')
+      passwordForm.code = ''
+      passwordForm.newPassword = ''
+      authStore.logout()
+      router.push('/login')
+    } catch (error) {
+      message.error(extractErrorMessage(error, '修改密码失败'))
+    } finally {
+      saving.value = false
+    }
+  }
+
+  onBeforeUnmount(() => {
+    if (timer) {
+      clearInterval(timer)
+    }
+  })
 </script>

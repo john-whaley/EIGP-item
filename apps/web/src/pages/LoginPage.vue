@@ -180,6 +180,7 @@ import {
   useMessage
 } from 'naive-ui';
 import { useAuthStore } from '@/stores/auth';
+import { extractErrorMessage } from '@/utils/error';
 
 type AuthTab = 'login' | 'code' | 'register' | 'reset';
 
@@ -230,6 +231,10 @@ function normalizeEmail(email: string) {
   return email.trim().toLowerCase();
 }
 
+function normalizePassword(password: string) {
+  return password.trim();
+}
+
 function formatSendCodeMessage(messageText: string, debugCode?: string) {
   return debugCode ? `${messageText}（当前开发环境验证码：${debugCode}）` : messageText;
 }
@@ -278,8 +283,8 @@ async function handleSendRegisterCode() {
     const response = await authStore.sendRegisterCode(normalizeEmail(registerForm.email));
     startCountdown('register');
     message.success(formatSendCodeMessage(response.message, response.debugCode));
-  } catch (error: any) {
-    message.error(error.response?.data?.message || '发送注册验证码失败');
+  } catch (error) {
+    message.error(extractErrorMessage(error, '发送注册验证码失败'));
   } finally {
     codeLoading.register = false;
   }
@@ -291,8 +296,8 @@ async function handleSendLoginCode() {
     const response = await authStore.sendLoginCode(normalizeEmail(codeLoginForm.email));
     startCountdown('login');
     message.success(formatSendCodeMessage(response.message, response.debugCode));
-  } catch (error: any) {
-    message.error(error.response?.data?.message || '发送登录验证码失败');
+  } catch (error) {
+    message.error(extractErrorMessage(error, '发送登录验证码失败'));
   } finally {
     codeLoading.login = false;
   }
@@ -304,8 +309,8 @@ async function handleSendResetCode() {
     const response = await authStore.sendPasswordResetCode(normalizeEmail(resetForm.email));
     startCountdown('reset');
     message.success(formatSendCodeMessage(response.message, response.debugCode));
-  } catch (error: any) {
-    message.error(error.response?.data?.message || '发送重置验证码失败');
+  } catch (error) {
+    message.error(extractErrorMessage(error, '发送重置验证码失败'));
   } finally {
     codeLoading.reset = false;
   }
@@ -316,12 +321,12 @@ async function handleLogin() {
   try {
     await authStore.login({
       email: normalizeEmail(loginForm.email),
-      password: loginForm.password
+      password: normalizePassword(loginForm.password)
     });
     message.success('登录成功');
     router.push('/dashboard');
-  } catch (error: any) {
-    message.error(error.response?.data?.message || '登录失败，请检查邮箱和密码');
+  } catch (error) {
+    message.error(extractErrorMessage(error, '登录失败，请检查邮箱和密码'));
   } finally {
     loading.value = false;
   }
@@ -336,8 +341,8 @@ async function handleCodeLogin() {
     });
     message.success('验证码登录成功');
     router.push('/dashboard');
-  } catch (error: any) {
-    message.error(error.response?.data?.message || '验证码登录失败');
+  } catch (error) {
+    message.error(extractErrorMessage(error, '验证码登录失败'));
   } finally {
     loading.value = false;
   }
@@ -350,12 +355,12 @@ async function handleRegister() {
       nickname: registerForm.nickname.trim(),
       email: normalizeEmail(registerForm.email),
       code: registerForm.code.trim(),
-      password: registerForm.password
+      password: normalizePassword(registerForm.password)
     });
     message.success('注册成功，已自动登录');
     router.push('/dashboard');
-  } catch (error: any) {
-    message.error(error.response?.data?.message || '注册失败，请稍后重试');
+  } catch (error) {
+    message.error(extractErrorMessage(error, '注册失败，请稍后重试'));
   } finally {
     loading.value = false;
   }
@@ -367,14 +372,14 @@ async function handleResetPassword() {
     const response = await authStore.resetPassword({
       email: normalizeEmail(resetForm.email),
       code: resetForm.code.trim(),
-      password: resetForm.password
+      password: normalizePassword(resetForm.password)
     });
     message.success(response.message || '密码已重置');
     activeTab.value = 'login';
     loginForm.email = normalizeEmail(resetForm.email);
     loginForm.password = '';
-  } catch (error: any) {
-    message.error(error.response?.data?.message || '重置密码失败');
+  } catch (error) {
+    message.error(extractErrorMessage(error, '重置密码失败'));
   } finally {
     loading.value = false;
   }

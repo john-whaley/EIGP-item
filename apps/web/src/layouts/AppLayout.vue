@@ -66,7 +66,7 @@ const menuOptions = [
   { label: '实体目录', key: '/directory' },
   { label: '主邮箱管理', key: '/emails' },
   { label: '全局搜索', key: '/search' },
-  { label: '关系图谱', key: '/graph' },
+  { label: '关系图谱', key: '/graph-full' },
   { label: '系统设置', key: '/settings' }
 ];
 

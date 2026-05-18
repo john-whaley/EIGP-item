@@ -43,7 +43,7 @@ export class EmailsService {
     return this.prisma.$transaction(async (tx) => {
       const email = normalizeEmailAddress(payload.email);
       await this.ensureUniqueEmail(tx, userId, email);
-      const relations = await this.validateRelations(tx, userId, payload);
+      const relations = await this.validateRelations(tx, userId, payload, email);
 
       const created = await tx.primaryEmail.create({
         data: {
@@ -132,7 +132,7 @@ export class EmailsService {
         await this.ensureUniqueEmail(tx, userId, nextEmail, id);
       }
 
-      const relations = await this.validateRelations(tx, userId, payload);
+      const relations = await this.validateRelations(tx, userId, payload, nextEmail);
 
       await tx.primaryEmail.update({
         where: { id },
@@ -273,12 +273,25 @@ export class EmailsService {
   private async validateRelations(
     tx: Prisma.TransactionClient,
     userId: string,
-    payload: RelationPayload
+    payload: RelationPayload,
+    mainEmail: string
   ): Promise<ValidatedRelations> {
     const registerPhoneIds = dedupeIds(payload.registerPhoneIds) || [];
     const recoveryEmailIds = dedupeIds(payload.recoveryEmailIds) || [];
     const recoveryPhoneIds = dedupeIds(payload.recoveryPhoneIds) || [];
     const platformIds = dedupeIds(payload.platformIds) || [];
+
+    if (registerPhoneIds.length > 1) {
+      throw new ConflictException('一个主邮箱只能关联一个注册号码');
+    }
+
+    if (recoveryEmailIds.length > 1) {
+      throw new ConflictException('一个主邮箱只能关联一个辅助邮箱');
+    }
+
+    if (recoveryPhoneIds.length > 1) {
+      throw new ConflictException('一个主邮箱只能关联一个辅助号码');
+    }
 
     await Promise.all([
       this.ensureRegisterPhonesOwned(tx, userId, registerPhoneIds),
@@ -286,6 +299,19 @@ export class EmailsService {
       this.ensureRecoveryPhonesOwned(tx, userId, recoveryPhoneIds),
       this.ensurePlatformsOwned(tx, userId, platformIds)
     ]);
+
+    if (recoveryEmailIds.length) {
+      const recoveryEmail = await tx.recoveryEmail.findFirst({
+        where: {
+          id: recoveryEmailIds[0],
+          userId
+        }
+      });
+
+      if (recoveryEmail && normalizeEmailAddress(recoveryEmail.email) === mainEmail) {
+        throw new ConflictException('辅助邮箱不能与主邮箱相同');
+      }
+    }
 
     return {
       registerPhoneIds,

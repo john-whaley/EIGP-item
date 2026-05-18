@@ -39,12 +39,17 @@ export const authApi = {
       .post<SendCodeResponse>('/auth/password/send-code', payload)
       .then((response) => response.data);
   },
+  sendChangePasswordCode() {
+    return http
+      .post<SendCodeResponse>('/auth/password/change/send-code')
+      .then((response) => response.data);
+  },
   resetPassword(payload: { email: string; code: string; password: string }) {
     return http
       .post<ActionResponse>('/auth/password/reset', payload)
       .then((response) => response.data);
   },
-  changePassword(payload: { currentPassword: string; newPassword: string }) {
+  changePassword(payload: { code: string; newPassword: string }) {
     return http
       .post<ActionResponse>('/auth/password/change', payload)
       .then((response) => response.data);

@@ -21,8 +21,7 @@
         </n-form-item>
         <n-form-item label="注册号码">
           <n-select
-            v-model:value="form.registerPhoneKeys"
-            multiple
+            v-model:value="form.registerPhoneKey"
             filterable
             clearable
             :options="phoneOptions"
@@ -31,18 +30,16 @@
         </n-form-item>
         <n-form-item label="辅助邮箱">
           <n-select
-            v-model:value="form.recoveryEmailKeys"
-            multiple
+            v-model:value="form.recoveryEmailKey"
             filterable
             clearable
-            :options="recoveryEmailOptions"
+            :options="availableRecoveryEmailOptions"
             placeholder="从邮箱目录中选择"
           />
         </n-form-item>
         <n-form-item label="辅助号码">
           <n-select
-            v-model:value="form.recoveryPhoneKeys"
-            multiple
+            v-model:value="form.recoveryPhoneKey"
             filterable
             clearable
             :options="phoneOptions"
@@ -110,9 +107,9 @@ const emit = defineEmits<{
       emailKey: string;
       password: string;
       note?: string;
-      registerPhoneKeys: string[];
-      recoveryEmailKeys: string[];
-      recoveryPhoneKeys: string[];
+      registerPhoneKey?: string;
+      recoveryEmailKey?: string;
+      recoveryPhoneKey?: string;
       platformIds: string[];
     }
   ];
@@ -122,9 +119,9 @@ const form = reactive({
   emailKey: '',
   password: '',
   note: '',
-  registerPhoneKeys: [] as string[],
-  recoveryEmailKeys: [] as string[],
-  recoveryPhoneKeys: [] as string[],
+  registerPhoneKey: '',
+  recoveryEmailKey: '',
+  recoveryPhoneKey: '',
   platformIds: [] as string[]
 });
 
@@ -133,6 +130,10 @@ const platformOptions = computed(() =>
     label: `${item.name} / ${item.type}`,
     value: item.id
   }))
+);
+
+const availableRecoveryEmailOptions = computed(() =>
+  props.recoveryEmailOptions.filter((item) => item.value !== form.emailKey)
 );
 
 watch(
@@ -145,9 +146,9 @@ watch(
     form.emailKey = props.model?.email || '';
     form.password = props.model?.password || '';
     form.note = props.model?.note || '';
-    form.registerPhoneKeys = props.model?.registerPhones.map((item) => item.label) || [];
-    form.recoveryEmailKeys = props.model?.recoveryEmails.map((item) => item.email) || [];
-    form.recoveryPhoneKeys = props.model?.recoveryPhones.map((item) => item.label) || [];
+    form.registerPhoneKey = props.model?.registerPhones[0]?.label || '';
+    form.recoveryEmailKey = props.model?.recoveryEmails[0]?.email || '';
+    form.recoveryPhoneKey = props.model?.recoveryPhones[0]?.label || '';
     form.platformIds = props.model?.platforms.map((item) => item.id) || [];
   },
   { immediate: true }
@@ -158,9 +159,9 @@ function handleSubmit() {
     emailKey: form.emailKey,
     password: form.password,
     note: form.note,
-    registerPhoneKeys: form.registerPhoneKeys,
-    recoveryEmailKeys: form.recoveryEmailKeys,
-    recoveryPhoneKeys: form.recoveryPhoneKeys,
+    registerPhoneKey: form.registerPhoneKey || undefined,
+    recoveryEmailKey: form.recoveryEmailKey || undefined,
+    recoveryPhoneKey: form.recoveryPhoneKey || undefined,
     platformIds: form.platformIds
   });
 }

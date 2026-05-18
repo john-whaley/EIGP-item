@@ -7,6 +7,8 @@ import { PrismaService } from '../prisma/prisma.service';
 import { UsersService } from '../users/users.service';
 import { VERIFICATION_CODE_LENGTH } from './auth.constants';
 
+const CHANGE_PASSWORD_PURPOSE = 'CHANGE_PASSWORD' as VerificationCodePurpose;
+
 @Injectable()
 export class VerificationCodeService {
   constructor(
@@ -50,6 +52,17 @@ export class VerificationCodeService {
     }
 
     return this.issueCode(normalizedEmail, VerificationCodePurpose.RESET_PASSWORD);
+  }
+
+  async sendChangePasswordCode(email: string) {
+    const normalizedEmail = this.normalizeEmail(email);
+    const user = await this.usersService.findByEmail(normalizedEmail);
+
+    if (!user) {
+      throw new BadRequestException('当前账号不存在，请重新登录');
+    }
+
+    return this.issueCode(normalizedEmail, CHANGE_PASSWORD_PURPOSE);
   }
 
   async consumeCode(email: string, purpose: VerificationCodePurpose, code: string) {
@@ -126,7 +139,9 @@ export class VerificationCodeService {
             ? 'register'
             : purpose === VerificationCodePurpose.LOGIN
               ? 'login'
-              : 'reset-password'
+              : purpose === CHANGE_PASSWORD_PURPOSE
+                ? 'change-password'
+                : 'reset-password'
       });
 
       return {

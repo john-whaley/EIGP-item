@@ -29,6 +29,9 @@ export const useAuthStore = defineStore('auth', {
     async sendPasswordResetCode(email: string) {
       return authApi.sendPasswordResetCode({ email });
     },
+    async sendChangePasswordCode() {
+      return authApi.sendChangePasswordCode();
+    },
     async register(payload: {
       email: string;
       code: string;
@@ -52,7 +55,7 @@ export const useAuthStore = defineStore('auth', {
     async resetPassword(payload: { email: string; code: string; password: string }) {
       return authApi.resetPassword(payload);
     },
-    async changePassword(payload: { currentPassword: string; newPassword: string }) {
+    async changePassword(payload: { code: string; newPassword: string }) {
       return authApi.changePassword(payload);
     },
     async fetchProfile() {

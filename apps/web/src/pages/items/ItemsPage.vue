@@ -4,7 +4,7 @@
       <page-header
         title="主邮箱管理"
         eyebrow="主邮箱"
-        description="主邮箱、辅助邮箱和号码都来自统一目录。你在这里选中的字段，会决定它在这条关系链中承担什么角色。"
+        description="主邮箱、辅助邮箱和号码都来自统一目录。你在不同字段里选中它们，就决定了它们在这条关系链中承担的角色。"
       >
         <n-space>
           <n-button secondary @click="loadAll">刷新</n-button>
@@ -95,7 +95,10 @@
         />
       </n-card>
 
-      <n-empty v-if="!loading && !emails.length" description="还没有主邮箱数据，先去实体目录准备邮箱或直接新增一个主邮箱" />
+      <n-empty
+        v-if="!loading && !emails.length"
+        description="还没有主邮箱数据，先去实体目录准备邮箱或直接新增一个主邮箱"
+      />
     </div>
 
     <primary-email-form-drawer
@@ -134,6 +137,7 @@ import {
 import PageHeader from '@/components/PageHeader.vue';
 import PrimaryEmailFormDrawer from '@/components/PrimaryEmailFormDrawer.vue';
 import type { Platform, PrimaryEmail, RecoveryEmail, RecoveryPhone, RegisterPhone } from '@/types';
+import { extractErrorMessage } from '@/utils/error';
 
 interface UnifiedEmailItem {
   key: string;
@@ -239,12 +243,10 @@ const primaryEmailOptions = computed(() =>
 );
 
 const recoveryEmailOptions = computed(() =>
-  unifiedEmails.value
-    .filter((item) => item.key !== (editingRecord.value?.email || ''))
-    .map((item) => ({
-      label: item.label,
-      value: item.key
-    }))
+  unifiedEmails.value.map((item) => ({
+    label: item.label,
+    value: item.key
+  }))
 );
 
 const phoneOptions = computed(() =>
@@ -278,7 +280,7 @@ async function loadAll() {
   try {
     await Promise.all([loadReferenceData(), loadEmails()]);
   } catch (error: any) {
-    message.error(error.response?.data?.message || '加载主邮箱数据失败');
+    message.error(extractErrorMessage(error, '加载主邮箱数据失败'));
   } finally {
     loading.value = false;
   }
@@ -372,9 +374,9 @@ async function handleSubmit(payload: {
   emailKey: string;
   password: string;
   note?: string;
-  registerPhoneKeys: string[];
-  recoveryEmailKeys: string[];
-  recoveryPhoneKeys: string[];
+  registerPhoneKey?: string;
+  recoveryEmailKey?: string;
+  recoveryPhoneKey?: string;
   platformIds: string[];
 }) {
   saving.value = true;
@@ -385,14 +387,24 @@ async function handleSubmit(payload: {
       throw new Error('请选择一个主邮箱');
     }
 
+    if (payload.recoveryEmailKey && payload.recoveryEmailKey === payload.emailKey) {
+      throw new Error('辅助邮箱不能选择自己');
+    }
+
     const recoveryEmailCache = new Map<string, string>();
     const registerPhoneCache = new Map<string, string>();
     const recoveryPhoneCache = new Map<string, string>();
 
     const [recoveryEmailIds, registerPhoneIds, recoveryPhoneIds] = await Promise.all([
-      Promise.all(payload.recoveryEmailKeys.map((key) => ensureRecoveryEmailKey(key, recoveryEmailCache))),
-      Promise.all(payload.registerPhoneKeys.map((key) => ensureRegisterPhoneKey(key, registerPhoneCache))),
-      Promise.all(payload.recoveryPhoneKeys.map((key) => ensureRecoveryPhoneKey(key, recoveryPhoneCache)))
+      payload.recoveryEmailKey
+        ? Promise.all([ensureRecoveryEmailKey(payload.recoveryEmailKey, recoveryEmailCache)])
+        : Promise.resolve([]),
+      payload.registerPhoneKey
+        ? Promise.all([ensureRegisterPhoneKey(payload.registerPhoneKey, registerPhoneCache)])
+        : Promise.resolve([]),
+      payload.recoveryPhoneKey
+        ? Promise.all([ensureRecoveryPhoneKey(payload.recoveryPhoneKey, recoveryPhoneCache)])
+        : Promise.resolve([])
     ]);
 
     const requestPayload = {
@@ -416,7 +428,7 @@ async function handleSubmit(payload: {
     drawerVisible.value = false;
     await loadAll();
   } catch (error: any) {
-    message.error(error.response?.data?.message || error.message || '保存主邮箱失败');
+    message.error(extractErrorMessage(error, '保存主邮箱失败'));
   } finally {
     saving.value = false;
   }
@@ -431,7 +443,7 @@ async function handleDelete(id: string) {
       currentPage.value -= 1;
     }
   } catch (error: any) {
-    message.error(error.response?.data?.message || '删除主邮箱失败');
+    message.error(extractErrorMessage(error, '删除主邮箱失败'));
   }
 }
 

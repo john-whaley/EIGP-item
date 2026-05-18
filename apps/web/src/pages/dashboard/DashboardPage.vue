@@ -107,6 +107,7 @@ import BaseChart from '@/components/BaseChart.vue';
 import PageHeader from '@/components/PageHeader.vue';
 import StatCard from '@/components/StatCard.vue';
 import type { DashboardOverview } from '@/types';
+import { extractErrorMessage } from '@/utils/error';
 
 const message = useMessage();
 const loading = ref(false);
@@ -157,7 +158,7 @@ async function loadOverview() {
   try {
     overview.value = await dashboardApi.overview();
   } catch (error: any) {
-    message.error(error.response?.data?.message || '加载总览失败');
+    message.error(extractErrorMessage(error, '加载总览失败'));
   } finally {
     loading.value = false;
   }

@@ -9,6 +9,8 @@ import { RegisterDto } from './dto/register.dto';
 import { ResetPasswordDto } from './dto/reset-password.dto';
 import { VerificationCodeService } from './verification-code.service';
 
+const CHANGE_PASSWORD_PURPOSE = 'CHANGE_PASSWORD' as VerificationCodePurpose;
+
 @Injectable()
 export class AuthService {
   constructor(
@@ -98,20 +100,26 @@ export class AuthService {
     };
   }
 
+  async sendChangePasswordCode(userId: string) {
+    const user = await this.usersService.findById(userId);
+    return this.verificationCodeService.sendChangePasswordCode(user.email);
+  }
+
   async changePassword(userId: string, payload: ChangePasswordDto) {
     const user = await this.usersService.findById(userId);
-    const passwordMatched = await bcrypt.compare(payload.currentPassword, user.passwordHash);
 
-    if (!passwordMatched) {
-      throw new UnauthorizedException('当前密码不正确');
-    }
+    await this.verificationCodeService.consumeCode(
+      user.email,
+      CHANGE_PASSWORD_PURPOSE,
+      payload.code
+    );
 
     const passwordHash = await bcrypt.hash(payload.newPassword, 10);
     await this.usersService.updatePasswordById(userId, passwordHash);
 
     return {
       success: true,
-      message: '密码修改成功'
+      message: '密码修改成功，请重新登录'
     };
   }
 

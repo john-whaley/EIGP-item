@@ -21,6 +21,18 @@ const router = createRouter({
       }
     },
     {
+      path: '/graph',
+      redirect: '/graph-full'
+    },
+    {
+      path: '/graph-full',
+      name: 'graph-full',
+      component: GraphPage,
+      meta: {
+        requiresAuth: true
+      }
+    },
+    {
       path: '/',
       component: AppLayout,
       meta: {
@@ -50,11 +62,6 @@ const router = createRouter({
           path: '/search',
           name: 'search',
           component: SearchPage
-        },
-        {
-          path: '/graph',
-          name: 'graph',
-          component: GraphPage
         },
         {
           path: '/settings',

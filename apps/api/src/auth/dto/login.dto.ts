@@ -9,5 +9,6 @@ export class LoginDto {
   @IsString()
   @MinLength(8)
   @MaxLength(64)
+  @Transform(({ value }) => (typeof value === 'string' ? value.trim() : value))
   password!: string;
 }
